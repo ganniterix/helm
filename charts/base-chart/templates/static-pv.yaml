@@ -1,0 +1,67 @@
+{{- $GitVersion := .Capabilities.KubeVersion.GitVersion -}}
+{{- $labels := include "base-chart.labels" . -}}
+{{- $fullName := include "base-chart.fullname" . -}}
+{{- $namespace := default "ns-test" .Release.Namespace -}}
+{{- $releasename := default "rl-test" .Release.Name -}}
+{{- range .Values.static_volumes }}
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: {{ $releasename }}-{{ $namespace }}-{{ .name }}-pv
+spec:
+  claimRef:
+    namespace: {{ $namespace }}
+    name: {{ $releasename }}-{{ $namespace }}-{{ .name }}-pvc
+  storageClassName: {{ .storageClassName }}
+  accessModes: 
+    {{- range .accessModes }}
+      - {{ . }}
+    {{- end }}
+  capacity:
+    storage: {{ .capacity.storage }}
+  csi:
+    driver: {{ .csi.driver }}
+    {{- if default .secret.enabled true }}
+    nodeStageSecretRef:
+      name: csi-{{ .storageClassName }}-secret-{{ .name }}
+      namespace: {{ $namespace }}
+    {{- else }}
+    {{- end }}
+    {{- if default .csi.volumeAttributes true }}
+    volumeAttributes: {{ toYaml .csi.volumeAttributes | nindent 6 }}
+    {{- end }}
+    volumeHandle: {{ $releasename }}-{{ $namespace }}-{{ .name }}-pv
+  persistentVolumeReclaimPolicy: {{ .persistentVolumeReclaimPolicy }}
+  volumeMode: {{ .volumeMode }}
+---
+{{-   if .createpv }}
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: {{ $releasename }}-{{ $namespace }}-{{ .name }}-pvc
+spec:
+  storageClassName: {{ .storageClassName }}
+  accessModes:
+    {{- range .accessModes }}
+      - {{ . }}
+    {{- end }}
+  resources:
+    requests:
+      storage: {{ .capacity.storage }}
+  volumeMode: {{ .volumeMode }}
+  # volumeName should be same as PV name
+  volumeName: {{ $releasename }}-{{ $namespace }}-{{ .name }}-pv
+---
+{{-   end }}
+{{-   if .secret.enabled }}
+apiVersion: v1
+kind: Secret
+metadata:
+  name: csi-{{ .storageClassName }}-secret-{{ .name }}
+  namespace: {{ $namespace }}
+stringData:
+  userID: {{ .secret.userID }}
+  userKey: {{ .secret.userKey }}
+---
+{{-   end }}
+{{- end }}

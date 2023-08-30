@@ -65,7 +65,7 @@ containers-pod:
     # Docs: https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.18/#container-v1-core
     containers:
       - name: lazylibrarian
-        image: linuxserver/lazylibrarian
+        image: lscr.io/linuxserver/lazylibrarian:latest
         env: []
         ports: 
           - containerPort: 5299

@@ -1,0 +1,105 @@
+# Default values for containers-pod.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+containers-pod:
+  nameOverride: mastodon
+  fullnameOverride: ""
+
+  serviceAccount:
+    # Specifies whether a service account should be created
+    create: true
+    # Annotations to add to the service account
+    annotations: {}
+    # The name of the service account to use.
+    # If not set and create is true, a name is generated using the fullname template
+    name:
+
+  service:
+    type: ClusterIP
+    ports: 
+      - port: 80
+        targetPort: 80
+        name: p80
+      - port: 443
+        targetPort: 443
+        name: p443
+
+  ingresses: []
+
+  pod:
+    replicas: 1
+    imagePullSecrets: []
+    podSecurityContext: {}
+    nodeSelector: {}
+    tolerations: []
+    affinity: {}
+    # Volumes to mount
+    # Docs: https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.18/#volume-v1-core
+    volumes:
+      - name: appdata
+        nfs: 
+          server: 192.168.1.10
+          path: /appdata
+    # Shared environment variables - would be concat to the start of the array
+    sharedEnv: 
+      - name: GUID
+        value: 1000
+      - name: PUID
+        value: 1000
+      - name: TZ
+        value: Etc/UTC
+    # Shared containers values - can be override by setting the field in the container declaration
+    sharedValues:
+      imagePullPolicy: IfNotPresent
+      securityContext: {}
+      resources: {}
+    # The containers to deploy
+    # Docs: https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.18/#container-v1-core
+    containers:
+      - name: mastodon
+        image: lscr.io/linuxserver/mastodon:latest
+        env: 
+          - name: LOCAL_DOMAIN
+            value: example.com
+          - name: REDIS_HOST
+            value: redis
+          - name: REDIS_PORT
+            value: 6379
+          - name: DB_HOST
+            value: db
+          - name: DB_USER
+            value: mastodon
+          - name: DB_NAME
+            value: mastodon
+          - name: DB_PASS
+            value: mastodon
+          - name: DB_PORT
+            value: 5432
+          - name: ES_ENABLED
+            value: false
+          - name: SECRET_KEY_BASE
+            value: 
+          - name: OTP_SECRET
+            value: 
+          - name: VAPID_PRIVATE_KEY
+            value: 
+          - name: VAPID_PUBLIC_KEY
+            value: 
+          - name: SMTP_SERVER
+            value: mail.example.com
+          - name: SMTP_PORT
+            value: 25
+          - name: SMTP_LOGIN
+            value: 
+          - name: SMTP_PASSWORD
+            value: 
+          - name: SMTP_FROM_ADDRESS
+            value: notifications@example.com
+          - name: S3_ENABLED
+            value: false
+        ports: 
+          - containerPort: 80
+            name: p80
+          - containerPort: 443
+            name: p443
+        volumeMounts: []

@@ -16,9 +16,30 @@ containers-pod:
 
   service:
     type: ClusterIP
-    ports: []
+    ports: 
+      - port: 8112
+        targetPort: 8112
+        name: p8112
+      - port: 6881
+        targetPort: 6881
+        name: p6881
+      - port: 6881
+        targetPort: 6881
+        name: p6881udp
+        protocol: UDP
 
-  ingresses: []
+  ingresses: 
+    - name: deluge
+      # disabled: true
+      annotations:
+        kubernetes.io/ingress.class: nginx
+        traefik.ingress.kubernetes.io/rule-type: PathPrefixStrip
+        traefik.ingress.kubernetes.io/preserve-host: "false"
+      rules:
+        - path: '/'
+          serviceName: p8112
+          servicePort: 8112
+          host: deluge.e-kavallieri.local
 
   pod:
     replicas: 1
@@ -35,13 +56,13 @@ containers-pod:
           server: 192.168.1.10
           path: /appdata
     # Shared environment variables - would be concat to the start of the array
-    sharedEnv:
+    sharedEnv: 
       - name: GUID
-        value: '1000'
+        value: 1000
       - name: PUID
-        value: '1000'
+        value: 1000
       - name: TZ
-        value: Asia/Jerusalem
+        value: Etc/UTC
     # Shared containers values - can be override by setting the field in the container declaration
     sharedValues:
       imagePullPolicy: IfNotPresent
@@ -51,7 +72,14 @@ containers-pod:
     # Docs: https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.18/#container-v1-core
     containers:
       - name: deluge
-        image: linuxserver/deluge
+        image: lscr.io/linuxserver/deluge:latest
         env: []
-        ports: []
+        ports: 
+          - containerPort: 8112
+            name: p8112
+          - containerPort: 6881
+            name: p6881
+          - containerPort: 6881
+            name: p6881udp
+            protocol: UDP
         volumeMounts: []

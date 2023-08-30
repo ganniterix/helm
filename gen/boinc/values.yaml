@@ -20,19 +20,22 @@ containers-pod:
       - port: 8080
         targetPort: 8080
         name: p8080
+      - port: 8181
+        targetPort: 8181
+        name: p8181
 
   ingresses: 
     - name: boinc
       # disabled: true
       annotations:
-        kkubernetes.io/ingress.class: traefik
+        kubernetes.io/ingress.class: nginx
         traefik.ingress.kubernetes.io/rule-type: PathPrefixStrip
         traefik.ingress.kubernetes.io/preserve-host: "false"
       rules:
         - path: '/'
           serviceName: p8080
           servicePort: 8080
-          host: boinc.k3s
+          host: boinc.e-kavallieri.local
 
   pod:
     replicas: 1
@@ -49,13 +52,13 @@ containers-pod:
           server: 192.168.1.10
           path: /appdata
     # Shared environment variables - would be concat to the start of the array
-    sharedEnv:
+    sharedEnv: 
       - name: GUID
-        value: '1000'
+        value: 1000
       - name: PUID
-        value: '1000'
+        value: 1000
       - name: TZ
-        value: Asia/Jerusalem
+        value: Etc/UTC
     # Shared containers values - can be override by setting the field in the container declaration
     sharedValues:
       imagePullPolicy: IfNotPresent
@@ -65,9 +68,11 @@ containers-pod:
     # Docs: https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.18/#container-v1-core
     containers:
       - name: boinc
-        image: linuxserver/boinc
+        image: lscr.io/linuxserver/boinc:latest
         env: []
         ports: 
           - containerPort: 8080
             name: p8080
+          - containerPort: 8181
+            name: p8181
         volumeMounts: []

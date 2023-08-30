@@ -28,14 +28,14 @@ containers-pod:
     - name: habridge
       # disabled: true
       annotations:
-        kkubernetes.io/ingress.class: traefik
+        kubernetes.io/ingress.class: nginx
         traefik.ingress.kubernetes.io/rule-type: PathPrefixStrip
         traefik.ingress.kubernetes.io/preserve-host: "false"
       rules:
         - path: '/'
           serviceName: p8080
           servicePort: 8080
-          host: habridge.k3s
+          host: habridge.e-kavallieri.local
 
   pod:
     replicas: 1
@@ -52,13 +52,13 @@ containers-pod:
           server: 192.168.1.10
           path: /appdata
     # Shared environment variables - would be concat to the start of the array
-    sharedEnv:
+    sharedEnv: 
       - name: GUID
-        value: '1000'
+        value: 1000
       - name: PUID
-        value: '1000'
+        value: 1000
       - name: TZ
-        value: Asia/Jerusalem
+        value: Etc/UTC
     # Shared containers values - can be override by setting the field in the container declaration
     sharedValues:
       imagePullPolicy: IfNotPresent
@@ -68,10 +68,10 @@ containers-pod:
     # Docs: https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.18/#container-v1-core
     containers:
       - name: habridge
-        image: linuxserver/habridge
+        image: lscr.io/linuxserver/habridge:latest
         env: 
-          - name: SEC_KEY
-            value: <Your Key To Encrypt Security Data>
+          - name: "SEC_KEY
+            value: <Your Key To Encrypt Security Data>"
         ports: 
           - containerPort: 8080
             name: p8080

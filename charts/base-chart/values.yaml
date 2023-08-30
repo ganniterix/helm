@@ -1,0 +1,139 @@
+nameOverride: ""
+fullnameOverride: ""
+
+serviceAccount:
+  # Specifies whether a service account should be created
+  create: true
+  # Annotations to add to the service account
+  annotations: {}
+  # The name of the service account to use.
+  # If not set and create is true, a name is generated using the fullname template
+  name:
+
+service:
+  type: ClusterIP
+  ports:
+    - port: 3000
+      targetPort: 3000
+      name: test
+
+ingresses:
+  - name: codimd
+    # disabled: true
+    annotations:
+      spec.ingressClassName: nginx
+      external-dns.alpha.kubernetes.io/cloudflare-proxied: "false"
+      external-dns.alpha.kubernetes.io/target: nginx.e-kavallieri.com
+      external-dns.alpha.kubernetes.io/hostname: nginx.e-kavallieri.com
+      external-dns.alpha.kubernetes.io/ttl: "3600"
+      cert-manager.io/issuer: letsencrypt-production
+      cert-manager.io/issuer-kind: ClusterIssuer
+    ingressClassName: nginx
+    tls:
+      - hosts:
+          - nginx.e-kavallieri.com
+        secretName: certsecret
+    rules:
+      - path: "/"
+        serviceName: codimd
+        servicePort: 3000
+        host: nginx.e-kavallieri.com
+
+statefulset:
+  podManagementPolicy: OrderedReady
+  replicas: 1
+  revisionHistoryLimit: 10
+  updateStrategy:
+    rollingUpdate:
+      partition: 0
+    type: RollingUpdate
+  volumes:
+    - name: appdata
+      volume:
+        nfs:
+          server: 192.168.1.10
+          path: /appdata
+      volumeMount:
+        mountPath: /appdata
+        subPath: k3s/dev/codimd/config
+  sharedEnv:
+    - name: GUID
+      value: "1000"
+    - name: PUID
+      value: "1000"
+    - name: TZ
+      value: Etc/UTC
+  sharedValues:
+    imagePullPolicy: IfNotPresent
+    securityContext: {}
+    resources: {}
+  spec:
+    imagePullSecrets: []
+    nodeSelector: {}
+    tolerations: []
+    affinity: {}
+  containers:
+    - name: codimd
+      image: linuxserver/codimd:latest
+      imagePullPolicy: Always
+      env:
+        - name: DB_HOST
+          value: localhost
+        - name: DB_USER
+          value: codimd
+        - name: DB_PASS
+          value: topSecretPassword
+        - name: DB_NAME
+          value: codimd
+        - name: DB_PORT
+          value: "3306"
+      ports:
+        - containerPort: 3000
+          name: codimd
+  volumeClaimTemplates:
+    - volumeClaimTemplate:
+        metadata:
+          name: pvc-config
+        spec:
+          storageClassName: "ceph-filesystem"
+          accessModes: ["ReadWriteOnce"]
+          resources:
+            requests:
+              storage: "20Gi"
+      volumeMount:
+        mount: /config
+    - volumeClaimTemplate:
+        metadata:
+          name: pvc-config2
+        spec:
+          storageClassName: "ceph-filesystem"
+          accessModes: ["ReadWriteOnce"]
+          resources:
+            requests:
+              storage: "20Gi"
+      volumeMount:
+        mount: /config2
+
+static_volumes:
+  - name: test
+    storageClassName: ceph-filesystem
+    accessModes:
+      - ReadWriteMany
+    capacity:
+      storage: 5Gi
+    csi:
+      driver: rook-ceph.cephfs.csi.ceph.com
+      volumeAttributes:
+        clusterID: "rook-ceph"
+        fsName: "ceph-filesystem"
+        staticVolume: "true"
+        rootPath: /volumes/test/share/xxxxxxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+    persistentVolumeReclaimPolicy: Retain
+    volumeMode: Filesystem
+    createpv: true
+    volumeMount:
+      mountPath: /test
+    secret:
+      enabled: true
+      userID: test_share
+      userKey: MTIzNDU2Nzg5YWJjZGVmZ2hpamtsbW5vcHFyc3R1dnd4eXo=

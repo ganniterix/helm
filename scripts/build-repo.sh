@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -eux -o pipefail
+
 node ./scripts/nodejs/index.js
 
 for chart in gen/*
@@ -9,4 +11,4 @@ done
 
 helm package charts/* gen/* -d docs
 
-helm repo index --url https://noygal.github.io/helm/ --merge docs/index.yaml docs
+# helm repo index --url https://noygal.github.io/helm/ --merge docs/index.yaml docs

@@ -25,14 +25,14 @@ containers-pod:
     - name: lychee
       # disabled: true
       annotations:
-        kkubernetes.io/ingress.class: traefik
+        kubernetes.io/ingress.class: nginx
         traefik.ingress.kubernetes.io/rule-type: PathPrefixStrip
         traefik.ingress.kubernetes.io/preserve-host: "false"
       rules:
         - path: '/'
           serviceName: p80
           servicePort: 80
-          host: lychee.k3s
+          host: lychee.e-kavallieri.local
 
   pod:
     replicas: 1
@@ -49,13 +49,13 @@ containers-pod:
           server: 192.168.1.10
           path: /appdata
     # Shared environment variables - would be concat to the start of the array
-    sharedEnv:
+    sharedEnv: 
       - name: GUID
-        value: '1000'
+        value: 1000
       - name: PUID
-        value: '1000'
+        value: 1000
       - name: TZ
-        value: Asia/Jerusalem
+        value: Etc/UTC
     # Shared containers values - can be override by setting the field in the container declaration
     sharedValues:
       imagePullPolicy: IfNotPresent
@@ -64,9 +64,34 @@ containers-pod:
     # The containers to deploy
     # Docs: https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.18/#container-v1-core
     containers:
+      - name: mariadb
+        image: lscr.io/linuxserver/mariadb:latest
+        env: 
+          - name: MYSQL_ROOT_PASSWORD
+            value: rootpassword
+          - name: MYSQL_DATABASE
+            value: lychee
+          - name: MYSQL_USER
+            value: lychee
+          - name: MYSQL_PASSWORD
+            value: dbpassword
+        ports: []
+        volumeMounts: []
       - name: lychee
-        image: linuxserver/lychee
-        env: []
+        image: lscr.io/linuxserver/lychee:latest
+        env: 
+          - name: DB_CONNECTION
+            value: mysql
+          - name: DB_HOST
+            value: mariadb
+          - name: DB_PORT
+            value: 3306
+          - name: DB_USERNAME
+            value: lychee
+          - name: DB_PASSWORD
+            value: dbpassword
+          - name: DB_DATABASE
+            value: lychee
         ports: 
           - containerPort: 80
             name: p80

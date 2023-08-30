@@ -1,13 +1,9 @@
-{{- $GitVersion := .Capabilities.KubeVersion.GitVersion }}
-{{- $labels := include "base-chart.labels" . }}
+{{- $GitVersion := .Capabilities.KubeVersion.GitVersion -}}
+{{- $labels := include "base-chart.labels" . -}}
 {{- $fullName := include "base-chart.fullname" . -}}
 {{- range .Values.ingresses }}
-{{- if not .disabled -}}
-{{- if semverCompare ">=1.14-0" $GitVersion -}}
-apiVersion: networking.k8s.io/v1beta1
-{{- else -}}
-apiVersion: extensions/v1beta1
-{{- end }}
+{{- if not .disabled }}
+apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: {{ .name }}
@@ -18,6 +14,9 @@ metadata:
     {{- toYaml . | nindent 4 }}
   {{- end }}
 spec:
+  {{- if .ingressClassName }}
+  ingressClassName: {{ .ingressClassName }}
+  {{- end }}
 {{- if .tls }}
   tls:
   {{- range .tls }}
@@ -28,18 +27,23 @@ spec:
       secretName: {{ .secretName }}
   {{- end }}
 {{- end }}
+{{- if .rules }}
   rules:
   {{- range .rules }}
     - http:
         paths:
           - path: {{ .path }}
+            pathType: {{ .pathType }}
             backend:
-              serviceName: {{ .serviceName | default $fullName }}
-              servicePort: {{ .servicePort }}
+              service:
+                name: {{ .serviceName | default $fullName }}
+                port: 
+                  number: {{ .servicePort }}
     {{- if .host }}
       host: {{ .host | quote }}
-    {{- end}}
+    {{- end }}
   {{- end }}
+{{- end }}
 ---
-{{- end -}}
+{{- end }}
 {{- end }}

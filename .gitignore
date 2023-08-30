@@ -5,6 +5,7 @@
 ### Helm ###
 # Chart dependencies
 **/charts/*.tgz
+**/real-values.yaml
 
 ### Linux ###
 *~

@@ -1,0 +1,28 @@
+{{- $GitVersion := .Capabilities.KubeVersion.GitVersion -}}
+{{- $labels := include "base-chart.labels" . -}}
+{{- $fullName := include "base-chart.fullname" . -}}
+apiVersion: apps/v1
+kind: StatefulSet
+
+metadata:
+  name: {{ $fullName }}
+  labels: {{- include "base-chart.labels" . | nindent 4 }}
+
+spec:
+  podManagementPolicy: {{ .Values.statefulset.podManagementPolicy | default "OrderedReady" }}
+  replicas: {{ .Values.statefulset.replicas | default 1 }}
+  revisionHistoryLimit: {{ .Values.statefulset.revisionHistoryLimit | default 10}}
+  selector:
+    matchLabels: 
+      {{- include "base-chart.selectorLabels" . | nindent 6 }}
+  serviceName: svc-{{ $fullName }}
+  template:
+    metadata: 
+      labels:
+        {{- include "base-chart.selectorLabels" . | nindent 8 }}
+    spec:
+      {{- toYaml .Values.statefulset.spec  | nindent 6 }}
+      {{- include "mapper.containers" . | indent 6 -}}
+      volumes: {{- include "mapper.volumes" . | indent 8 }}
+  updateStrategy: {{ toYaml .Values.statefulset.updateStrategy | nindent 4 }}
+{{ include "mapper.volumeClaims" . | indent 2 }}

@@ -31,9 +31,10 @@ containers-pod:
     - name: {{name}}
       # disabled: true
       annotations:
-        kkubernetes.io/ingress.class: traefik
-        traefik.ingress.kubernetes.io/rule-type: PathPrefixStrip
-        traefik.ingress.kubernetes.io/preserve-host: "false"
+        kubernetes.io/ingress.class: nginx
+        cert-manager.io/issuer: letsencrypt-staging
+        cert-manager.io/issuer-kind: ClusterIssuer
+      ingressClassName: nginx
       rules:
         {{#rules}}
         - path: '/'
@@ -58,13 +59,11 @@ containers-pod:
           server: 192.168.1.10
           path: /appdata
     # Shared environment variables - would be concat to the start of the array
-    sharedEnv:
-      - name: GUID
-        value: '1000'
-      - name: PUID
-        value: '1000'
-      - name: TZ
-        value: Asia/Jerusalem
+    sharedEnv: {{^defaultEnv}}[]{{/defaultEnv}}
+      {{#defaultEnv}}
+      - name: {{name}}
+        value: {{{value}}}
+      {{/defaultEnv}}
     # Shared containers values - can be override by setting the field in the container declaration
     sharedValues:
       imagePullPolicy: IfNotPresent
@@ -96,3 +95,5 @@ containers-pod:
             subPath: {{{subPath}}}
           {{/volumeMounts}} 
   {{/containers}}
+
+  static_volumes: []

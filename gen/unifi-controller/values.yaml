@@ -17,6 +17,9 @@ containers-pod:
   service:
     type: ClusterIP
     ports: 
+      - port: 8443
+        targetPort: 8443
+        name: p8443
       - port: 3478
         targetPort: 3478
         name: p3478udp
@@ -28,9 +31,6 @@ containers-pod:
       - port: 8080
         targetPort: 8080
         name: p8080
-      - port: 8443
-        targetPort: 8443
-        name: p8443
       - port: 1900
         targetPort: 1900
         name: p1900udp
@@ -46,20 +46,21 @@ containers-pod:
         name: p6789
       - port: 5514
         targetPort: 5514
-        name: p5514
+        name: p5514udp
+        protocol: UDP
 
   ingresses: 
     - name: unifi-controller
       # disabled: true
       annotations:
-        kkubernetes.io/ingress.class: traefik
+        kubernetes.io/ingress.class: nginx
         traefik.ingress.kubernetes.io/rule-type: PathPrefixStrip
         traefik.ingress.kubernetes.io/preserve-host: "false"
       rules:
         - path: '/'
           serviceName: p10001/udp
           servicePort: 10001&#x2F;udp
-          host: unifi-controller.k3s
+          host: unifi-controller.e-kavallieri.local
 
   pod:
     replicas: 1
@@ -76,13 +77,13 @@ containers-pod:
           server: 192.168.1.10
           path: /appdata
     # Shared environment variables - would be concat to the start of the array
-    sharedEnv:
+    sharedEnv: 
       - name: GUID
-        value: '1000'
+        value: 1000
       - name: PUID
-        value: '1000'
+        value: 1000
       - name: TZ
-        value: Asia/Jerusalem
+        value: Etc/UTC
     # Shared containers values - can be override by setting the field in the container declaration
     sharedValues:
       imagePullPolicy: IfNotPresent
@@ -92,9 +93,11 @@ containers-pod:
     # Docs: https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.18/#container-v1-core
     containers:
       - name: unifi
-        image: linuxserver/unifi-controller
+        image: lscr.io/linuxserver/unifi-controller:latest
         env: []
         ports: 
+          - containerPort: 8443
+            name: p8443
           - containerPort: 3478
             name: p3478udp
             protocol: UDP
@@ -103,8 +106,6 @@ containers-pod:
             protocol: UDP
           - containerPort: 8080
             name: p8080
-          - containerPort: 8443
-            name: p8443
           - containerPort: 1900
             name: p1900udp
             protocol: UDP
@@ -114,6 +115,7 @@ containers-pod:
             name: p8880 #optional
           - containerPort: 6789 #optional
             name: p6789 #optional
-          - containerPort: 5514 #optional
-            name: p5514 #optional
+          - containerPort: 5514
+            name: p5514udp
+            protocol: UDP
         volumeMounts: []

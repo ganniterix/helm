@@ -1,0 +1,74 @@
+# Default values for containers-pod.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+containers-pod:
+  nameOverride: syslog-ng
+  fullnameOverride: ""
+
+  serviceAccount:
+    # Specifies whether a service account should be created
+    create: true
+    # Annotations to add to the service account
+    annotations: {}
+    # The name of the service account to use.
+    # If not set and create is true, a name is generated using the fullname template
+    name:
+
+  service:
+    type: ClusterIP
+    ports: 
+      - port: 5514
+        targetPort: 5514
+        name: p5514udp
+        protocol: UDP
+      - port: 6601
+        targetPort: 6601
+        name: p6601
+      - port: 6514
+        targetPort: 6514
+        name: p6514
+
+  ingresses: []
+
+  pod:
+    replicas: 1
+    imagePullSecrets: []
+    podSecurityContext: {}
+    nodeSelector: {}
+    tolerations: []
+    affinity: {}
+    # Volumes to mount
+    # Docs: https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.18/#volume-v1-core
+    volumes:
+      - name: appdata
+        nfs: 
+          server: 192.168.1.10
+          path: /appdata
+    # Shared environment variables - would be concat to the start of the array
+    sharedEnv: 
+      - name: GUID
+        value: 1000
+      - name: PUID
+        value: 1000
+      - name: TZ
+        value: Etc/UTC
+    # Shared containers values - can be override by setting the field in the container declaration
+    sharedValues:
+      imagePullPolicy: IfNotPresent
+      securityContext: {}
+      resources: {}
+    # The containers to deploy
+    # Docs: https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.18/#container-v1-core
+    containers:
+      - name: syslog
+        image: lscr.io/linuxserver/syslog-ng:latest
+        env: []
+        ports: 
+          - containerPort: 5514
+            name: p5514udp
+            protocol: UDP
+          - containerPort: 6601
+            name: p6601
+          - containerPort: 6514
+            name: p6514
+        volumeMounts: []

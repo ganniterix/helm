@@ -62,20 +62,69 @@ Create the name of the service account to use
 {{- end -}}
 {{- end -}}
 
+{{/* Prepare volume mounts from static mounts*/}}
+{{ define "mapper.staticpvcmounts"}}
+{{- $releasename := default "rl-test" .Release.Name -}}
+{{- $namespace := default "ns-test" .Release.Namespace -}}
+volumeMounts:
+{{-   range .Values.static_volumes | default list }}
+- name: {{ $releasename }}-{{ $namespace }}-{{ .name }}-pv
+  mountPath: {{ .volumeMount.mountPath }}
+  {{- if .volumeMount.subPath }}
+  subPath: {{ .volumeMount.subPath }}
+  {{- end }}
+{{    end}}
+{{-   range .Values.statefulset.volumes }}
+- name: {{ .name }}
+{{ toYaml .volumeMount | indent 2 }}
+{{-   end }}
+{{-   range .Values.statefulset.volumeClaimTemplates }}
+- name: {{ .volumeClaimTemplate.metadata.name }}
+{{ toYaml .volumeMount | indent 2 }}
+{{-   end }}
+{{ end }}
+
 {{/*
 Map a container values to a container template
 Reference: https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.18/#container-v1-core
 */}}
 {{ define "mapper.containers" }}
-{{- $sharedValues := .Values.pod.sharedValues | default dict }}
-{{- $sharedEnv := .Values.pod.sharedEnv | default list }}
+{{- $sharedValues := .Values.statefulset.sharedValues | default dict }}
+{{- $sharedEnv := .Values.statefulset.sharedEnv | default list }}
+{{- $staticpvcmounts := fromYaml (include "mapper.staticpvcmounts" .) }}
 containers:
-{{- range .Values.pod.containers -}}
+{{- range .Values.statefulset.containers }}
   {{- $container := (merge . $sharedValues) }}
   {{- $env := concat $sharedEnv (.env | default list) | default list }}
   {{- $_ := unset $container "env" }}
-  - env:
-{{ toYaml $env | indent 4 }}
-{{ toYaml $container | indent 4}}
+  - env: {{ toYaml $env | nindent 6 -}}
+{{ toYaml $staticpvcmounts | nindent 4 }}
+{{ toYaml $container | indent 4 }}
 {{- end }}
 {{ end }}
+
+{{/*
+Create a map with the static volumes and other defined volumes
+*/}}
+{{- define "mapper.volumes" -}}
+{{- $releasename := default "rl-test" .Release.Name -}}
+{{- $namespace := default "ns-test" .Release.Namespace -}}
+{{- range .Values.static_volumes }}
+- name: {{ $releasename }}-{{ $namespace }}-{{ .name }}-pv
+  persistentVolumeClaim:
+    claimName: {{ $releasename }}-{{ $namespace }}-{{ .name }}-pvc
+{{- end }}
+{{- range .Values.statefulset.volumes }}
+- name: {{ .name }}
+{{ toYaml .volume | indent 2 }}
+{{- end }}
+{{- end -}}
+
+{{- define "mapper.volumeClaims" }}
+{{- $templatesList := list }}
+{{-   range .Values.statefulset.volumeClaimTemplates }}
+{{- $templatesList = append $templatesList .volumeClaimTemplate }}
+{{-   end}}
+{{- $output := dict "volumeClaimTemplates" $templatesList }}
+{{ toYaml $output | nindent 0 }}
+{{- end }}
