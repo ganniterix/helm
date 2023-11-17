@@ -34,7 +34,7 @@ base-chart:
             secretName: grocy-certsecret
         rules:
           - path: '/'
-            serviceName: p80-tcp
+            serviceName: grocy
             servicePort: 80
             host: grocy.e-kavallieri.com
             pathType: Prefix

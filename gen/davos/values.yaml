@@ -34,7 +34,7 @@ base-chart:
             secretName: davos-certsecret
         rules:
           - path: '/'
-            serviceName: p8080-tcp
+            serviceName: davos
             servicePort: 8080
             host: davos.e-kavallieri.com
             pathType: Prefix

@@ -38,7 +38,7 @@ base-chart:
             secretName: pydio-cells-certsecret
         rules:
           - path: '/'
-            serviceName: p33060-tcp
+            serviceName: pydio-cells
             servicePort: 33060
             host: pydio-cells.e-kavallieri.com
             pathType: Prefix

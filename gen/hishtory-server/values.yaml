@@ -34,7 +34,7 @@ base-chart:
             secretName: hishtory-server-certsecret
         rules:
           - path: '/'
-            serviceName: p8080-tcp
+            serviceName: hishtory-server
             servicePort: 8080
             host: hishtory-server.e-kavallieri.com
             pathType: Prefix

@@ -38,7 +38,7 @@ base-chart:
             secretName: habridge-certsecret
         rules:
           - path: '/'
-            serviceName: p8080-tcp
+            serviceName: habridge
             servicePort: 8080
             host: habridge.e-kavallieri.com
             pathType: Prefix

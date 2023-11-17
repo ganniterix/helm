@@ -38,7 +38,7 @@ base-chart:
             secretName: lollypop-certsecret
         rules:
           - path: '/'
-            serviceName: p3000-tcp
+            serviceName: lollypop
             servicePort: 3000
             host: lollypop.e-kavallieri.com
             pathType: Prefix

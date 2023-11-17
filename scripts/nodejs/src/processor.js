@@ -124,7 +124,7 @@ const generateValues =
         host: `${name}.${config.chart.host}`,
         rules: [
           {
-            name: "p" + uiPort[0] + "-tcp",
+            r_name: "p" + uiPort[0] + "-tcp",
             port: uiPort[0],
             host: `${name}.${config.chart.host}`,
           },

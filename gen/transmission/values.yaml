@@ -42,7 +42,7 @@ base-chart:
             secretName: transmission-certsecret
         rules:
           - path: '/'
-            serviceName: p9091-tcp
+            serviceName: transmission
             servicePort: 9091
             host: transmission.e-kavallieri.com
             pathType: Prefix

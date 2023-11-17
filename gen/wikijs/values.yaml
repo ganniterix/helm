@@ -34,7 +34,7 @@ base-chart:
             secretName: wikijs-certsecret
         rules:
           - path: '/'
-            serviceName: p3000-tcp
+            serviceName: wikijs
             servicePort: 3000
             host: wikijs.e-kavallieri.com
             pathType: Prefix

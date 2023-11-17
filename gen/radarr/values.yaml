@@ -34,7 +34,7 @@ base-chart:
             secretName: radarr-certsecret
         rules:
           - path: '/'
-            serviceName: p7878-tcp
+            serviceName: radarr
             servicePort: 7878
             host: radarr.e-kavallieri.com
             pathType: Prefix

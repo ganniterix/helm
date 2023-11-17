@@ -42,7 +42,7 @@ base-chart:
             secretName: minisatip-certsecret
         rules:
           - path: '/'
-            serviceName: p8875-tcp
+            serviceName: minisatip
             servicePort: 8875
             host: minisatip.e-kavallieri.com
             pathType: Prefix

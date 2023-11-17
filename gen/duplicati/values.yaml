@@ -34,7 +34,7 @@ base-chart:
             secretName: duplicati-certsecret
         rules:
           - path: '/'
-            serviceName: p8200-tcp
+            serviceName: duplicati
             servicePort: 8200
             host: duplicati.e-kavallieri.com
             pathType: Prefix

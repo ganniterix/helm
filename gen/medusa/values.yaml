@@ -34,7 +34,7 @@ base-chart:
             secretName: medusa-certsecret
         rules:
           - path: '/'
-            serviceName: p8081-tcp
+            serviceName: medusa
             servicePort: 8081
             host: medusa.e-kavallieri.com
             pathType: Prefix

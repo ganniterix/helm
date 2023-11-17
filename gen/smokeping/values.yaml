@@ -34,7 +34,7 @@ base-chart:
             secretName: smokeping-certsecret
         rules:
           - path: '/'
-            serviceName: p80-tcp
+            serviceName: smokeping
             servicePort: 80
             host: smokeping.e-kavallieri.com
             pathType: Prefix

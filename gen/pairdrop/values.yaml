@@ -34,7 +34,7 @@ base-chart:
             secretName: pairdrop-certsecret
         rules:
           - path: '/'
-            serviceName: p3000-tcp
+            serviceName: pairdrop
             servicePort: 3000
             host: pairdrop.e-kavallieri.com
             pathType: Prefix

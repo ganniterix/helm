@@ -34,7 +34,7 @@ base-chart:
             secretName: pwndrop-certsecret
         rules:
           - path: '/'
-            serviceName: p8080-tcp
+            serviceName: pwndrop
             servicePort: 8080
             host: pwndrop.e-kavallieri.com
             pathType: Prefix

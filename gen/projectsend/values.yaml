@@ -34,7 +34,7 @@ base-chart:
             secretName: projectsend-certsecret
         rules:
           - path: '/'
-            serviceName: p80-tcp
+            serviceName: projectsend
             servicePort: 80
             host: projectsend.e-kavallieri.com
             pathType: Prefix

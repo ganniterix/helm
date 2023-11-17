@@ -34,7 +34,7 @@ base-chart:
             secretName: bazarr-certsecret
         rules:
           - path: '/'
-            serviceName: p6767-tcp
+            serviceName: bazarr
             servicePort: 6767
             host: bazarr.e-kavallieri.com
             pathType: Prefix

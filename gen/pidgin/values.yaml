@@ -38,7 +38,7 @@ base-chart:
             secretName: pidgin-certsecret
         rules:
           - path: '/'
-            serviceName: p3000-tcp
+            serviceName: pidgin
             servicePort: 3000
             host: pidgin.e-kavallieri.com
             pathType: Prefix

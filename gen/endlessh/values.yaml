@@ -34,7 +34,7 @@ base-chart:
             secretName: endlessh-certsecret
         rules:
           - path: '/'
-            serviceName: p2222-tcp
+            serviceName: endlessh
             servicePort: 2222
             host: endlessh.e-kavallieri.com
             pathType: Prefix

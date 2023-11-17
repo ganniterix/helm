@@ -34,7 +34,7 @@ base-chart:
             secretName: piwigo-certsecret
         rules:
           - path: '/'
-            serviceName: p80-tcp
+            serviceName: piwigo
             servicePort: 80
             host: piwigo.e-kavallieri.com
             pathType: Prefix

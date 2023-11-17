@@ -38,7 +38,7 @@ base-chart:
             secretName: emby-certsecret
         rules:
           - path: '/'
-            serviceName: p8096-tcp
+            serviceName: emby
             servicePort: 8096
             host: emby.e-kavallieri.com
             pathType: Prefix

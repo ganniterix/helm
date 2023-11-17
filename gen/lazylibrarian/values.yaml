@@ -34,7 +34,7 @@ base-chart:
             secretName: lazylibrarian-certsecret
         rules:
           - path: '/'
-            serviceName: p5299-tcp
+            serviceName: lazylibrarian
             servicePort: 5299
             host: lazylibrarian.e-kavallieri.com
             pathType: Prefix

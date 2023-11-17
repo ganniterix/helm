@@ -34,7 +34,7 @@ base-chart:
             secretName: bookstack-certsecret
         rules:
           - path: '/'
-            serviceName: p80-tcp
+            serviceName: bookstack
             servicePort: 80
             host: bookstack.e-kavallieri.com
             pathType: Prefix

@@ -66,7 +66,7 @@ base-chart:
             secretName: unifi-network-application-certsecret
         rules:
           - path: '/'
-            serviceName: p10001/udp-tcp
+            serviceName: unifi-network-application
             servicePort: 10001&#x2F;udp
             host: unifi-network-application.e-kavallieri.com
             pathType: Prefix

@@ -34,7 +34,7 @@ base-chart:
             secretName: prowlarr-certsecret
         rules:
           - path: '/'
-            serviceName: p9696-tcp
+            serviceName: prowlarr
             servicePort: 9696
             host: prowlarr.e-kavallieri.com
             pathType: Prefix

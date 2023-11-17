@@ -34,7 +34,7 @@ base-chart:
             secretName: dillinger-certsecret
         rules:
           - path: '/'
-            serviceName: p8080-tcp
+            serviceName: dillinger
             servicePort: 8080
             host: dillinger.e-kavallieri.com
             pathType: Prefix

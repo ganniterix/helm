@@ -38,7 +38,7 @@ base-chart:
             secretName: mullvad-browser-certsecret
         rules:
           - path: '/'
-            serviceName: p3000-tcp
+            serviceName: mullvad-browser
             servicePort: 3000
             host: mullvad-browser.e-kavallieri.com
             pathType: Prefix

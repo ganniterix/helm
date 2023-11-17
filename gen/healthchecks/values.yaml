@@ -38,7 +38,7 @@ base-chart:
             secretName: healthchecks-certsecret
         rules:
           - path: '/'
-            serviceName: p8000-tcp
+            serviceName: healthchecks
             servicePort: 8000
             host: healthchecks.e-kavallieri.com
             pathType: Prefix

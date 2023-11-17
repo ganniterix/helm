@@ -34,7 +34,7 @@ base-chart:
             secretName: sabnzbd-certsecret
         rules:
           - path: '/'
-            serviceName: p8080-tcp
+            serviceName: sabnzbd
             servicePort: 8080
             host: sabnzbd.e-kavallieri.com
             pathType: Prefix

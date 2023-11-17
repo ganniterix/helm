@@ -34,7 +34,7 @@ base-chart:
             secretName: tautulli-certsecret
         rules:
           - path: '/'
-            serviceName: p8181-tcp
+            serviceName: tautulli
             servicePort: 8181
             host: tautulli.e-kavallieri.com
             pathType: Prefix

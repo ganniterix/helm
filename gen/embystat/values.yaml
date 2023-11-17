@@ -34,7 +34,7 @@ base-chart:
             secretName: embystat-certsecret
         rules:
           - path: '/'
-            serviceName: p6555-tcp
+            serviceName: embystat
             servicePort: 6555
             host: embystat.e-kavallieri.com
             pathType: Prefix

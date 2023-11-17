@@ -34,7 +34,7 @@ base-chart:
             secretName: openssh-server-certsecret
         rules:
           - path: '/'
-            serviceName: p2222-tcp
+            serviceName: openssh-server
             servicePort: 2222
             host: openssh-server.e-kavallieri.com
             pathType: Prefix

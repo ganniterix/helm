@@ -34,7 +34,7 @@ base-chart:
             secretName: overseerr-certsecret
         rules:
           - path: '/'
-            serviceName: p5055-tcp
+            serviceName: overseerr
             servicePort: 5055
             host: overseerr.e-kavallieri.com
             pathType: Prefix

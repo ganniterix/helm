@@ -34,7 +34,7 @@ base-chart:
             secretName: changedetection.io-certsecret
         rules:
           - path: '/'
-            serviceName: p5000-tcp
+            serviceName: changedetection.io
             servicePort: 5000
             host: changedetection.io.e-kavallieri.com
             pathType: Prefix

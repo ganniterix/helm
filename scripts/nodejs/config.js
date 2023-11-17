@@ -32,8 +32,8 @@ module.exports = {
     },
   },
   versions: {
-    chartVersion: "0.2.2",
-    appVersion: "0.2.2",
+    chartVersion: "0.2.3",
+    appVersion: "0.2.3",
     baseChartVersion: "0.4.1",
   },
   chart: {

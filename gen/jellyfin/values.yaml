@@ -46,7 +46,7 @@ base-chart:
             secretName: jellyfin-certsecret
         rules:
           - path: '/'
-            serviceName: p8096-tcp
+            serviceName: jellyfin
             servicePort: 8096
             host: jellyfin.e-kavallieri.com
             pathType: Prefix

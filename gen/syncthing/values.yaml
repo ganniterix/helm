@@ -46,7 +46,7 @@ base-chart:
             secretName: syncthing-certsecret
         rules:
           - path: '/'
-            serviceName: p8384-tcp
+            serviceName: syncthing
             servicePort: 8384
             host: syncthing.e-kavallieri.com
             pathType: Prefix

@@ -34,7 +34,7 @@ base-chart:
             secretName: fleet-certsecret
         rules:
           - path: '/'
-            serviceName: p8080-tcp
+            serviceName: fleet
             servicePort: 8080
             host: fleet.e-kavallieri.com
             pathType: Prefix

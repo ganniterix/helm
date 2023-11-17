@@ -34,7 +34,7 @@ base-chart:
             secretName: znc-certsecret
         rules:
           - path: '/'
-            serviceName: p6501-tcp
+            serviceName: znc
             servicePort: 6501
             host: znc.e-kavallieri.com
             pathType: Prefix

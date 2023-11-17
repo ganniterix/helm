@@ -34,7 +34,7 @@ base-chart:
             secretName: nzbhydra2-certsecret
         rules:
           - path: '/'
-            serviceName: p5076-tcp
+            serviceName: nzbhydra2
             servicePort: 5076
             host: nzbhydra2.e-kavallieri.com
             pathType: Prefix

@@ -34,7 +34,7 @@ base-chart:
             secretName: limnoria-certsecret
         rules:
           - path: '/'
-            serviceName: p8080-tcp
+            serviceName: limnoria
             servicePort: 8080
             host: limnoria.e-kavallieri.com
             pathType: Prefix

@@ -34,7 +34,7 @@ base-chart:
             secretName: raneto-certsecret
         rules:
           - path: '/'
-            serviceName: p3000-tcp
+            serviceName: raneto
             servicePort: 3000
             host: raneto.e-kavallieri.com
             pathType: Prefix

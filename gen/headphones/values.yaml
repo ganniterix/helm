@@ -34,7 +34,7 @@ base-chart:
             secretName: headphones-certsecret
         rules:
           - path: '/'
-            serviceName: p8181-tcp
+            serviceName: headphones
             servicePort: 8181
             host: headphones.e-kavallieri.com
             pathType: Prefix

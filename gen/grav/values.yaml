@@ -34,7 +34,7 @@ base-chart:
             secretName: grav-certsecret
         rules:
           - path: '/'
-            serviceName: p80-tcp
+            serviceName: grav
             servicePort: 80
             host: grav.e-kavallieri.com
             pathType: Prefix

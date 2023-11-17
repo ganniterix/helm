@@ -38,7 +38,7 @@ base-chart:
             secretName: resilio-sync-certsecret
         rules:
           - path: '/'
-            serviceName: p8888-tcp
+            serviceName: resilio-sync
             servicePort: 8888
             host: resilio-sync.e-kavallieri.com
             pathType: Prefix

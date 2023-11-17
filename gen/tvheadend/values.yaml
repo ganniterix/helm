@@ -38,7 +38,7 @@ base-chart:
             secretName: tvheadend-certsecret
         rules:
           - path: '/'
-            serviceName: p9981-tcp
+            serviceName: tvheadend
             servicePort: 9981
             host: tvheadend.e-kavallieri.com
             pathType: Prefix

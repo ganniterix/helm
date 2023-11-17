@@ -38,7 +38,7 @@ base-chart:
             secretName: qdirstat-certsecret
         rules:
           - path: '/'
-            serviceName: p3000-tcp
+            serviceName: qdirstat
             servicePort: 3000
             host: qdirstat.e-kavallieri.com
             pathType: Prefix

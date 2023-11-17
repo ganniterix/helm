@@ -38,7 +38,7 @@ base-chart:
             secretName: audacity-certsecret
         rules:
           - path: '/'
-            serviceName: p3000-tcp
+            serviceName: audacity
             servicePort: 3000
             host: audacity.e-kavallieri.com
             pathType: Prefix

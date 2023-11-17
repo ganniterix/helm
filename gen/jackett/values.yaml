@@ -34,7 +34,7 @@ base-chart:
             secretName: jackett-certsecret
         rules:
           - path: '/'
-            serviceName: p9117-tcp
+            serviceName: jackett
             servicePort: 9117
             host: jackett.e-kavallieri.com
             pathType: Prefix

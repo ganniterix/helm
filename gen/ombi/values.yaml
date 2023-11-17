@@ -34,7 +34,7 @@ base-chart:
             secretName: ombi-certsecret
         rules:
           - path: '/'
-            serviceName: p3579-tcp
+            serviceName: ombi
             servicePort: 3579
             host: ombi.e-kavallieri.com
             pathType: Prefix

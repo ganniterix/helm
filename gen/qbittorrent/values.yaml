@@ -42,7 +42,7 @@ base-chart:
             secretName: qbittorrent-certsecret
         rules:
           - path: '/'
-            serviceName: p8080-tcp
+            serviceName: qbittorrent
             servicePort: 8080
             host: qbittorrent.e-kavallieri.com
             pathType: Prefix

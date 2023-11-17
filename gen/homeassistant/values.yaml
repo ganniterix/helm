@@ -34,7 +34,7 @@ base-chart:
             secretName: homeassistant-certsecret
         rules:
           - path: '/'
-            serviceName: p8123-tcp
+            serviceName: homeassistant
             servicePort: 8123
             host: homeassistant.e-kavallieri.com
             pathType: Prefix

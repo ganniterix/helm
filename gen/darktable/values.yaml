@@ -38,7 +38,7 @@ base-chart:
             secretName: darktable-certsecret
         rules:
           - path: '/'
-            serviceName: p3000-tcp
+            serviceName: darktable
             servicePort: 3000
             host: darktable.e-kavallieri.com
             pathType: Prefix

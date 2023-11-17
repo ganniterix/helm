@@ -38,7 +38,7 @@ base-chart:
             secretName: your_spotify-certsecret
         rules:
           - path: '/'
-            serviceName: p80-tcp
+            serviceName: your_spotify
             servicePort: 80
             host: your_spotify.e-kavallieri.com
             pathType: Prefix

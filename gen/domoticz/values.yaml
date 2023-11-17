@@ -42,7 +42,7 @@ base-chart:
             secretName: domoticz-certsecret
         rules:
           - path: '/'
-            serviceName: p8080-tcp
+            serviceName: domoticz
             servicePort: 8080
             host: domoticz.e-kavallieri.com
             pathType: Prefix

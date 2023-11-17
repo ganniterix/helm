@@ -34,7 +34,7 @@ base-chart:
             secretName: freshrss-certsecret
         rules:
           - path: '/'
-            serviceName: p80-tcp
+            serviceName: freshrss
             servicePort: 80
             host: freshrss.e-kavallieri.com
             pathType: Prefix

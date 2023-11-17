@@ -42,7 +42,7 @@ base-chart:
             secretName: deluge-certsecret
         rules:
           - path: '/'
-            serviceName: p8112-tcp
+            serviceName: deluge
             servicePort: 8112
             host: deluge.e-kavallieri.com
             pathType: Prefix

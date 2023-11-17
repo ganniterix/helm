@@ -34,7 +34,7 @@ base-chart:
             secretName: quassel-web-certsecret
         rules:
           - path: '/'
-            serviceName: p64443-tcp
+            serviceName: quassel-web
             servicePort: 64443
             host: quassel-web.e-kavallieri.com
             pathType: Prefix

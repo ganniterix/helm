@@ -34,7 +34,7 @@ base-chart:
             secretName: cops-certsecret
         rules:
           - path: '/'
-            serviceName: p80-tcp
+            serviceName: cops
             servicePort: 80
             host: cops.e-kavallieri.com
             pathType: Prefix

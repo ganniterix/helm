@@ -34,7 +34,7 @@ base-chart:
             secretName: sickchill-certsecret
         rules:
           - path: '/'
-            serviceName: p8081-tcp
+            serviceName: sickchill
             servicePort: 8081
             host: sickchill.e-kavallieri.com
             pathType: Prefix

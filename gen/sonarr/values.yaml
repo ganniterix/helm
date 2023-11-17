@@ -34,7 +34,7 @@ base-chart:
             secretName: sonarr-certsecret
         rules:
           - path: '/'
-            serviceName: p8989-tcp
+            serviceName: sonarr
             servicePort: 8989
             host: sonarr.e-kavallieri.com
             pathType: Prefix

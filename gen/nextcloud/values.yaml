@@ -34,7 +34,7 @@ base-chart:
             secretName: nextcloud-certsecret
         rules:
           - path: '/'
-            serviceName: p443-tcp
+            serviceName: nextcloud
             servicePort: 443
             host: nextcloud.e-kavallieri.com
             pathType: Prefix

@@ -34,7 +34,7 @@ base-chart:
             secretName: htpcmanager-certsecret
         rules:
           - path: '/'
-            serviceName: p8085-tcp
+            serviceName: htpcmanager
             servicePort: 8085
             host: htpcmanager.e-kavallieri.com
             pathType: Prefix

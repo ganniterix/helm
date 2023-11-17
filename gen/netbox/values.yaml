@@ -34,7 +34,7 @@ base-chart:
             secretName: netbox-certsecret
         rules:
           - path: '/'
-            serviceName: p8000-tcp
+            serviceName: netbox
             servicePort: 8000
             host: netbox.e-kavallieri.com
             pathType: Prefix

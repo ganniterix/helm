@@ -34,7 +34,7 @@ base-chart:
             secretName: snipe-it-certsecret
         rules:
           - path: '/'
-            serviceName: p80-tcp
+            serviceName: snipe-it
             servicePort: 80
             host: snipe-it.e-kavallieri.com
             pathType: Prefix

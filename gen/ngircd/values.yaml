@@ -34,7 +34,7 @@ base-chart:
             secretName: ngircd-certsecret
         rules:
           - path: '/'
-            serviceName: p6667-tcp
+            serviceName: ngircd
             servicePort: 6667
             host: ngircd.e-kavallieri.com
             pathType: Prefix

@@ -34,7 +34,7 @@ base-chart:
             secretName: pylon-certsecret
         rules:
           - path: '/'
-            serviceName: p3131-tcp
+            serviceName: pylon
             servicePort: 3131
             host: pylon.e-kavallieri.com
             pathType: Prefix

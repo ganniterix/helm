@@ -34,7 +34,7 @@ base-chart:
             secretName: code-server-certsecret
         rules:
           - path: '/'
-            serviceName: p8443-tcp
+            serviceName: code-server
             servicePort: 8443
             host: code-server.e-kavallieri.com
             pathType: Prefix

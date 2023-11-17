@@ -34,7 +34,7 @@ base-chart:
             secretName: beets-certsecret
         rules:
           - path: '/'
-            serviceName: p8337-tcp
+            serviceName: beets
             servicePort: 8337
             host: beets.e-kavallieri.com
             pathType: Prefix

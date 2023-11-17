@@ -34,7 +34,7 @@ base-chart:
             secretName: mstream-certsecret
         rules:
           - path: '/'
-            serviceName: p3000-tcp
+            serviceName: mstream
             servicePort: 3000
             host: mstream.e-kavallieri.com
             pathType: Prefix

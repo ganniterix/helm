@@ -34,7 +34,7 @@ base-chart:
             secretName: mylar3-certsecret
         rules:
           - path: '/'
-            serviceName: p8090-tcp
+            serviceName: mylar3
             servicePort: 8090
             host: mylar3.e-kavallieri.com
             pathType: Prefix

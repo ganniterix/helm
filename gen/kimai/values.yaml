@@ -38,7 +38,7 @@ base-chart:
             secretName: kimai-certsecret
         rules:
           - path: '/'
-            serviceName: p80-tcp
+            serviceName: kimai
             servicePort: 80
             host: kimai.e-kavallieri.com
             pathType: Prefix

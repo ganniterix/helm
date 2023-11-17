@@ -34,7 +34,7 @@ base-chart:
             secretName: openvscode-server-certsecret
         rules:
           - path: '/'
-            serviceName: p3000-tcp
+            serviceName: openvscode-server
             servicePort: 3000
             host: openvscode-server.e-kavallieri.com
             pathType: Prefix

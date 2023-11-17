@@ -38,7 +38,7 @@ base-chart:
             secretName: series-troxide-certsecret
         rules:
           - path: '/'
-            serviceName: p3000-tcp
+            serviceName: series-troxide
             servicePort: 3000
             host: series-troxide.e-kavallieri.com
             pathType: Prefix

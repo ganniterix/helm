@@ -34,7 +34,7 @@ base-chart:
             secretName: librespeed-certsecret
         rules:
           - path: '/'
-            serviceName: p80-tcp
+            serviceName: librespeed
             servicePort: 80
             host: librespeed.e-kavallieri.com
             pathType: Prefix

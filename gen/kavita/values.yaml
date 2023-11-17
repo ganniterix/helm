@@ -34,7 +34,7 @@ base-chart:
             secretName: kavita-certsecret
         rules:
           - path: '/'
-            serviceName: p5000-tcp
+            serviceName: kavita
             servicePort: 5000
             host: kavita.e-kavallieri.com
             pathType: Prefix

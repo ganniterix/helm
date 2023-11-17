@@ -38,7 +38,7 @@ base-chart:
             secretName: libreoffice-certsecret
         rules:
           - path: '/'
-            serviceName: p3000-tcp
+            serviceName: libreoffice
             servicePort: 3000
             host: libreoffice.e-kavallieri.com
             pathType: Prefix

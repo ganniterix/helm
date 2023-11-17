@@ -34,7 +34,7 @@ base-chart:
             secretName: synclounge-certsecret
         rules:
           - path: '/'
-            serviceName: p8088-tcp
+            serviceName: synclounge
             servicePort: 8088
             host: synclounge.e-kavallieri.com
             pathType: Prefix

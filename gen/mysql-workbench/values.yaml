@@ -38,7 +38,7 @@ base-chart:
             secretName: mysql-workbench-certsecret
         rules:
           - path: '/'
-            serviceName: p3000-tcp
+            serviceName: mysql-workbench
             servicePort: 3000
             host: mysql-workbench.e-kavallieri.com
             pathType: Prefix

@@ -34,7 +34,7 @@ base-chart:
             secretName: oscam-certsecret
         rules:
           - path: '/'
-            serviceName: p8888-tcp
+            serviceName: oscam
             servicePort: 8888
             host: oscam.e-kavallieri.com
             pathType: Prefix

@@ -34,7 +34,7 @@ base-chart:
             secretName: mariadb-certsecret
         rules:
           - path: '/'
-            serviceName: p3306-tcp
+            serviceName: mariadb
             servicePort: 3306
             host: mariadb.e-kavallieri.com
             pathType: Prefix

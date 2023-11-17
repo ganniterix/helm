@@ -38,7 +38,7 @@ base-chart:
             secretName: blender-certsecret
         rules:
           - path: '/'
-            serviceName: p3000-tcp
+            serviceName: blender
             servicePort: 3000
             host: blender.e-kavallieri.com
             pathType: Prefix

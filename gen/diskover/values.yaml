@@ -34,7 +34,7 @@ base-chart:
             secretName: diskover-certsecret
         rules:
           - path: '/'
-            serviceName: p80-tcp
+            serviceName: diskover
             servicePort: 80
             host: diskover.e-kavallieri.com
             pathType: Prefix

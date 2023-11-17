@@ -34,7 +34,7 @@ base-chart:
             secretName: flexget-certsecret
         rules:
           - path: '/'
-            serviceName: p5050-tcp
+            serviceName: flexget
             servicePort: 5050
             host: flexget.e-kavallieri.com
             pathType: Prefix

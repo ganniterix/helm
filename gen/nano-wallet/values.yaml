@@ -34,7 +34,7 @@ base-chart:
             secretName: nano-wallet-certsecret
         rules:
           - path: '/'
-            serviceName: p80-tcp
+            serviceName: nano-wallet
             servicePort: 80
             host: nano-wallet.e-kavallieri.com
             pathType: Prefix

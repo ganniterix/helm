@@ -34,7 +34,7 @@ base-chart:
             secretName: readarr-certsecret
         rules:
           - path: '/'
-            serviceName: p8787-tcp
+            serviceName: readarr
             servicePort: 8787
             host: readarr.e-kavallieri.com
             pathType: Prefix

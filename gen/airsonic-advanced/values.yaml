@@ -34,7 +34,7 @@ base-chart:
             secretName: airsonic-advanced-certsecret
         rules:
           - path: '/'
-            serviceName: p4040-tcp
+            serviceName: airsonic-advanced
             servicePort: 4040
             host: airsonic-advanced.e-kavallieri.com
             pathType: Prefix

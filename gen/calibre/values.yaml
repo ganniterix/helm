@@ -42,7 +42,7 @@ base-chart:
             secretName: calibre-certsecret
         rules:
           - path: '/'
-            serviceName: p8080-tcp
+            serviceName: calibre
             servicePort: 8080
             host: calibre.e-kavallieri.com
             pathType: Prefix

@@ -34,7 +34,7 @@ base-chart:
             secretName: adguardhome-sync-certsecret
         rules:
           - path: '/'
-            serviceName: p8080-tcp
+            serviceName: adguardhome-sync
             servicePort: 8080
             host: adguardhome-sync.e-kavallieri.com
             pathType: Prefix

@@ -34,7 +34,7 @@ base-chart:
             secretName: rdesktop-certsecret
         rules:
           - path: '/'
-            serviceName: p3389-tcp
+            serviceName: rdesktop
             servicePort: 3389
             host: rdesktop.e-kavallieri.com
             pathType: Prefix

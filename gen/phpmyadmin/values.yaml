@@ -34,7 +34,7 @@ base-chart:
             secretName: phpmyadmin-certsecret
         rules:
           - path: '/'
-            serviceName: p80-tcp
+            serviceName: phpmyadmin
             servicePort: 80
             host: phpmyadmin.e-kavallieri.com
             pathType: Prefix

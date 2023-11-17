@@ -34,7 +34,7 @@ base-chart:
             secretName: wireguard-certsecret
         rules:
           - path: '/'
-            serviceName: p51820/udp-tcp
+            serviceName: wireguard
             servicePort: 51820&#x2F;udp
             host: wireguard.e-kavallieri.com
             pathType: Prefix

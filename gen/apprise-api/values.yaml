@@ -34,7 +34,7 @@ base-chart:
             secretName: apprise-api-certsecret
         rules:
           - path: '/'
-            serviceName: p8000-tcp
+            serviceName: apprise-api
             servicePort: 8000
             host: apprise-api.e-kavallieri.com
             pathType: Prefix

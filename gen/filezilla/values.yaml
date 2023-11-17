@@ -38,7 +38,7 @@ base-chart:
             secretName: filezilla-certsecret
         rules:
           - path: '/'
-            serviceName: p3000-tcp
+            serviceName: filezilla
             servicePort: 3000
             host: filezilla.e-kavallieri.com
             pathType: Prefix

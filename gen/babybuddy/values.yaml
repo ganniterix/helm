@@ -34,7 +34,7 @@ base-chart:
             secretName: babybuddy-certsecret
         rules:
           - path: '/'
-            serviceName: p8000-tcp
+            serviceName: babybuddy
             servicePort: 8000
             host: babybuddy.e-kavallieri.com
             pathType: Prefix

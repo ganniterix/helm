@@ -38,7 +38,7 @@ base-chart:
             secretName: webtop-certsecret
         rules:
           - path: '/'
-            serviceName: p3000-tcp
+            serviceName: webtop
             servicePort: 3000
             host: webtop.e-kavallieri.com
             pathType: Prefix

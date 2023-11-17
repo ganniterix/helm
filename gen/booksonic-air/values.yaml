@@ -34,7 +34,7 @@ base-chart:
             secretName: booksonic-air-certsecret
         rules:
           - path: '/'
-            serviceName: p4040-tcp
+            serviceName: booksonic-air
             servicePort: 4040
             host: booksonic-air.e-kavallieri.com
             pathType: Prefix

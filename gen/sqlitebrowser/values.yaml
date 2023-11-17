@@ -38,7 +38,7 @@ base-chart:
             secretName: sqlitebrowser-certsecret
         rules:
           - path: '/'
-            serviceName: p3000-tcp
+            serviceName: sqlitebrowser
             servicePort: 3000
             host: sqlitebrowser.e-kavallieri.com
             pathType: Prefix

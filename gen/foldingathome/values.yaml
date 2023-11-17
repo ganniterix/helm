@@ -38,7 +38,7 @@ base-chart:
             secretName: foldingathome-certsecret
         rules:
           - path: '/'
-            serviceName: p7396-tcp
+            serviceName: foldingathome
             servicePort: 7396
             host: foldingathome.e-kavallieri.com
             pathType: Prefix

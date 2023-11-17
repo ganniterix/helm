@@ -34,7 +34,7 @@ base-chart:
             secretName: hedgedoc-certsecret
         rules:
           - path: '/'
-            serviceName: p3000-tcp
+            serviceName: hedgedoc
             servicePort: 3000
             host: hedgedoc.e-kavallieri.com
             pathType: Prefix

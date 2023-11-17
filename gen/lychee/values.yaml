@@ -34,7 +34,7 @@ base-chart:
             secretName: lychee-certsecret
         rules:
           - path: '/'
-            serviceName: p80-tcp
+            serviceName: lychee
             servicePort: 80
             host: lychee.e-kavallieri.com
             pathType: Prefix

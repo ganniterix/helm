@@ -38,7 +38,7 @@ base-chart:
             secretName: snapdrop-certsecret
         rules:
           - path: '/'
-            serviceName: p80-tcp
+            serviceName: snapdrop
             servicePort: 80
             host: snapdrop.e-kavallieri.com
             pathType: Prefix

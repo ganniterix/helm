@@ -38,7 +38,7 @@ base-chart:
             secretName: firefox-certsecret
         rules:
           - path: '/'
-            serviceName: p3000-tcp
+            serviceName: firefox
             servicePort: 3000
             host: firefox.e-kavallieri.com
             pathType: Prefix

@@ -34,7 +34,7 @@ base-chart:
             secretName: thelounge-certsecret
         rules:
           - path: '/'
-            serviceName: p9000-tcp
+            serviceName: thelounge
             servicePort: 9000
             host: thelounge.e-kavallieri.com
             pathType: Prefix

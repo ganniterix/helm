@@ -34,7 +34,7 @@ base-chart:
             secretName: minetest-certsecret
         rules:
           - path: '/'
-            serviceName: p30000/udp-tcp
+            serviceName: minetest
             servicePort: 30000&#x2F;udp
             host: minetest.e-kavallieri.com
             pathType: Prefix

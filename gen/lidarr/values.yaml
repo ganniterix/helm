@@ -34,7 +34,7 @@ base-chart:
             secretName: lidarr-certsecret
         rules:
           - path: '/'
-            serviceName: p8686-tcp
+            serviceName: lidarr
             servicePort: 8686
             host: lidarr.e-kavallieri.com
             pathType: Prefix

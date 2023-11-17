@@ -58,7 +58,7 @@ base-chart:
             secretName: steamos-certsecret
         rules:
           - path: '/'
-            serviceName: p3000-tcp
+            serviceName: steamos
             servicePort: 3000
             host: steamos.e-kavallieri.com
             pathType: Prefix

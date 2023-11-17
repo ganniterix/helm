@@ -38,7 +38,7 @@ base-chart:
             secretName: vscodium-certsecret
         rules:
           - path: '/'
-            serviceName: p3000-tcp
+            serviceName: vscodium
             servicePort: 3000
             host: vscodium.e-kavallieri.com
             pathType: Prefix

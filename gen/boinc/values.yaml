@@ -38,7 +38,7 @@ base-chart:
             secretName: boinc-certsecret
         rules:
           - path: '/'
-            serviceName: p8080-tcp
+            serviceName: boinc
             servicePort: 8080
             host: boinc.e-kavallieri.com
             pathType: Prefix

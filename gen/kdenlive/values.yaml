@@ -38,7 +38,7 @@ base-chart:
             secretName: kdenlive-certsecret
         rules:
           - path: '/'
-            serviceName: p3000-tcp
+            serviceName: kdenlive
             servicePort: 3000
             host: kdenlive.e-kavallieri.com
             pathType: Prefix
