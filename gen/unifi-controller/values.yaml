@@ -1,7 +1,4 @@
-# Default values for containers-pod.
-# This is a YAML-formatted file.
-# Declare variables to be passed into your templates.
-containers-pod:
+base-chart:
   nameOverride: unifi-controller
   fullnameOverride: ""
 
@@ -19,103 +16,135 @@ containers-pod:
     ports: 
       - port: 8443
         targetPort: 8443
-        name: p8443
+        name: p8443-tcp
+        protocol: TCP
       - port: 3478
         targetPort: 3478
-        name: p3478udp
+        name: p3478-udp
         protocol: UDP
       - port: 10001
         targetPort: 10001
-        name: p10001udp
+        name: p10001-udp
         protocol: UDP
       - port: 8080
         targetPort: 8080
-        name: p8080
+        name: p8080-tcp
+        protocol: TCP
       - port: 1900
         targetPort: 1900
-        name: p1900udp
+        name: p1900-udp
         protocol: UDP
       - port: 8843
         targetPort: 8843
-        name: p8843
+        name: p8843-tcp
+        protocol: TCP
       - port: 8880
         targetPort: 8880
-        name: p8880
+        name: p8880-tcp
+        protocol: TCP
       - port: 6789
         targetPort: 6789
-        name: p6789
+        name: p6789-tcp
+        protocol: TCP
       - port: 5514
         targetPort: 5514
-        name: p5514udp
+        name: p5514-udp
         protocol: UDP
 
   ingresses: 
     - name: unifi-controller
       # disabled: true
       annotations:
-        kubernetes.io/ingress.class: nginx
-        traefik.ingress.kubernetes.io/rule-type: PathPrefixStrip
-        traefik.ingress.kubernetes.io/preserve-host: "false"
-      rules:
-        - path: '/'
-          serviceName: p10001/udp
-          servicePort: 10001&#x2F;udp
-          host: unifi-controller.e-kavallieri.local
+        spec.ingressClassName: nginx
+        cert-manager.io/issuer: letsencrypt-staging
+        cert-manager.io/issuer-kind: ClusterIssuer
+      spec:
+        ingressClassName: nginx
+        tls:
+          - hosts:
+              - unifi-controller.e-kavallieri.com
+            secretName: unifi-controller-certsecret
+        rules:
+          - path: '/'
+            serviceName: p10001/udp-tcp
+            servicePort: 10001&#x2F;udp
+            host: unifi-controller.e-kavallieri.com
+            pathType: Prefix
 
-  pod:
+  statefulset:
+    podManagementPolicy: OrderedReady
     replicas: 1
-    imagePullSecrets: []
-    podSecurityContext: {}
-    nodeSelector: {}
-    tolerations: []
-    affinity: {}
-    # Volumes to mount
-    # Docs: https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.18/#volume-v1-core
+    revisionHistoryLimit: 10
+    updateStrategy:
+      rollingUpdate:
+        partition: 0
+      type: RollingUpdate
     volumes:
       - name: appdata
         nfs: 
           server: 192.168.1.10
           path: /appdata
-    # Shared environment variables - would be concat to the start of the array
     sharedEnv: 
       - name: GUID
-        value: 1000
+        value: "1000"
       - name: PUID
-        value: 1000
+        value: "1000"
       - name: TZ
         value: Etc/UTC
-    # Shared containers values - can be override by setting the field in the container declaration
     sharedValues:
       imagePullPolicy: IfNotPresent
       securityContext: {}
       resources: {}
-    # The containers to deploy
-    # Docs: https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.18/#container-v1-core
-    containers:
+    spec:
+      imagePullSecrets: []
+      nodeSelector: {}
+      tolerations: []
+      affinity: {}
+    containers: 
       - name: unifi
         image: lscr.io/linuxserver/unifi-controller:latest
         env: []
         ports: 
           - containerPort: 8443
-            name: p8443
+            name: p8443-tcp
+            protocol: TCP
           - containerPort: 3478
-            name: p3478udp
+            name: p3478-udp
             protocol: UDP
           - containerPort: 10001
-            name: p10001udp
+            name: p10001-udp
             protocol: UDP
           - containerPort: 8080
-            name: p8080
+            name: p8080-tcp
+            protocol: TCP
           - containerPort: 1900
-            name: p1900udp
+            name: p1900-udp
             protocol: UDP
           - containerPort: 8843 #optional
-            name: p8843 #optional
+            name: p8843 #optional-tcp
+            protocol: TCP
           - containerPort: 8880 #optional
-            name: p8880 #optional
+            name: p8880 #optional-tcp
+            protocol: TCP
           - containerPort: 6789 #optional
-            name: p6789 #optional
+            name: p6789 #optional-tcp
+            protocol: TCP
           - containerPort: 5514
-            name: p5514udp
+            name: p5514-udp
             protocol: UDP
         volumeMounts: []
+    volumeClaimTemplates: 
+      - volumeClaimTemplate:
+          metadata:
+            name: pvc-config
+          spec:
+            storageClassName: ceph-block
+            accessModes: 
+              - ReadWriteOnce
+            resources:
+              requests:
+                storage: 20Gi
+        volumeMount:
+          mountPath: /config
+
+  static_volumes: []

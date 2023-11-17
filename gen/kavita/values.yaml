@@ -1,0 +1,94 @@
+base-chart:
+  nameOverride: kavita
+  fullnameOverride: ""
+
+  serviceAccount:
+    # Specifies whether a service account should be created
+    create: true
+    # Annotations to add to the service account
+    annotations: {}
+    # The name of the service account to use.
+    # If not set and create is true, a name is generated using the fullname template
+    name:
+
+  service:
+    type: ClusterIP
+    ports: 
+      - port: 5000
+        targetPort: 5000
+        name: p5000-tcp
+        protocol: TCP
+
+  ingresses: 
+    - name: kavita
+      # disabled: true
+      annotations:
+        spec.ingressClassName: nginx
+        cert-manager.io/issuer: letsencrypt-staging
+        cert-manager.io/issuer-kind: ClusterIssuer
+      spec:
+        ingressClassName: nginx
+        tls:
+          - hosts:
+              - kavita.e-kavallieri.com
+            secretName: kavita-certsecret
+        rules:
+          - path: '/'
+            serviceName: p5000-tcp
+            servicePort: 5000
+            host: kavita.e-kavallieri.com
+            pathType: Prefix
+
+  statefulset:
+    podManagementPolicy: OrderedReady
+    replicas: 1
+    revisionHistoryLimit: 10
+    updateStrategy:
+      rollingUpdate:
+        partition: 0
+      type: RollingUpdate
+    volumes:
+      - name: appdata
+        nfs: 
+          server: 192.168.1.10
+          path: /appdata
+    sharedEnv: 
+      - name: GUID
+        value: "1000"
+      - name: PUID
+        value: "1000"
+      - name: TZ
+        value: Etc/UTC
+    sharedValues:
+      imagePullPolicy: IfNotPresent
+      securityContext: {}
+      resources: {}
+    spec:
+      imagePullSecrets: []
+      nodeSelector: {}
+      tolerations: []
+      affinity: {}
+    containers: 
+      - name: kavita
+        image: lscr.io/linuxserver/kavita:latest
+        env: []
+        ports: 
+          - containerPort: 5000
+            name: p5000-tcp
+            protocol: TCP
+        volumeMounts: []
+    volumeClaimTemplates: 
+      - volumeClaimTemplate:
+          metadata:
+            name: pvc-config
+          spec:
+            storageClassName: ceph-block
+            accessModes: 
+              - ReadWriteOnce
+            resources:
+              requests:
+                storage: 20Gi
+        volumeMount:
+          mountPath: /config
+
+  static_volumes: []

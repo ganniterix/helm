@@ -1,7 +1,4 @@
-# Default values for containers-pod.
-# This is a YAML-formatted file.
-# Declare variables to be passed into your templates.
-containers-pod:
+base-chart:
   nameOverride: flexget
   fullnameOverride: ""
 
@@ -19,51 +16,59 @@ containers-pod:
     ports: 
       - port: 5050
         targetPort: 5050
-        name: p5050
+        name: p5050-tcp
+        protocol: TCP
 
   ingresses: 
     - name: flexget
       # disabled: true
       annotations:
-        kubernetes.io/ingress.class: nginx
-        traefik.ingress.kubernetes.io/rule-type: PathPrefixStrip
-        traefik.ingress.kubernetes.io/preserve-host: "false"
-      rules:
-        - path: '/'
-          serviceName: p5050
-          servicePort: 5050
-          host: flexget.e-kavallieri.local
+        spec.ingressClassName: nginx
+        cert-manager.io/issuer: letsencrypt-staging
+        cert-manager.io/issuer-kind: ClusterIssuer
+      spec:
+        ingressClassName: nginx
+        tls:
+          - hosts:
+              - flexget.e-kavallieri.com
+            secretName: flexget-certsecret
+        rules:
+          - path: '/'
+            serviceName: p5050-tcp
+            servicePort: 5050
+            host: flexget.e-kavallieri.com
+            pathType: Prefix
 
-  pod:
+  statefulset:
+    podManagementPolicy: OrderedReady
     replicas: 1
-    imagePullSecrets: []
-    podSecurityContext: {}
-    nodeSelector: {}
-    tolerations: []
-    affinity: {}
-    # Volumes to mount
-    # Docs: https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.18/#volume-v1-core
+    revisionHistoryLimit: 10
+    updateStrategy:
+      rollingUpdate:
+        partition: 0
+      type: RollingUpdate
     volumes:
       - name: appdata
         nfs: 
           server: 192.168.1.10
           path: /appdata
-    # Shared environment variables - would be concat to the start of the array
     sharedEnv: 
       - name: GUID
-        value: 1000
+        value: "1000"
       - name: PUID
-        value: 1000
+        value: "1000"
       - name: TZ
         value: Etc/UTC
-    # Shared containers values - can be override by setting the field in the container declaration
     sharedValues:
       imagePullPolicy: IfNotPresent
       securityContext: {}
       resources: {}
-    # The containers to deploy
-    # Docs: https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.18/#container-v1-core
-    containers:
+    spec:
+      imagePullSecrets: []
+      nodeSelector: {}
+      tolerations: []
+      affinity: {}
+    containers: 
       - name: flexget
         image: lscr.io/linuxserver/flexget:latest
         env: 
@@ -75,5 +80,21 @@ containers-pod:
             value: /config/.flexget/config.yml
         ports: 
           - containerPort: 5050
-            name: p5050
+            name: p5050-tcp
+            protocol: TCP
         volumeMounts: []
+    volumeClaimTemplates: 
+      - volumeClaimTemplate:
+          metadata:
+            name: pvc-config
+          spec:
+            storageClassName: ceph-block
+            accessModes: 
+              - ReadWriteOnce
+            resources:
+              requests:
+                storage: 20Gi
+        volumeMount:
+          mountPath: /config
+
+  static_volumes: []

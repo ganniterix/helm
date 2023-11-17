@@ -1,7 +1,4 @@
-# Default values for containers-pod.
-# This is a YAML-formatted file.
-# Declare variables to be passed into your templates.
-containers-pod:
+base-chart:
   nameOverride: duckdns
   fullnameOverride: ""
 
@@ -20,36 +17,36 @@ containers-pod:
 
   ingresses: []
 
-  pod:
+  statefulset:
+    podManagementPolicy: OrderedReady
     replicas: 1
-    imagePullSecrets: []
-    podSecurityContext: {}
-    nodeSelector: {}
-    tolerations: []
-    affinity: {}
-    # Volumes to mount
-    # Docs: https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.18/#volume-v1-core
+    revisionHistoryLimit: 10
+    updateStrategy:
+      rollingUpdate:
+        partition: 0
+      type: RollingUpdate
     volumes:
       - name: appdata
         nfs: 
           server: 192.168.1.10
           path: /appdata
-    # Shared environment variables - would be concat to the start of the array
     sharedEnv: 
       - name: GUID
-        value: 1000
+        value: "1000"
       - name: PUID
-        value: 1000
+        value: "1000"
       - name: TZ
         value: Etc/UTC
-    # Shared containers values - can be override by setting the field in the container declaration
     sharedValues:
       imagePullPolicy: IfNotPresent
       securityContext: {}
       resources: {}
-    # The containers to deploy
-    # Docs: https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.18/#container-v1-core
-    containers:
+    spec:
+      imagePullSecrets: []
+      nodeSelector: {}
+      tolerations: []
+      affinity: {}
+    containers: 
       - name: duckdns
         image: lscr.io/linuxserver/duckdns:latest
         env: 
@@ -59,3 +56,18 @@ containers-pod:
             value: token
         ports: []
         volumeMounts: []
+    volumeClaimTemplates: 
+      - volumeClaimTemplate:
+          metadata:
+            name: pvc-config
+          spec:
+            storageClassName: ceph-block
+            accessModes: 
+              - ReadWriteOnce
+            resources:
+              requests:
+                storage: 20Gi
+        volumeMount:
+          mountPath: /config
+
+  static_volumes: []

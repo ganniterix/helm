@@ -1,18 +1,18 @@
 apiVersion: v2
 name: pylon
-description: "This chart deploys the 'pylon' service, please refer to the documentation at: https://noygal.github.io/helm//pylon"
+description: "This chart deploys the 'pylon' service, please refer to the documentation at: https://ekavallieri.github.io/public-helm-charts//pylon"
 type: application
 
 # This is the chart version. This version number should be incremented each time you make changes
 # to the chart and its templates, including the app version.
-version: 0.2.0
+version: 0.2.2
 
 # This is the version number of the application being deployed. This version number should be
 # incremented each time you make changes to the application.
-appVersion: 0.2.0
+appVersion: 0.2.2
 
 dependencies:
   - name: base-chart
-    version: 0.2.0
-    repository: "https://noygal.github.io/helm/"
+    version: 0.4.1
+    repository: "https://ekavallieri.github.io/public-helm-charts/"
 

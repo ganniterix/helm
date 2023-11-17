@@ -1,0 +1,113 @@
+base-chart:
+  nameOverride: kimai
+  fullnameOverride: ""
+
+  serviceAccount:
+    # Specifies whether a service account should be created
+    create: true
+    # Annotations to add to the service account
+    annotations: {}
+    # The name of the service account to use.
+    # If not set and create is true, a name is generated using the fullname template
+    name:
+
+  service:
+    type: ClusterIP
+    ports: 
+      - port: 80
+        targetPort: 80
+        name: p80-tcp
+        protocol: TCP
+      - port: 443
+        targetPort: 443
+        name: p443-tcp
+        protocol: TCP
+
+  ingresses: 
+    - name: kimai
+      # disabled: true
+      annotations:
+        spec.ingressClassName: nginx
+        cert-manager.io/issuer: letsencrypt-staging
+        cert-manager.io/issuer-kind: ClusterIssuer
+      spec:
+        ingressClassName: nginx
+        tls:
+          - hosts:
+              - kimai.e-kavallieri.com
+            secretName: kimai-certsecret
+        rules:
+          - path: '/'
+            serviceName: p80-tcp
+            servicePort: 80
+            host: kimai.e-kavallieri.com
+            pathType: Prefix
+
+  statefulset:
+    podManagementPolicy: OrderedReady
+    replicas: 1
+    revisionHistoryLimit: 10
+    updateStrategy:
+      rollingUpdate:
+        partition: 0
+      type: RollingUpdate
+    volumes:
+      - name: appdata
+        nfs: 
+          server: 192.168.1.10
+          path: /appdata
+    sharedEnv: 
+      - name: GUID
+        value: "1000"
+      - name: PUID
+        value: "1000"
+      - name: TZ
+        value: Etc/UTC
+    sharedValues:
+      imagePullPolicy: IfNotPresent
+      securityContext: {}
+      resources: {}
+    spec:
+      imagePullSecrets: []
+      nodeSelector: {}
+      tolerations: []
+      affinity: {}
+    containers: 
+      - name: kimai
+        image: lscr.io/linuxserver/kimai:latest
+        env: 
+          - name: DATABASE_URL
+            value: mysql://your_db_user:your_db_pass@your_db_host:3306/your_db_name?charset
+        ports: 
+          - containerPort: 80
+            name: p80-tcp
+            protocol: TCP
+          - containerPort: 443
+            name: p443-tcp
+            protocol: TCP
+        volumeMounts: []
+      - name: mariadb
+        image: lscr.io/linuxserver/mariadb:latest
+        env: 
+          - name: MYSQL_ROOT_PASSWORD
+            value: ROOT_ACCESS_PASSWORD
+        ports: 
+          - containerPort: 3306
+            name: p3306-tcp
+            protocol: TCP
+        volumeMounts: []
+    volumeClaimTemplates: 
+      - volumeClaimTemplate:
+          metadata:
+            name: pvc-config
+          spec:
+            storageClassName: ceph-block
+            accessModes: 
+              - ReadWriteOnce
+            resources:
+              requests:
+                storage: 20Gi
+        volumeMount:
+          mountPath: /config
+
+  static_volumes: []

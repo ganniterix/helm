@@ -1,0 +1,101 @@
+base-chart:
+  nameOverride: github-desktop
+  fullnameOverride: ""
+
+  serviceAccount:
+    # Specifies whether a service account should be created
+    create: true
+    # Annotations to add to the service account
+    annotations: {}
+    # The name of the service account to use.
+    # If not set and create is true, a name is generated using the fullname template
+    name:
+
+  service:
+    type: ClusterIP
+    ports: 
+      - port: 3000
+        targetPort: 3000
+        name: p3000-tcp
+        protocol: TCP
+      - port: 3001
+        targetPort: 3001
+        name: p3001-tcp
+        protocol: TCP
+
+  ingresses: 
+    - name: github-desktop
+      # disabled: true
+      annotations:
+        spec.ingressClassName: nginx
+        cert-manager.io/issuer: letsencrypt-staging
+        cert-manager.io/issuer-kind: ClusterIssuer
+      spec:
+        ingressClassName: nginx
+        tls:
+          - hosts:
+              - github-desktop.e-kavallieri.com
+            secretName: github-desktop-certsecret
+        rules:
+          - path: '/'
+            serviceName: p3000-tcp
+            servicePort: 3000
+            host: github-desktop.e-kavallieri.com
+            pathType: Prefix
+
+  statefulset:
+    podManagementPolicy: OrderedReady
+    replicas: 1
+    revisionHistoryLimit: 10
+    updateStrategy:
+      rollingUpdate:
+        partition: 0
+      type: RollingUpdate
+    volumes:
+      - name: appdata
+        nfs: 
+          server: 192.168.1.10
+          path: /appdata
+    sharedEnv: 
+      - name: GUID
+        value: "1000"
+      - name: PUID
+        value: "1000"
+      - name: TZ
+        value: Etc/UTC
+    sharedValues:
+      imagePullPolicy: IfNotPresent
+      securityContext: {}
+      resources: {}
+    spec:
+      imagePullSecrets: []
+      nodeSelector: {}
+      tolerations: []
+      affinity: {}
+    containers: 
+      - name: github
+        image: lscr.io/linuxserver/github-desktop:latest
+        env: []
+        ports: 
+          - containerPort: 3000
+            name: p3000-tcp
+            protocol: TCP
+          - containerPort: 3001
+            name: p3001-tcp
+            protocol: TCP
+        volumeMounts: []
+    volumeClaimTemplates: 
+      - volumeClaimTemplate:
+          metadata:
+            name: pvc-config
+          spec:
+            storageClassName: ceph-block
+            accessModes: 
+              - ReadWriteOnce
+            resources:
+              requests:
+                storage: 20Gi
+        volumeMount:
+          mountPath: /config
+
+  static_volumes: []

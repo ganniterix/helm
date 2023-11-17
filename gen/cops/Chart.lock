@@ -1,0 +1,6 @@
+dependencies:
+- name: base-chart
+  repository: https://ekavallieri.github.io/public-helm-charts/
+  version: 0.4.1
+digest: sha256:96a022b52747212eb16e2a3424b9576eab178de4263459d7726129d64c8af57a
+generated: "2023-11-15T17:31:08.60752+01:00"

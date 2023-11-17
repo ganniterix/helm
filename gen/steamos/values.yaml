@@ -1,0 +1,138 @@
+base-chart:
+  nameOverride: steamos
+  fullnameOverride: ""
+
+  serviceAccount:
+    # Specifies whether a service account should be created
+    create: true
+    # Annotations to add to the service account
+    annotations: {}
+    # The name of the service account to use.
+    # If not set and create is true, a name is generated using the fullname template
+    name:
+
+  service:
+    type: ClusterIP
+    ports: 
+      - port: 3000
+        targetPort: 3000
+        name: p3000-tcp
+        protocol: TCP
+      - port: 3001
+        targetPort: 3001
+        name: p3001-tcp
+        protocol: TCP
+      - port: 27031
+        targetPort: 27031
+        name: p27031-udp
+        protocol: UDP
+      - port: 27031
+        targetPort: 27031
+        name: p27031-tcp
+        protocol: TCP
+      - port: 47984
+        targetPort: 47984
+        name: p47984-tcp
+        protocol: TCP
+      - port: 48010
+        targetPort: 48010
+        name: p48010-tcp
+        protocol: TCP
+      - port: 47998
+        targetPort: 47998
+        name: p47998-udp
+        protocol: UDP
+
+  ingresses: 
+    - name: steamos
+      # disabled: true
+      annotations:
+        spec.ingressClassName: nginx
+        cert-manager.io/issuer: letsencrypt-staging
+        cert-manager.io/issuer-kind: ClusterIssuer
+      spec:
+        ingressClassName: nginx
+        tls:
+          - hosts:
+              - steamos.e-kavallieri.com
+            secretName: steamos-certsecret
+        rules:
+          - path: '/'
+            serviceName: p3000-tcp
+            servicePort: 3000
+            host: steamos.e-kavallieri.com
+            pathType: Prefix
+
+  statefulset:
+    podManagementPolicy: OrderedReady
+    replicas: 1
+    revisionHistoryLimit: 10
+    updateStrategy:
+      rollingUpdate:
+        partition: 0
+      type: RollingUpdate
+    volumes:
+      - name: appdata
+        nfs: 
+          server: 192.168.1.10
+          path: /appdata
+    sharedEnv: 
+      - name: GUID
+        value: "1000"
+      - name: PUID
+        value: "1000"
+      - name: TZ
+        value: Etc/UTC
+    sharedValues:
+      imagePullPolicy: IfNotPresent
+      securityContext: {}
+      resources: {}
+    spec:
+      imagePullSecrets: []
+      nodeSelector: {}
+      tolerations: []
+      affinity: {}
+    containers: 
+      - name: steamos
+        image: lscr.io/linuxserver/steamos:latest
+        env: 
+          - name: DRINODE
+            value: /dev/dri/renderD128
+        ports: 
+          - containerPort: 3000
+            name: p3000-tcp
+            protocol: TCP
+          - containerPort: 3001
+            name: p3001-tcp
+            protocol: TCP
+          - containerPort: 27031-27036
+            name: p27031-27036-udp
+            protocol: UDP
+          - containerPort: 27031-27036 #optional
+            name: p27031-27036 #optional-tcp
+            protocol: TCP
+          - containerPort: 47984-47990 #optional
+            name: p47984-47990 #optional-tcp
+            protocol: TCP
+          - containerPort: 48010-48010 #optional
+            name: p48010-48010 #optional-tcp
+            protocol: TCP
+          - containerPort: 47998-48000
+            name: p47998-48000-udp
+            protocol: UDP
+        volumeMounts: []
+    volumeClaimTemplates: 
+      - volumeClaimTemplate:
+          metadata:
+            name: pvc-config
+          spec:
+            storageClassName: ceph-block
+            accessModes: 
+              - ReadWriteOnce
+            resources:
+              requests:
+                storage: 20Gi
+        volumeMount:
+          mountPath: /config
+
+  static_volumes: []

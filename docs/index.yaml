@@ -2,2175 +2,2400 @@ apiVersion: v1
 entries:
   adguardhome-sync:
   - apiVersion: v2
-    appVersion: 0.2.0
-    created: "2023-07-26T18:14:24.196732+02:00"
+    appVersion: 0.2.1
+    created: "2023-11-16T12:10:43.176288+01:00"
     dependencies:
     - name: base-chart
-      repository: https://noygal.github.io/helm/
-      version: 0.2.0
+      repository: https://ekavallieri.github.io/public-helm-charts/
+      version: 0.4.1
     description: 'This chart deploys the ''adguardhome-sync'' service, please refer
-      to the documentation at: https://noygal.github.io/helm//adguardhome-sync'
-    digest: edae98fa76da596975ad1796fd2bc4661e5fda643754729ffd5f1adc6f30d6bd
+      to the documentation at: https://ekavallieri.github.io/public-helm-charts//adguardhome-sync'
+    digest: 70c82761d0dee06822f81ad42bf6d7aa1cca0457614170ca411fcfb785f85a6a
     name: adguardhome-sync
     type: application
     urls:
-    - https://noygal.github.io/helm/adguardhome-sync-0.2.0.tgz
-    version: 0.2.0
+    - https://ekavallieri.github.io/public-helm-charts/adguardhome-sync-0.2.1.tgz
+    version: 0.2.1
   airsonic-advanced:
   - apiVersion: v2
-    appVersion: 0.2.0
-    created: "2023-07-26T18:14:24.199777+02:00"
+    appVersion: 0.2.1
+    created: "2023-11-16T12:10:43.178853+01:00"
     dependencies:
     - name: base-chart
-      repository: https://noygal.github.io/helm/
-      version: 0.2.0
+      repository: https://ekavallieri.github.io/public-helm-charts/
+      version: 0.4.1
     description: 'This chart deploys the ''airsonic-advanced'' service, please refer
-      to the documentation at: https://noygal.github.io/helm//airsonic-advanced'
-    digest: 8ae60dec42ce2105cedd29c18b57944e89ad292065da45cc65d78e275fa58a7f
+      to the documentation at: https://ekavallieri.github.io/public-helm-charts//airsonic-advanced'
+    digest: cfea2e5b60afc32aa865f6a3c1023129952a505b990fb9aa80433c71030ba44c
     name: airsonic-advanced
     type: application
     urls:
-    - https://noygal.github.io/helm/airsonic-advanced-0.2.0.tgz
-    version: 0.2.0
+    - https://ekavallieri.github.io/public-helm-charts/airsonic-advanced-0.2.1.tgz
+    version: 0.2.1
   apprise-api:
   - apiVersion: v2
-    appVersion: 0.2.0
-    created: "2023-07-26T18:14:24.202364+02:00"
+    appVersion: 0.2.1
+    created: "2023-11-16T12:10:43.182667+01:00"
     dependencies:
     - name: base-chart
-      repository: https://noygal.github.io/helm/
-      version: 0.2.0
+      repository: https://ekavallieri.github.io/public-helm-charts/
+      version: 0.4.1
     description: 'This chart deploys the ''apprise-api'' service, please refer to
-      the documentation at: https://noygal.github.io/helm//apprise-api'
-    digest: f43e1d333f014604dfda0e4a2f9f149e9c3c0201a73d2670ac731fa826149322
+      the documentation at: https://ekavallieri.github.io/public-helm-charts//apprise-api'
+    digest: 6f605a4aaa1c27431b99f120c9ed9444646074264304c776b058a00b0696fe6a
     name: apprise-api
     type: application
     urls:
-    - https://noygal.github.io/helm/apprise-api-0.2.0.tgz
-    version: 0.2.0
+    - https://ekavallieri.github.io/public-helm-charts/apprise-api-0.2.1.tgz
+    version: 0.2.1
   audacity:
   - apiVersion: v2
-    appVersion: 0.2.0
-    created: "2023-07-26T18:14:24.205103+02:00"
+    appVersion: 0.2.1
+    created: "2023-11-16T12:10:43.185263+01:00"
     dependencies:
     - name: base-chart
-      repository: https://noygal.github.io/helm/
-      version: 0.2.0
+      repository: https://ekavallieri.github.io/public-helm-charts/
+      version: 0.4.1
     description: 'This chart deploys the ''audacity'' service, please refer to the
-      documentation at: https://noygal.github.io/helm//audacity'
-    digest: e8aad7c3c91c1dbac1ecc5b1b89c4ffdda48fd83ef7c1b565c507ed732439077
+      documentation at: https://ekavallieri.github.io/public-helm-charts//audacity'
+    digest: f7fe0ef9952b15913d1f8e40c9f5c56eccdd44f182939520fdb425835e5350f2
     name: audacity
     type: application
     urls:
-    - https://noygal.github.io/helm/audacity-0.2.0.tgz
-    version: 0.2.0
+    - https://ekavallieri.github.io/public-helm-charts/audacity-0.2.1.tgz
+    version: 0.2.1
   babybuddy:
   - apiVersion: v2
-    appVersion: 0.2.0
-    created: "2023-07-26T18:14:24.207433+02:00"
+    appVersion: 0.2.1
+    created: "2023-11-16T12:10:43.187247+01:00"
     dependencies:
     - name: base-chart
-      repository: https://noygal.github.io/helm/
-      version: 0.2.0
+      repository: https://ekavallieri.github.io/public-helm-charts/
+      version: 0.4.1
     description: 'This chart deploys the ''babybuddy'' service, please refer to the
-      documentation at: https://noygal.github.io/helm//babybuddy'
-    digest: 0b8c6cbd99953e1e1307437cd11a417d082a8d3b633856b38ace49055eeb151d
+      documentation at: https://ekavallieri.github.io/public-helm-charts//babybuddy'
+    digest: 86ad113b495e680c303ae10f76f61e01f7909fe13c6596eb1c156ed7c1364209
     name: babybuddy
     type: application
     urls:
-    - https://noygal.github.io/helm/babybuddy-0.2.0.tgz
-    version: 0.2.0
+    - https://ekavallieri.github.io/public-helm-charts/babybuddy-0.2.1.tgz
+    version: 0.2.1
   base-chart:
   - apiVersion: v2
-    appVersion: 1.16.0
-    created: "2023-07-26T18:14:24.210385+02:00"
+    appVersion: 1.0.0
+    created: "2023-11-16T12:10:43.188857+01:00"
     description: A Helm chart for Kubernetes
-    digest: 34564456fa0466d4f6ffb7e26ab78309dd4c9ae9682fd9026c6cb65201084705
+    digest: d74f2cbcf3c7b7831a566291822c676fe32b26fcd7b9b3221c35782454c00793
     maintainers:
-    - name: noygal
-      url: https://github.com/noygal
+    - name: ganniterix
+      url: https://github.com/ganniterix
     name: base-chart
     type: application
     urls:
-    - https://noygal.github.io/helm/base-chart-0.2.0.tgz
-    version: 0.2.0
+    - https://ekavallieri.github.io/public-helm-charts/base-chart-0.4.1.tgz
+    version: 0.4.1
   bazarr:
   - apiVersion: v2
-    appVersion: 0.2.0
-    created: "2023-07-26T18:14:24.21347+02:00"
+    appVersion: 0.2.1
+    created: "2023-11-16T12:10:43.190798+01:00"
     dependencies:
     - name: base-chart
-      repository: https://noygal.github.io/helm/
-      version: 0.2.0
+      repository: https://ekavallieri.github.io/public-helm-charts/
+      version: 0.4.1
     description: 'This chart deploys the ''bazarr'' service, please refer to the documentation
-      at: https://noygal.github.io/helm//bazarr'
-    digest: 0ab059298a35dab9e11c951877b3776d980c6299f6c7e509e6ee52d191b2b9b3
+      at: https://ekavallieri.github.io/public-helm-charts//bazarr'
+    digest: 058f95e517a4992a0092ddb172dd1d5ff87e06146ae8578ce804abe2ad353338
     name: bazarr
     type: application
     urls:
-    - https://noygal.github.io/helm/bazarr-0.2.0.tgz
-    version: 0.2.0
+    - https://ekavallieri.github.io/public-helm-charts/bazarr-0.2.1.tgz
+    version: 0.2.1
   beets:
   - apiVersion: v2
-    appVersion: 0.2.0
-    created: "2023-07-26T18:14:24.215563+02:00"
+    appVersion: 0.2.1
+    created: "2023-11-16T12:10:43.192924+01:00"
     dependencies:
     - name: base-chart
-      repository: https://noygal.github.io/helm/
-      version: 0.2.0
+      repository: https://ekavallieri.github.io/public-helm-charts/
+      version: 0.4.1
     description: 'This chart deploys the ''beets'' service, please refer to the documentation
-      at: https://noygal.github.io/helm//beets'
-    digest: e1f21045c389bd80f094f9063de8f9357757fb3665a752cd3f6f09bf2b10a1e0
+      at: https://ekavallieri.github.io/public-helm-charts//beets'
+    digest: a3460e456d9b6211d2b82ee17474a41a712fdff96a5b8a88caabdfb9182c1065
     name: beets
     type: application
     urls:
-    - https://noygal.github.io/helm/beets-0.2.0.tgz
-    version: 0.2.0
+    - https://ekavallieri.github.io/public-helm-charts/beets-0.2.1.tgz
+    version: 0.2.1
   blender:
   - apiVersion: v2
-    appVersion: 0.2.0
-    created: "2023-07-26T18:14:24.217756+02:00"
+    appVersion: 0.2.1
+    created: "2023-11-16T12:10:43.195159+01:00"
     dependencies:
     - name: base-chart
-      repository: https://noygal.github.io/helm/
-      version: 0.2.0
+      repository: https://ekavallieri.github.io/public-helm-charts/
+      version: 0.4.1
     description: 'This chart deploys the ''blender'' service, please refer to the
-      documentation at: https://noygal.github.io/helm//blender'
-    digest: 478044e659a1991ef562ed3afcf91b242c22d6e1002976b25ec5ecc5fe35aae8
+      documentation at: https://ekavallieri.github.io/public-helm-charts//blender'
+    digest: 646594f195d4aade4e7860761caa92897547baf059d70a48fbd9dea9cc5eaebd
     name: blender
     type: application
     urls:
-    - https://noygal.github.io/helm/blender-0.2.0.tgz
-    version: 0.2.0
+    - https://ekavallieri.github.io/public-helm-charts/blender-0.2.1.tgz
+    version: 0.2.1
   boinc:
   - apiVersion: v2
-    appVersion: 0.2.0
-    created: "2023-07-26T18:14:24.219909+02:00"
+    appVersion: 0.2.1
+    created: "2023-11-16T12:10:43.197279+01:00"
     dependencies:
     - name: base-chart
-      repository: https://noygal.github.io/helm/
-      version: 0.2.0
+      repository: https://ekavallieri.github.io/public-helm-charts/
+      version: 0.4.1
     description: 'This chart deploys the ''boinc'' service, please refer to the documentation
-      at: https://noygal.github.io/helm//boinc'
-    digest: ae3a20f6e4817d44999c106d78a829e198a4333947abfabdad3e19d55320adf0
+      at: https://ekavallieri.github.io/public-helm-charts//boinc'
+    digest: c3b3a6cf450c6844f09d9a8a1221b510413c1e3c696108d562445471d3f550e6
     name: boinc
     type: application
     urls:
-    - https://noygal.github.io/helm/boinc-0.2.0.tgz
-    version: 0.2.0
+    - https://ekavallieri.github.io/public-helm-charts/boinc-0.2.1.tgz
+    version: 0.2.1
   booksonic-air:
   - apiVersion: v2
-    appVersion: 0.2.0
-    created: "2023-07-26T18:14:24.222586+02:00"
+    appVersion: 0.2.1
+    created: "2023-11-16T12:10:43.198967+01:00"
     dependencies:
     - name: base-chart
-      repository: https://noygal.github.io/helm/
-      version: 0.2.0
+      repository: https://ekavallieri.github.io/public-helm-charts/
+      version: 0.4.1
     description: 'This chart deploys the ''booksonic-air'' service, please refer to
-      the documentation at: https://noygal.github.io/helm//booksonic-air'
-    digest: 02f6dac0a90d3830d88a14c44fd106fb16a1dc17a0a5412c05fede05d7e8b09c
+      the documentation at: https://ekavallieri.github.io/public-helm-charts//booksonic-air'
+    digest: 16934d07a86c22a70cb55990ff0508b187a398c7b435923dcf792e6e7b9d1881
     name: booksonic-air
     type: application
     urls:
-    - https://noygal.github.io/helm/booksonic-air-0.2.0.tgz
-    version: 0.2.0
+    - https://ekavallieri.github.io/public-helm-charts/booksonic-air-0.2.1.tgz
+    version: 0.2.1
   bookstack:
   - apiVersion: v2
-    appVersion: 0.2.0
-    created: "2023-07-26T18:14:24.230461+02:00"
+    appVersion: 0.2.1
+    created: "2023-11-16T12:10:43.200565+01:00"
     dependencies:
     - name: base-chart
-      repository: https://noygal.github.io/helm/
-      version: 0.2.0
+      repository: https://ekavallieri.github.io/public-helm-charts/
+      version: 0.4.1
     description: 'This chart deploys the ''bookstack'' service, please refer to the
-      documentation at: https://noygal.github.io/helm//bookstack'
-    digest: 8a5f3c75199c3159e4de82d1d8ac8f0bec26f86b013f74166a690a3b690b480c
+      documentation at: https://ekavallieri.github.io/public-helm-charts//bookstack'
+    digest: 5bcbab5791537b8d464ce07e9422117135d4b43e4aa48c8c0531aff8560444a0
     name: bookstack
     type: application
     urls:
-    - https://noygal.github.io/helm/bookstack-0.2.0.tgz
-    version: 0.2.0
+    - https://ekavallieri.github.io/public-helm-charts/bookstack-0.2.1.tgz
+    version: 0.2.1
   budge:
   - apiVersion: v2
-    appVersion: 0.2.0
-    created: "2023-07-26T18:14:24.236418+02:00"
+    appVersion: 0.2.1
+    created: "2023-11-16T12:10:43.202371+01:00"
     dependencies:
     - name: base-chart
-      repository: https://noygal.github.io/helm/
-      version: 0.2.0
+      repository: https://ekavallieri.github.io/public-helm-charts/
+      version: 0.4.1
     description: 'This chart deploys the ''budge'' service, please refer to the documentation
-      at: https://noygal.github.io/helm//budge'
-    digest: 1b53a994514696218117975391f779683b533111750d9252b0342a3660142271
+      at: https://ekavallieri.github.io/public-helm-charts//budge'
+    digest: 2e2ed34bc4c76c027d31b4200109a0056c9e65eb6706325896039248918351cd
     name: budge
     type: application
     urls:
-    - https://noygal.github.io/helm/budge-0.2.0.tgz
-    version: 0.2.0
+    - https://ekavallieri.github.io/public-helm-charts/budge-0.2.1.tgz
+    version: 0.2.1
   calibre:
   - apiVersion: v2
-    appVersion: 0.2.0
-    created: "2023-07-26T18:14:24.238637+02:00"
+    appVersion: 0.2.1
+    created: "2023-11-16T12:10:43.203803+01:00"
     dependencies:
     - name: base-chart
-      repository: https://noygal.github.io/helm/
-      version: 0.2.0
+      repository: https://ekavallieri.github.io/public-helm-charts/
+      version: 0.4.1
     description: 'This chart deploys the ''calibre'' service, please refer to the
-      documentation at: https://noygal.github.io/helm//calibre'
-    digest: d3c9a2805d9dd30b7bd8dca954c448fa9efadf4272bb24af499702a73a809462
+      documentation at: https://ekavallieri.github.io/public-helm-charts//calibre'
+    digest: 8586821fa18f9e2dc9611288ced4a3803c16854f545b2434fa509f1114adac5f
     name: calibre
     type: application
     urls:
-    - https://noygal.github.io/helm/calibre-0.2.0.tgz
-    version: 0.2.0
+    - https://ekavallieri.github.io/public-helm-charts/calibre-0.2.1.tgz
+    version: 0.2.1
   calibre-web:
   - apiVersion: v2
-    appVersion: 0.2.0
-    created: "2023-07-26T18:14:24.243015+02:00"
+    appVersion: 0.2.1
+    created: "2023-11-16T12:10:43.205458+01:00"
     dependencies:
     - name: base-chart
-      repository: https://noygal.github.io/helm/
-      version: 0.2.0
+      repository: https://ekavallieri.github.io/public-helm-charts/
+      version: 0.4.1
     description: 'This chart deploys the ''calibre-web'' service, please refer to
-      the documentation at: https://noygal.github.io/helm//calibre-web'
-    digest: 794a79dfdc9aebb40b925772f64195d91a4bc85c6fbb07ab20bc7f3cbb3c37c1
+      the documentation at: https://ekavallieri.github.io/public-helm-charts//calibre-web'
+    digest: dc713420666de3419a59305d7bb1be7c05215fe8a6e8b63ebd33f7af8da73a51
     name: calibre-web
     type: application
     urls:
-    - https://noygal.github.io/helm/calibre-web-0.2.0.tgz
-    version: 0.2.0
+    - https://ekavallieri.github.io/public-helm-charts/calibre-web-0.2.1.tgz
+    version: 0.2.1
   changedetection.io:
   - apiVersion: v2
-    appVersion: 0.2.0
-    created: "2023-07-26T18:14:24.245091+02:00"
+    appVersion: 0.2.1
+    created: "2023-11-16T12:10:43.206959+01:00"
     dependencies:
     - name: base-chart
-      repository: https://noygal.github.io/helm/
-      version: 0.2.0
+      repository: https://ekavallieri.github.io/public-helm-charts/
+      version: 0.4.1
     description: 'This chart deploys the ''changedetection.io'' service, please refer
-      to the documentation at: https://noygal.github.io/helm//changedetection.io'
-    digest: a1f64018bf980cdd90b28323ac08c8967db95ad831deca25fed1da04e788e05b
+      to the documentation at: https://ekavallieri.github.io/public-helm-charts//changedetection.io'
+    digest: fb50b1528cb3e82a71be373c08bf7030e2e174399103fdf13720ce12d2c00ba7
     name: changedetection.io
     type: application
     urls:
-    - https://noygal.github.io/helm/changedetection.io-0.2.0.tgz
-    version: 0.2.0
+    - https://ekavallieri.github.io/public-helm-charts/changedetection.io-0.2.1.tgz
+    version: 0.2.1
   chromium:
   - apiVersion: v2
-    appVersion: 0.2.0
-    created: "2023-07-26T18:14:24.247216+02:00"
+    appVersion: 0.2.1
+    created: "2023-11-16T12:10:43.208463+01:00"
     dependencies:
     - name: base-chart
-      repository: https://noygal.github.io/helm/
-      version: 0.2.0
+      repository: https://ekavallieri.github.io/public-helm-charts/
+      version: 0.4.1
     description: 'This chart deploys the ''chromium'' service, please refer to the
-      documentation at: https://noygal.github.io/helm//chromium'
-    digest: 3231b44afbd7decdc541a572c5b6324d54745a905beb938eafee7343f2f19237
+      documentation at: https://ekavallieri.github.io/public-helm-charts//chromium'
+    digest: 6ce27fdf282cabd58ee4029442158a216d4d2a3c3a2ce06fc461265a1b32d1a4
     name: chromium
     type: application
     urls:
-    - https://noygal.github.io/helm/chromium-0.2.0.tgz
-    version: 0.2.0
+    - https://ekavallieri.github.io/public-helm-charts/chromium-0.2.1.tgz
+    version: 0.2.1
   code-server:
   - apiVersion: v2
-    appVersion: 0.2.0
-    created: "2023-07-26T18:14:24.24958+02:00"
+    appVersion: 0.2.1
+    created: "2023-11-16T12:10:43.210495+01:00"
     dependencies:
     - name: base-chart
-      repository: https://noygal.github.io/helm/
-      version: 0.2.0
+      repository: https://ekavallieri.github.io/public-helm-charts/
+      version: 0.4.1
     description: 'This chart deploys the ''code-server'' service, please refer to
-      the documentation at: https://noygal.github.io/helm//code-server'
-    digest: feffdfd52bba561a37406207aa8de289c54507f8acb380a79758554baf00488c
+      the documentation at: https://ekavallieri.github.io/public-helm-charts//code-server'
+    digest: bdd61ca34820599752eed98a68d5bdd62f95dd283481120eb7afac73650ba831
     name: code-server
     type: application
     urls:
-    - https://noygal.github.io/helm/code-server-0.2.0.tgz
-    version: 0.2.0
-  daapd:
+    - https://ekavallieri.github.io/public-helm-charts/code-server-0.2.1.tgz
+    version: 0.2.1
+  cops:
   - apiVersion: v2
-    appVersion: 0.2.0
-    created: "2023-07-26T18:14:24.254543+02:00"
+    appVersion: 0.2.1
+    created: "2023-11-16T12:10:43.212459+01:00"
     dependencies:
     - name: base-chart
-      repository: https://noygal.github.io/helm/
-      version: 0.2.0
+      repository: https://ekavallieri.github.io/public-helm-charts/
+      version: 0.4.1
+    description: 'This chart deploys the ''cops'' service, please refer to the documentation
+      at: https://ekavallieri.github.io/public-helm-charts//cops'
+    digest: 9f59e40341822cb1b249fbe878626359ee0cc619931e5eda4d15cd0337534ac9
+    name: cops
+    type: application
+    urls:
+    - https://ekavallieri.github.io/public-helm-charts/cops-0.2.1.tgz
+    version: 0.2.1
+  daapd:
+  - apiVersion: v2
+    appVersion: 0.2.1
+    created: "2023-11-16T12:10:43.214186+01:00"
+    dependencies:
+    - name: base-chart
+      repository: https://ekavallieri.github.io/public-helm-charts/
+      version: 0.4.1
     description: 'This chart deploys the ''daapd'' service, please refer to the documentation
-      at: https://noygal.github.io/helm//daapd'
-    digest: ae8750335621259929cfd24ae42607901f4176ef4037cdcd71827ff3879a9f11
+      at: https://ekavallieri.github.io/public-helm-charts//daapd'
+    digest: b24f1f99a15e231e75f18307f405fbd7b18ad94afddebdbc9fc1489a2ff5d35b
     name: daapd
     type: application
     urls:
-    - https://noygal.github.io/helm/daapd-0.2.0.tgz
-    version: 0.2.0
+    - https://ekavallieri.github.io/public-helm-charts/daapd-0.2.1.tgz
+    version: 0.2.1
   darktable:
   - apiVersion: v2
-    appVersion: 0.2.0
-    created: "2023-07-26T18:14:24.258246+02:00"
+    appVersion: 0.2.1
+    created: "2023-11-16T12:10:43.215741+01:00"
     dependencies:
     - name: base-chart
-      repository: https://noygal.github.io/helm/
-      version: 0.2.0
+      repository: https://ekavallieri.github.io/public-helm-charts/
+      version: 0.4.1
     description: 'This chart deploys the ''darktable'' service, please refer to the
-      documentation at: https://noygal.github.io/helm//darktable'
-    digest: 701b5589a799b75862ba93c26aa382f42d4e1722116c0ca92550dea8e423fc39
+      documentation at: https://ekavallieri.github.io/public-helm-charts//darktable'
+    digest: 3f8f45b38438e54114ebce418eafb320816cdfd70e10dd2c9811d19b106d3248
     name: darktable
     type: application
     urls:
-    - https://noygal.github.io/helm/darktable-0.2.0.tgz
-    version: 0.2.0
+    - https://ekavallieri.github.io/public-helm-charts/darktable-0.2.1.tgz
+    version: 0.2.1
   davos:
   - apiVersion: v2
-    appVersion: 0.2.0
-    created: "2023-07-26T18:14:24.265716+02:00"
+    appVersion: 0.2.1
+    created: "2023-11-16T12:10:43.217569+01:00"
     dependencies:
     - name: base-chart
-      repository: https://noygal.github.io/helm/
-      version: 0.2.0
+      repository: https://ekavallieri.github.io/public-helm-charts/
+      version: 0.4.1
     description: 'This chart deploys the ''davos'' service, please refer to the documentation
-      at: https://noygal.github.io/helm//davos'
-    digest: c35e0ce1bf5232cf3d54bf683a5f4bb5a7182c29882e86efd3ca5f309356aaeb
+      at: https://ekavallieri.github.io/public-helm-charts//davos'
+    digest: 49f6456203fa450da75af67abd81b5a4fa211d97f81a80d156ecf87d48a66707
     name: davos
     type: application
     urls:
-    - https://noygal.github.io/helm/davos-0.2.0.tgz
-    version: 0.2.0
+    - https://ekavallieri.github.io/public-helm-charts/davos-0.2.1.tgz
+    version: 0.2.1
   ddclient:
   - apiVersion: v2
-    appVersion: 0.2.0
-    created: "2023-07-26T18:14:24.268572+02:00"
+    appVersion: 0.2.1
+    created: "2023-11-16T12:10:43.219313+01:00"
     dependencies:
     - name: base-chart
-      repository: https://noygal.github.io/helm/
-      version: 0.2.0
+      repository: https://ekavallieri.github.io/public-helm-charts/
+      version: 0.4.1
     description: 'This chart deploys the ''ddclient'' service, please refer to the
-      documentation at: https://noygal.github.io/helm//ddclient'
-    digest: af4cb9088cd9751c45756d95ffa26007c3bce125d69b55c92c4e4977f984d5d7
+      documentation at: https://ekavallieri.github.io/public-helm-charts//ddclient'
+    digest: 1c5a0ec94e9fd59628ece0372d75e53a36804e86132d59865cd92508178885a9
     name: ddclient
     type: application
     urls:
-    - https://noygal.github.io/helm/ddclient-0.2.0.tgz
-    version: 0.2.0
+    - https://ekavallieri.github.io/public-helm-charts/ddclient-0.2.1.tgz
+    version: 0.2.1
   deluge:
   - apiVersion: v2
-    appVersion: 0.2.0
-    created: "2023-07-26T18:14:24.271655+02:00"
+    appVersion: 0.2.1
+    created: "2023-11-16T12:10:43.220904+01:00"
     dependencies:
     - name: base-chart
-      repository: https://noygal.github.io/helm/
-      version: 0.2.0
+      repository: https://ekavallieri.github.io/public-helm-charts/
+      version: 0.4.1
     description: 'This chart deploys the ''deluge'' service, please refer to the documentation
-      at: https://noygal.github.io/helm//deluge'
-    digest: 4291c5936aa5012188562c98faf0deef1452b7d4ea01618f16fbcb2a87203092
+      at: https://ekavallieri.github.io/public-helm-charts//deluge'
+    digest: 995e8b2297169df0f0a26f46b6e967a4e3c08548df288ec25424f6a7ff75393f
     name: deluge
     type: application
     urls:
-    - https://noygal.github.io/helm/deluge-0.2.0.tgz
-    version: 0.2.0
+    - https://ekavallieri.github.io/public-helm-charts/deluge-0.2.1.tgz
+    version: 0.2.1
   digikam:
   - apiVersion: v2
-    appVersion: 0.2.0
-    created: "2023-07-26T18:14:24.274185+02:00"
+    appVersion: 0.2.1
+    created: "2023-11-16T12:10:43.223228+01:00"
     dependencies:
     - name: base-chart
-      repository: https://noygal.github.io/helm/
-      version: 0.2.0
+      repository: https://ekavallieri.github.io/public-helm-charts/
+      version: 0.4.1
     description: 'This chart deploys the ''digikam'' service, please refer to the
-      documentation at: https://noygal.github.io/helm//digikam'
-    digest: ec07a9ea244e335dcac2e342e5e74a58d4e21b81eaf24fd459a140d01bfc837f
+      documentation at: https://ekavallieri.github.io/public-helm-charts//digikam'
+    digest: 489b92753327095839646679fbcf612e8e4072a1e1b092a43d80974ee4c3d276
     name: digikam
     type: application
     urls:
-    - https://noygal.github.io/helm/digikam-0.2.0.tgz
-    version: 0.2.0
+    - https://ekavallieri.github.io/public-helm-charts/digikam-0.2.1.tgz
+    version: 0.2.1
   dillinger:
   - apiVersion: v2
-    appVersion: 0.2.0
-    created: "2023-07-26T18:14:24.276964+02:00"
+    appVersion: 0.2.1
+    created: "2023-11-16T12:10:43.224986+01:00"
     dependencies:
     - name: base-chart
-      repository: https://noygal.github.io/helm/
-      version: 0.2.0
+      repository: https://ekavallieri.github.io/public-helm-charts/
+      version: 0.4.1
     description: 'This chart deploys the ''dillinger'' service, please refer to the
-      documentation at: https://noygal.github.io/helm//dillinger'
-    digest: ce646a4a97848afa98f4ddc25579844ca8bf90457bcf1ceb048d95130a43a5d1
+      documentation at: https://ekavallieri.github.io/public-helm-charts//dillinger'
+    digest: e3a959053d486035723512d842ebc0fa4dfeb27aaff4bd0ed0ad537d88f76e78
     name: dillinger
     type: application
     urls:
-    - https://noygal.github.io/helm/dillinger-0.2.0.tgz
-    version: 0.2.0
+    - https://ekavallieri.github.io/public-helm-charts/dillinger-0.2.1.tgz
+    version: 0.2.1
   diskover:
   - apiVersion: v2
-    appVersion: 0.2.0
-    created: "2023-07-26T18:14:24.280013+02:00"
+    appVersion: 0.2.1
+    created: "2023-11-16T12:10:43.227544+01:00"
     dependencies:
     - name: base-chart
-      repository: https://noygal.github.io/helm/
-      version: 0.2.0
+      repository: https://ekavallieri.github.io/public-helm-charts/
+      version: 0.4.1
     description: 'This chart deploys the ''diskover'' service, please refer to the
-      documentation at: https://noygal.github.io/helm//diskover'
-    digest: 22afe13ddb7256b390e1b8a07fa738b448d2243fd09392c46ec9d4f773396c0d
+      documentation at: https://ekavallieri.github.io/public-helm-charts//diskover'
+    digest: 3195d7cd9e3c778a00f7e0e5f494845ff5345d112341bcc1a1ec6df1142ae61a
     name: diskover
     type: application
     urls:
-    - https://noygal.github.io/helm/diskover-0.2.0.tgz
-    version: 0.2.0
+    - https://ekavallieri.github.io/public-helm-charts/diskover-0.2.1.tgz
+    version: 0.2.1
   dokuwiki:
   - apiVersion: v2
-    appVersion: 0.2.0
-    created: "2023-07-26T18:14:24.282726+02:00"
+    appVersion: 0.2.1
+    created: "2023-11-16T12:10:43.230407+01:00"
     dependencies:
     - name: base-chart
-      repository: https://noygal.github.io/helm/
-      version: 0.2.0
+      repository: https://ekavallieri.github.io/public-helm-charts/
+      version: 0.4.1
     description: 'This chart deploys the ''dokuwiki'' service, please refer to the
-      documentation at: https://noygal.github.io/helm//dokuwiki'
-    digest: 4fb82bc68ff90c1e489e660822bb135d413136d294d15bc30125f8560706db77
+      documentation at: https://ekavallieri.github.io/public-helm-charts//dokuwiki'
+    digest: 98dc53584966d562dd58301371f042d3d2caf9fb734d08098a5d11fe32ced4c2
     name: dokuwiki
     type: application
     urls:
-    - https://noygal.github.io/helm/dokuwiki-0.2.0.tgz
-    version: 0.2.0
+    - https://ekavallieri.github.io/public-helm-charts/dokuwiki-0.2.1.tgz
+    version: 0.2.1
   domoticz:
   - apiVersion: v2
-    appVersion: 0.2.0
-    created: "2023-07-26T18:14:24.285588+02:00"
+    appVersion: 0.2.1
+    created: "2023-11-16T12:10:43.232428+01:00"
     dependencies:
     - name: base-chart
-      repository: https://noygal.github.io/helm/
-      version: 0.2.0
+      repository: https://ekavallieri.github.io/public-helm-charts/
+      version: 0.4.1
     description: 'This chart deploys the ''domoticz'' service, please refer to the
-      documentation at: https://noygal.github.io/helm//domoticz'
-    digest: ade58022c8b183dcabff17ff1d2aef9d8a8bec37f867b952f69b97de0c4d1c06
+      documentation at: https://ekavallieri.github.io/public-helm-charts//domoticz'
+    digest: 33b764a417a6ca80ddd515a2aa3d5e26a7bd2192ffd1246b8ec7a537935d571d
     name: domoticz
     type: application
     urls:
-    - https://noygal.github.io/helm/domoticz-0.2.0.tgz
-    version: 0.2.0
+    - https://ekavallieri.github.io/public-helm-charts/domoticz-0.2.1.tgz
+    version: 0.2.1
   doplarr:
   - apiVersion: v2
-    appVersion: 0.2.0
-    created: "2023-07-26T18:14:24.288719+02:00"
+    appVersion: 0.2.1
+    created: "2023-11-16T12:10:43.234223+01:00"
     dependencies:
     - name: base-chart
-      repository: https://noygal.github.io/helm/
-      version: 0.2.0
+      repository: https://ekavallieri.github.io/public-helm-charts/
+      version: 0.4.1
     description: 'This chart deploys the ''doplarr'' service, please refer to the
-      documentation at: https://noygal.github.io/helm//doplarr'
-    digest: c9aaaa5a83c5cb682164a8106052b1daa566f3a62e93b9c519e056c2d80b8796
+      documentation at: https://ekavallieri.github.io/public-helm-charts//doplarr'
+    digest: 1f3498f924d8f588f9bf79e3ca4fe5a190c2727a389f89144a0f63737483ce05
     name: doplarr
     type: application
     urls:
-    - https://noygal.github.io/helm/doplarr-0.2.0.tgz
-    version: 0.2.0
+    - https://ekavallieri.github.io/public-helm-charts/doplarr-0.2.1.tgz
+    version: 0.2.1
   doublecommander:
   - apiVersion: v2
-    appVersion: 0.2.0
-    created: "2023-07-26T18:14:24.293632+02:00"
+    appVersion: 0.2.1
+    created: "2023-11-16T12:10:43.235886+01:00"
     dependencies:
     - name: base-chart
-      repository: https://noygal.github.io/helm/
-      version: 0.2.0
+      repository: https://ekavallieri.github.io/public-helm-charts/
+      version: 0.4.1
     description: 'This chart deploys the ''doublecommander'' service, please refer
-      to the documentation at: https://noygal.github.io/helm//doublecommander'
-    digest: 0fdea6a20e950430e697186152832f94020a4f4a31ce91e0f6efd8dae77b22a3
+      to the documentation at: https://ekavallieri.github.io/public-helm-charts//doublecommander'
+    digest: 88fd36a4a4745e76cbc6c8688800c2c3b47e78a5044fc74ee8368ee4515e22ca
     name: doublecommander
     type: application
     urls:
-    - https://noygal.github.io/helm/doublecommander-0.2.0.tgz
-    version: 0.2.0
+    - https://ekavallieri.github.io/public-helm-charts/doublecommander-0.2.1.tgz
+    version: 0.2.1
   duckdns:
   - apiVersion: v2
-    appVersion: 0.2.0
-    created: "2023-07-26T18:14:24.296551+02:00"
+    appVersion: 0.2.1
+    created: "2023-11-16T12:10:43.238528+01:00"
     dependencies:
     - name: base-chart
-      repository: https://noygal.github.io/helm/
-      version: 0.2.0
+      repository: https://ekavallieri.github.io/public-helm-charts/
+      version: 0.4.1
     description: 'This chart deploys the ''duckdns'' service, please refer to the
-      documentation at: https://noygal.github.io/helm//duckdns'
-    digest: f29d62a4eb6a627fc6a892669b384bdccb63b146b99d673cf503977ae3d9522e
+      documentation at: https://ekavallieri.github.io/public-helm-charts//duckdns'
+    digest: 22dc81e609886b0bfc92f47b573e9cfdba283f7fb1d8666a2c9f777d06d5396c
     name: duckdns
     type: application
     urls:
-    - https://noygal.github.io/helm/duckdns-0.2.0.tgz
-    version: 0.2.0
+    - https://ekavallieri.github.io/public-helm-charts/duckdns-0.2.1.tgz
+    version: 0.2.1
   duplicati:
   - apiVersion: v2
-    appVersion: 0.2.0
-    created: "2023-07-26T18:14:24.299335+02:00"
+    appVersion: 0.2.1
+    created: "2023-11-16T12:10:43.240642+01:00"
     dependencies:
     - name: base-chart
-      repository: https://noygal.github.io/helm/
-      version: 0.2.0
+      repository: https://ekavallieri.github.io/public-helm-charts/
+      version: 0.4.1
     description: 'This chart deploys the ''duplicati'' service, please refer to the
-      documentation at: https://noygal.github.io/helm//duplicati'
-    digest: 1d572d47b6d218e005ff92c27df175b80170e957400935ac14d01bdac0b513f5
+      documentation at: https://ekavallieri.github.io/public-helm-charts//duplicati'
+    digest: f145b1b9f187dbe5f7316ba48f6f0ce141d5af134b2577f9fcec53c2cfcc4fe8
     name: duplicati
     type: application
     urls:
-    - https://noygal.github.io/helm/duplicati-0.2.0.tgz
-    version: 0.2.0
+    - https://ekavallieri.github.io/public-helm-charts/duplicati-0.2.1.tgz
+    version: 0.2.1
   emby:
   - apiVersion: v2
-    appVersion: 0.2.0
-    created: "2023-07-26T18:14:24.302092+02:00"
+    appVersion: 0.2.1
+    created: "2023-11-16T12:10:43.242441+01:00"
     dependencies:
     - name: base-chart
-      repository: https://noygal.github.io/helm/
-      version: 0.2.0
+      repository: https://ekavallieri.github.io/public-helm-charts/
+      version: 0.4.1
     description: 'This chart deploys the ''emby'' service, please refer to the documentation
-      at: https://noygal.github.io/helm//emby'
-    digest: 2d04f3c55aafefb932fb7b77275611343a5be216bb35bb7a542752a6a4b652a3
+      at: https://ekavallieri.github.io/public-helm-charts//emby'
+    digest: 3a2b0cb9d055a67719d3a1c772fc734f5609f23b8b870aaf51610a21d07cd528
     name: emby
     type: application
     urls:
-    - https://noygal.github.io/helm/emby-0.2.0.tgz
-    version: 0.2.0
+    - https://ekavallieri.github.io/public-helm-charts/emby-0.2.1.tgz
+    version: 0.2.1
   embystat:
   - apiVersion: v2
-    appVersion: 0.2.0
-    created: "2023-07-26T18:14:24.311274+02:00"
+    appVersion: 0.2.1
+    created: "2023-11-16T12:10:43.244582+01:00"
     dependencies:
     - name: base-chart
-      repository: https://noygal.github.io/helm/
-      version: 0.2.0
+      repository: https://ekavallieri.github.io/public-helm-charts/
+      version: 0.4.1
     description: 'This chart deploys the ''embystat'' service, please refer to the
-      documentation at: https://noygal.github.io/helm//embystat'
-    digest: 2bd8102dbad3195be005b822c8498ed073219703398c08eaae35b39435b84f29
+      documentation at: https://ekavallieri.github.io/public-helm-charts//embystat'
+    digest: 2c9499a5353f707e8315cabdd5e93344ce1b16227c92d5db14fc49b7ed1c0ab3
     name: embystat
     type: application
     urls:
-    - https://noygal.github.io/helm/embystat-0.2.0.tgz
-    version: 0.2.0
+    - https://ekavallieri.github.io/public-helm-charts/embystat-0.2.1.tgz
+    version: 0.2.1
   emulatorjs:
   - apiVersion: v2
-    appVersion: 0.2.0
-    created: "2023-07-26T18:14:24.315764+02:00"
+    appVersion: 0.2.1
+    created: "2023-11-16T12:10:43.247425+01:00"
     dependencies:
     - name: base-chart
-      repository: https://noygal.github.io/helm/
-      version: 0.2.0
+      repository: https://ekavallieri.github.io/public-helm-charts/
+      version: 0.4.1
     description: 'This chart deploys the ''emulatorjs'' service, please refer to the
-      documentation at: https://noygal.github.io/helm//emulatorjs'
-    digest: 372eb7778b95efb891d2a60a2a4e9366c835ec363f27db44845ca2c69f1a1739
+      documentation at: https://ekavallieri.github.io/public-helm-charts//emulatorjs'
+    digest: 1bc070d62bff831175c757de954a1146f03549cd0406f5dbd510aeb0dc6371d9
     name: emulatorjs
     type: application
     urls:
-    - https://noygal.github.io/helm/emulatorjs-0.2.0.tgz
-    version: 0.2.0
+    - https://ekavallieri.github.io/public-helm-charts/emulatorjs-0.2.1.tgz
+    version: 0.2.1
   endlessh:
   - apiVersion: v2
-    appVersion: 0.2.0
-    created: "2023-07-26T18:14:24.31853+02:00"
+    appVersion: 0.2.1
+    created: "2023-11-16T12:10:43.249599+01:00"
     dependencies:
     - name: base-chart
-      repository: https://noygal.github.io/helm/
-      version: 0.2.0
+      repository: https://ekavallieri.github.io/public-helm-charts/
+      version: 0.4.1
     description: 'This chart deploys the ''endlessh'' service, please refer to the
-      documentation at: https://noygal.github.io/helm//endlessh'
-    digest: 63d31dd23550478b13cdfee3707fa77f625402e9a9656017bea092b268fb2320
+      documentation at: https://ekavallieri.github.io/public-helm-charts//endlessh'
+    digest: 386d8d43a6c0ab3954c2ae51f82f5f95ab861ad1a0625052fd1a05f95e3d2223
     name: endlessh
     type: application
     urls:
-    - https://noygal.github.io/helm/endlessh-0.2.0.tgz
-    version: 0.2.0
-  example-dev-tools:
-  - apiVersion: v2
-    appVersion: 1.16.0
-    created: "2023-07-26T18:14:24.321452+02:00"
-    dependencies:
-    - name: base-chart
-      repository: https://noygal.github.io/helm/
-      version: 0.2.0
-    description: Example chart - deploying cloud9, codimd and mariadb
-    digest: 775dce0f4235153e64b0f64679d6d28ad768a8e694d1ee55de23bb0078b7b375
-    name: example-dev-tools
-    type: application
-    urls:
-    - https://noygal.github.io/helm/example-dev-tools-0.2.8.tgz
-    version: 0.2.8
+    - https://ekavallieri.github.io/public-helm-charts/endlessh-0.2.1.tgz
+    version: 0.2.1
   fail2ban:
   - apiVersion: v2
-    appVersion: 0.2.0
-    created: "2023-07-26T18:14:24.325295+02:00"
+    appVersion: 0.2.1
+    created: "2023-11-16T12:10:43.252633+01:00"
     dependencies:
     - name: base-chart
-      repository: https://noygal.github.io/helm/
-      version: 0.2.0
+      repository: https://ekavallieri.github.io/public-helm-charts/
+      version: 0.4.1
     description: 'This chart deploys the ''fail2ban'' service, please refer to the
-      documentation at: https://noygal.github.io/helm//fail2ban'
-    digest: ca3088fac0e769993c8c10b64b763a8cbeb6a2b9fbedca22765ef37222137124
+      documentation at: https://ekavallieri.github.io/public-helm-charts//fail2ban'
+    digest: 2f2473e29c8bd7fc4ab5bf583cf47eecfda344c56b9fb3f9ccc0466fd0c8283b
     name: fail2ban
     type: application
     urls:
-    - https://noygal.github.io/helm/fail2ban-0.2.0.tgz
-    version: 0.2.0
+    - https://ekavallieri.github.io/public-helm-charts/fail2ban-0.2.1.tgz
+    version: 0.2.1
   feed2toot:
   - apiVersion: v2
-    appVersion: 0.2.0
-    created: "2023-07-26T18:14:24.329069+02:00"
+    appVersion: 0.2.1
+    created: "2023-11-16T12:10:43.254359+01:00"
     dependencies:
     - name: base-chart
-      repository: https://noygal.github.io/helm/
-      version: 0.2.0
+      repository: https://ekavallieri.github.io/public-helm-charts/
+      version: 0.4.1
     description: 'This chart deploys the ''feed2toot'' service, please refer to the
-      documentation at: https://noygal.github.io/helm//feed2toot'
-    digest: 29b476089f74c51ba5033c2d4a498af63420b4daa190c42001c100903c42c93d
+      documentation at: https://ekavallieri.github.io/public-helm-charts//feed2toot'
+    digest: 6ac4550ee0a57ca50a0d4c96d6843bd877a187f5816b094e8d43d57b962afc98
     name: feed2toot
     type: application
     urls:
-    - https://noygal.github.io/helm/feed2toot-0.2.0.tgz
-    version: 0.2.0
+    - https://ekavallieri.github.io/public-helm-charts/feed2toot-0.2.1.tgz
+    version: 0.2.1
   filezilla:
   - apiVersion: v2
-    appVersion: 0.2.0
-    created: "2023-07-26T18:14:24.332031+02:00"
+    appVersion: 0.2.1
+    created: "2023-11-16T12:10:43.256407+01:00"
     dependencies:
     - name: base-chart
-      repository: https://noygal.github.io/helm/
-      version: 0.2.0
+      repository: https://ekavallieri.github.io/public-helm-charts/
+      version: 0.4.1
     description: 'This chart deploys the ''filezilla'' service, please refer to the
-      documentation at: https://noygal.github.io/helm//filezilla'
-    digest: c638e85a71cffc0ca922112bd0951dc07f24540ccad057e4355526e63072f553
+      documentation at: https://ekavallieri.github.io/public-helm-charts//filezilla'
+    digest: 11cc658bf9d653641a115345f6a40aab502100d0e00d42a3c48bed7d82376055
     name: filezilla
     type: application
     urls:
-    - https://noygal.github.io/helm/filezilla-0.2.0.tgz
-    version: 0.2.0
+    - https://ekavallieri.github.io/public-helm-charts/filezilla-0.2.1.tgz
+    version: 0.2.1
   firefox:
   - apiVersion: v2
-    appVersion: 0.2.0
-    created: "2023-07-26T18:14:24.336462+02:00"
+    appVersion: 0.2.1
+    created: "2023-11-16T12:10:43.258282+01:00"
     dependencies:
     - name: base-chart
-      repository: https://noygal.github.io/helm/
-      version: 0.2.0
+      repository: https://ekavallieri.github.io/public-helm-charts/
+      version: 0.4.1
     description: 'This chart deploys the ''firefox'' service, please refer to the
-      documentation at: https://noygal.github.io/helm//firefox'
-    digest: 13700808e557f9c2e601e34ceebc77394fb07161cb91373058afc1a60eaa30fd
+      documentation at: https://ekavallieri.github.io/public-helm-charts//firefox'
+    digest: 3b7285af95403e9f7e7e411f38529b6305c74d291c537693b135398f1dd1ef89
     name: firefox
     type: application
     urls:
-    - https://noygal.github.io/helm/firefox-0.2.0.tgz
-    version: 0.2.0
+    - https://ekavallieri.github.io/public-helm-charts/firefox-0.2.1.tgz
+    version: 0.2.1
   fleet:
   - apiVersion: v2
-    appVersion: 0.2.0
-    created: "2023-07-26T18:14:24.339376+02:00"
+    appVersion: 0.2.1
+    created: "2023-11-16T12:10:43.260632+01:00"
     dependencies:
     - name: base-chart
-      repository: https://noygal.github.io/helm/
-      version: 0.2.0
+      repository: https://ekavallieri.github.io/public-helm-charts/
+      version: 0.4.1
     description: 'This chart deploys the ''fleet'' service, please refer to the documentation
-      at: https://noygal.github.io/helm//fleet'
-    digest: e2e5f12df26fccb059fa4008d453687f529228f5d3cf2c7d6ec0fba530a15ba3
+      at: https://ekavallieri.github.io/public-helm-charts//fleet'
+    digest: b67fbdb88fa71c93e63535251cd3dc4640e7026304356833fd23d4dfe05aec8f
     name: fleet
     type: application
     urls:
-    - https://noygal.github.io/helm/fleet-0.2.0.tgz
-    version: 0.2.0
+    - https://ekavallieri.github.io/public-helm-charts/fleet-0.2.1.tgz
+    version: 0.2.1
   flexget:
   - apiVersion: v2
-    appVersion: 0.2.0
-    created: "2023-07-26T18:14:24.344737+02:00"
+    appVersion: 0.2.1
+    created: "2023-11-16T12:10:43.263666+01:00"
     dependencies:
     - name: base-chart
-      repository: https://noygal.github.io/helm/
-      version: 0.2.0
+      repository: https://ekavallieri.github.io/public-helm-charts/
+      version: 0.4.1
     description: 'This chart deploys the ''flexget'' service, please refer to the
-      documentation at: https://noygal.github.io/helm//flexget'
-    digest: 9c988ae86a9351ba8389179957ca4e3659cd46ca47d289b7e0e88ab3e2f0cc01
+      documentation at: https://ekavallieri.github.io/public-helm-charts//flexget'
+    digest: ba345b62b729ebff344156fb1fcc35c9d70838dc4adb0feb1a62e81f2a7d9081
     name: flexget
     type: application
     urls:
-    - https://noygal.github.io/helm/flexget-0.2.0.tgz
-    version: 0.2.0
+    - https://ekavallieri.github.io/public-helm-charts/flexget-0.2.1.tgz
+    version: 0.2.1
   foldingathome:
   - apiVersion: v2
-    appVersion: 0.2.0
-    created: "2023-07-26T18:14:24.35053+02:00"
+    appVersion: 0.2.1
+    created: "2023-11-16T12:10:43.265494+01:00"
     dependencies:
     - name: base-chart
-      repository: https://noygal.github.io/helm/
-      version: 0.2.0
+      repository: https://ekavallieri.github.io/public-helm-charts/
+      version: 0.4.1
     description: 'This chart deploys the ''foldingathome'' service, please refer to
-      the documentation at: https://noygal.github.io/helm//foldingathome'
-    digest: 51a4e5694a670c383158b69a0b1188ef78633c86c78340a347cdf873946ae1a6
+      the documentation at: https://ekavallieri.github.io/public-helm-charts//foldingathome'
+    digest: a903111265d0301daf0bc1e3e1054c19237090b1917168650c31e36cb8016299
     name: foldingathome
     type: application
     urls:
-    - https://noygal.github.io/helm/foldingathome-0.2.0.tgz
-    version: 0.2.0
+    - https://ekavallieri.github.io/public-helm-charts/foldingathome-0.2.1.tgz
+    version: 0.2.1
   freshrss:
   - apiVersion: v2
-    appVersion: 0.2.0
-    created: "2023-07-26T18:14:24.354529+02:00"
+    appVersion: 0.2.1
+    created: "2023-11-16T12:10:43.267302+01:00"
     dependencies:
     - name: base-chart
-      repository: https://noygal.github.io/helm/
-      version: 0.2.0
+      repository: https://ekavallieri.github.io/public-helm-charts/
+      version: 0.4.1
     description: 'This chart deploys the ''freshrss'' service, please refer to the
-      documentation at: https://noygal.github.io/helm//freshrss'
-    digest: 7210ed2118841c8a4d589c903a6b7d8a213a548f5816296fd742bf40ec3bfd5f
+      documentation at: https://ekavallieri.github.io/public-helm-charts//freshrss'
+    digest: cd93102b9be8479d1f87bed314177cb304f9cb75c9af947003f73cf1a36afdbf
     name: freshrss
     type: application
     urls:
-    - https://noygal.github.io/helm/freshrss-0.2.0.tgz
-    version: 0.2.0
-  gitqlient:
+    - https://ekavallieri.github.io/public-helm-charts/freshrss-0.2.1.tgz
+    version: 0.2.1
+  github-desktop:
   - apiVersion: v2
-    appVersion: 0.2.0
-    created: "2023-07-26T18:14:24.360855+02:00"
+    appVersion: 0.2.1
+    created: "2023-11-16T12:10:43.268995+01:00"
     dependencies:
     - name: base-chart
-      repository: https://noygal.github.io/helm/
-      version: 0.2.0
+      repository: https://ekavallieri.github.io/public-helm-charts/
+      version: 0.4.1
+    description: 'This chart deploys the ''github-desktop'' service, please refer
+      to the documentation at: https://ekavallieri.github.io/public-helm-charts//github-desktop'
+    digest: 9004072872f248a0d3bc958825432753fa7a52fb141f7d9426c3d1a613268b42
+    name: github-desktop
+    type: application
+    urls:
+    - https://ekavallieri.github.io/public-helm-charts/github-desktop-0.2.1.tgz
+    version: 0.2.1
+  gitqlient:
+  - apiVersion: v2
+    appVersion: 0.2.1
+    created: "2023-11-16T12:10:43.271449+01:00"
+    dependencies:
+    - name: base-chart
+      repository: https://ekavallieri.github.io/public-helm-charts/
+      version: 0.4.1
     description: 'This chart deploys the ''gitqlient'' service, please refer to the
-      documentation at: https://noygal.github.io/helm//gitqlient'
-    digest: 2ad6b7b724b2d18211d538ff98b43969594278dac11fdc9c428d528f3395e58b
+      documentation at: https://ekavallieri.github.io/public-helm-charts//gitqlient'
+    digest: cf3c28f85175bed656e1a6118dbd0f733d19c492e38638e80b72c5a3a57f6670
     name: gitqlient
     type: application
     urls:
-    - https://noygal.github.io/helm/gitqlient-0.2.0.tgz
-    version: 0.2.0
+    - https://ekavallieri.github.io/public-helm-charts/gitqlient-0.2.1.tgz
+    version: 0.2.1
   grav:
   - apiVersion: v2
-    appVersion: 0.2.0
-    created: "2023-07-26T18:14:24.366034+02:00"
+    appVersion: 0.2.1
+    created: "2023-11-16T12:10:43.273264+01:00"
     dependencies:
     - name: base-chart
-      repository: https://noygal.github.io/helm/
-      version: 0.2.0
+      repository: https://ekavallieri.github.io/public-helm-charts/
+      version: 0.4.1
     description: 'This chart deploys the ''grav'' service, please refer to the documentation
-      at: https://noygal.github.io/helm//grav'
-    digest: 6f1b94907deed23356458af5011476b10c59a9af2e3383561624b03f8b802300
+      at: https://ekavallieri.github.io/public-helm-charts//grav'
+    digest: 294506d5a02de6fc646d765ab9ec85651f7245dd58caf2b0b2fd503a6c539821
     name: grav
     type: application
     urls:
-    - https://noygal.github.io/helm/grav-0.2.0.tgz
-    version: 0.2.0
+    - https://ekavallieri.github.io/public-helm-charts/grav-0.2.1.tgz
+    version: 0.2.1
   grocy:
   - apiVersion: v2
-    appVersion: 0.2.0
-    created: "2023-07-26T18:14:24.370839+02:00"
+    appVersion: 0.2.1
+    created: "2023-11-16T12:10:43.274834+01:00"
     dependencies:
     - name: base-chart
-      repository: https://noygal.github.io/helm/
-      version: 0.2.0
+      repository: https://ekavallieri.github.io/public-helm-charts/
+      version: 0.4.1
     description: 'This chart deploys the ''grocy'' service, please refer to the documentation
-      at: https://noygal.github.io/helm//grocy'
-    digest: 4554ba4d9bfc09fa3433e9a2b0341474f1ea6c0316d187436c14de34e7568fc0
+      at: https://ekavallieri.github.io/public-helm-charts//grocy'
+    digest: bee3fe529f91e1a83b7fffeaced3437c341ac6755ddba93e24d1e13f8b19c120
     name: grocy
     type: application
     urls:
-    - https://noygal.github.io/helm/grocy-0.2.0.tgz
-    version: 0.2.0
+    - https://ekavallieri.github.io/public-helm-charts/grocy-0.2.1.tgz
+    version: 0.2.1
   habridge:
   - apiVersion: v2
-    appVersion: 0.2.0
-    created: "2023-07-26T18:14:24.37606+02:00"
+    appVersion: 0.2.1
+    created: "2023-11-16T12:10:43.277783+01:00"
     dependencies:
     - name: base-chart
-      repository: https://noygal.github.io/helm/
-      version: 0.2.0
+      repository: https://ekavallieri.github.io/public-helm-charts/
+      version: 0.4.1
     description: 'This chart deploys the ''habridge'' service, please refer to the
-      documentation at: https://noygal.github.io/helm//habridge'
-    digest: 26078cf40039a772c8c95fdadf40c7f20febe84b9c262ca6b7e68873b1453df3
+      documentation at: https://ekavallieri.github.io/public-helm-charts//habridge'
+    digest: 08673948654c1859e89531ab83dbcd61e51881a83a5a5cc930576cbfcafd9339
     name: habridge
     type: application
     urls:
-    - https://noygal.github.io/helm/habridge-0.2.0.tgz
-    version: 0.2.0
+    - https://ekavallieri.github.io/public-helm-charts/habridge-0.2.1.tgz
+    version: 0.2.1
   headphones:
   - apiVersion: v2
-    appVersion: 0.2.0
-    created: "2023-07-26T18:14:24.381083+02:00"
+    appVersion: 0.2.1
+    created: "2023-11-16T12:10:43.283496+01:00"
     dependencies:
     - name: base-chart
-      repository: https://noygal.github.io/helm/
-      version: 0.2.0
+      repository: https://ekavallieri.github.io/public-helm-charts/
+      version: 0.4.1
     description: 'This chart deploys the ''headphones'' service, please refer to the
-      documentation at: https://noygal.github.io/helm//headphones'
-    digest: 266fcaac99e8fdf0faecea1c00bb45cf602a83a18858f85bea7b55442ab00c72
+      documentation at: https://ekavallieri.github.io/public-helm-charts//headphones'
+    digest: d758abaf0b106f65960cd2290c25c59e14aab18a686d253a234e915c1616f076
     name: headphones
     type: application
     urls:
-    - https://noygal.github.io/helm/headphones-0.2.0.tgz
-    version: 0.2.0
+    - https://ekavallieri.github.io/public-helm-charts/headphones-0.2.1.tgz
+    version: 0.2.1
   healthchecks:
   - apiVersion: v2
-    appVersion: 0.2.0
-    created: "2023-07-26T18:14:24.390713+02:00"
+    appVersion: 0.2.1
+    created: "2023-11-16T12:10:43.285352+01:00"
     dependencies:
     - name: base-chart
-      repository: https://noygal.github.io/helm/
-      version: 0.2.0
+      repository: https://ekavallieri.github.io/public-helm-charts/
+      version: 0.4.1
     description: 'This chart deploys the ''healthchecks'' service, please refer to
-      the documentation at: https://noygal.github.io/helm//healthchecks'
-    digest: fb75cfa8c92949da8d690d427e003a7fe942392fc8b7b1510508d7292ee18a06
+      the documentation at: https://ekavallieri.github.io/public-helm-charts//healthchecks'
+    digest: 1c2a3760b59188ff861224a960906928ef6a7295ba34b7b5c740f34aba752d5a
     name: healthchecks
     type: application
     urls:
-    - https://noygal.github.io/helm/healthchecks-0.2.0.tgz
-    version: 0.2.0
+    - https://ekavallieri.github.io/public-helm-charts/healthchecks-0.2.1.tgz
+    version: 0.2.1
   hedgedoc:
   - apiVersion: v2
-    appVersion: 0.2.0
-    created: "2023-07-26T18:14:24.394785+02:00"
+    appVersion: 0.2.1
+    created: "2023-11-16T12:10:43.287106+01:00"
     dependencies:
     - name: base-chart
-      repository: https://noygal.github.io/helm/
-      version: 0.2.0
+      repository: https://ekavallieri.github.io/public-helm-charts/
+      version: 0.4.1
     description: 'This chart deploys the ''hedgedoc'' service, please refer to the
-      documentation at: https://noygal.github.io/helm//hedgedoc'
-    digest: af8b7012c183447e2b1ad196f39395fe8c8c0331ad3c7aadd85010251cb5b711
+      documentation at: https://ekavallieri.github.io/public-helm-charts//hedgedoc'
+    digest: e27bc2d8c9454d05a6dc1db182b277fe0d5d693e62a3dda4774ecdacc6f62c1d
     name: hedgedoc
     type: application
     urls:
-    - https://noygal.github.io/helm/hedgedoc-0.2.0.tgz
-    version: 0.2.0
+    - https://ekavallieri.github.io/public-helm-charts/hedgedoc-0.2.1.tgz
+    version: 0.2.1
   heimdall:
   - apiVersion: v2
-    appVersion: 0.2.0
-    created: "2023-07-26T18:14:24.39843+02:00"
+    appVersion: 0.2.1
+    created: "2023-11-16T12:10:43.289519+01:00"
     dependencies:
     - name: base-chart
-      repository: https://noygal.github.io/helm/
-      version: 0.2.0
+      repository: https://ekavallieri.github.io/public-helm-charts/
+      version: 0.4.1
     description: 'This chart deploys the ''heimdall'' service, please refer to the
-      documentation at: https://noygal.github.io/helm//heimdall'
-    digest: c04da91b5b18f4f9065ff6cffb0e80cd45e1ce22260902510b353a9c4a148e56
+      documentation at: https://ekavallieri.github.io/public-helm-charts//heimdall'
+    digest: 6fab092a687521d86a52d6dcc180a62b626d45e9d93920cfedd9aac7cc60251d
     name: heimdall
     type: application
     urls:
-    - https://noygal.github.io/helm/heimdall-0.2.0.tgz
-    version: 0.2.0
-  htpcmanager:
+    - https://ekavallieri.github.io/public-helm-charts/heimdall-0.2.1.tgz
+    version: 0.2.1
+  hishtory-server:
   - apiVersion: v2
-    appVersion: 0.2.0
-    created: "2023-07-26T18:14:24.402695+02:00"
+    appVersion: 0.2.1
+    created: "2023-11-16T12:10:43.291159+01:00"
     dependencies:
     - name: base-chart
-      repository: https://noygal.github.io/helm/
-      version: 0.2.0
+      repository: https://ekavallieri.github.io/public-helm-charts/
+      version: 0.4.1
+    description: 'This chart deploys the ''hishtory-server'' service, please refer
+      to the documentation at: https://ekavallieri.github.io/public-helm-charts//hishtory-server'
+    digest: 1f7ce94dd0bb46ec1e3a453b75ce5c0649c6f66b40bc857e5113ab5cae0f33bc
+    name: hishtory-server
+    type: application
+    urls:
+    - https://ekavallieri.github.io/public-helm-charts/hishtory-server-0.2.1.tgz
+    version: 0.2.1
+  homeassistant:
+  - apiVersion: v2
+    appVersion: 0.2.1
+    created: "2023-11-16T12:10:43.293679+01:00"
+    dependencies:
+    - name: base-chart
+      repository: https://ekavallieri.github.io/public-helm-charts/
+      version: 0.4.1
+    description: 'This chart deploys the ''homeassistant'' service, please refer to
+      the documentation at: https://ekavallieri.github.io/public-helm-charts//homeassistant'
+    digest: a6dee4251857d5691bf0402247461ab7edabc37dbab8c09ac9aa9f7a5d4edc83
+    name: homeassistant
+    type: application
+    urls:
+    - https://ekavallieri.github.io/public-helm-charts/homeassistant-0.2.1.tgz
+    version: 0.2.1
+  htpcmanager:
+  - apiVersion: v2
+    appVersion: 0.2.1
+    created: "2023-11-16T12:10:43.303171+01:00"
+    dependencies:
+    - name: base-chart
+      repository: https://ekavallieri.github.io/public-helm-charts/
+      version: 0.4.1
     description: 'This chart deploys the ''htpcmanager'' service, please refer to
-      the documentation at: https://noygal.github.io/helm//htpcmanager'
-    digest: 5c2ded43ed1faa60718926ce88a3fadc9ff44fb4706375647c37b763e61889b4
+      the documentation at: https://ekavallieri.github.io/public-helm-charts//htpcmanager'
+    digest: 59b704840173e3c3c78a2fe8295b486d1126289cd152ca0af2764f7183d1ae67
     name: htpcmanager
     type: application
     urls:
-    - https://noygal.github.io/helm/htpcmanager-0.2.0.tgz
-    version: 0.2.0
+    - https://ekavallieri.github.io/public-helm-charts/htpcmanager-0.2.1.tgz
+    version: 0.2.1
   jackett:
   - apiVersion: v2
-    appVersion: 0.2.0
-    created: "2023-07-26T18:14:24.40738+02:00"
+    appVersion: 0.2.1
+    created: "2023-11-16T12:10:43.305088+01:00"
     dependencies:
     - name: base-chart
-      repository: https://noygal.github.io/helm/
-      version: 0.2.0
+      repository: https://ekavallieri.github.io/public-helm-charts/
+      version: 0.4.1
     description: 'This chart deploys the ''jackett'' service, please refer to the
-      documentation at: https://noygal.github.io/helm//jackett'
-    digest: c8a6b18697f7a6400ea855c941d05b9da0fa0af1515929d0cb3bd180750004e6
+      documentation at: https://ekavallieri.github.io/public-helm-charts//jackett'
+    digest: f7270975ece5353d5df67aa37a0b849937d708d17075d02d0090366f25f94d7f
     name: jackett
     type: application
     urls:
-    - https://noygal.github.io/helm/jackett-0.2.0.tgz
-    version: 0.2.0
+    - https://ekavallieri.github.io/public-helm-charts/jackett-0.2.1.tgz
+    version: 0.2.1
   jellyfin:
   - apiVersion: v2
-    appVersion: 0.2.0
-    created: "2023-07-26T18:14:24.411336+02:00"
+    appVersion: 0.2.1
+    created: "2023-11-16T12:10:43.306767+01:00"
     dependencies:
     - name: base-chart
-      repository: https://noygal.github.io/helm/
-      version: 0.2.0
+      repository: https://ekavallieri.github.io/public-helm-charts/
+      version: 0.4.1
     description: 'This chart deploys the ''jellyfin'' service, please refer to the
-      documentation at: https://noygal.github.io/helm//jellyfin'
-    digest: 7488ad584c0f7aa1f0acd0c4fcb4ec6ca3f25e3f7026f0151d3e0b26d1a1cc94
+      documentation at: https://ekavallieri.github.io/public-helm-charts//jellyfin'
+    digest: cff3b7e87600cc9370439af6c02fcb2ca8c6bf32cc44d059c9e3b4312d663b3a
     name: jellyfin
     type: application
     urls:
-    - https://noygal.github.io/helm/jellyfin-0.2.0.tgz
-    version: 0.2.0
+    - https://ekavallieri.github.io/public-helm-charts/jellyfin-0.2.1.tgz
+    version: 0.2.1
   kasm:
   - apiVersion: v2
-    appVersion: 0.2.0
-    created: "2023-07-26T18:14:24.415081+02:00"
+    appVersion: 0.2.1
+    created: "2023-11-16T12:10:43.308274+01:00"
     dependencies:
     - name: base-chart
-      repository: https://noygal.github.io/helm/
-      version: 0.2.0
+      repository: https://ekavallieri.github.io/public-helm-charts/
+      version: 0.4.1
     description: 'This chart deploys the ''kasm'' service, please refer to the documentation
-      at: https://noygal.github.io/helm//kasm'
-    digest: 6fcdc42c504860d8a2148238465fb28688587fb90b62a0cccf98e5885b811cf5
+      at: https://ekavallieri.github.io/public-helm-charts//kasm'
+    digest: 335a407fbf5b942280a71a22be3b1a4c5d4da50b53fafa654eb2a480e78bc0e7
     name: kasm
     type: application
     urls:
-    - https://noygal.github.io/helm/kasm-0.2.0.tgz
-    version: 0.2.0
-  kdenlive:
+    - https://ekavallieri.github.io/public-helm-charts/kasm-0.2.1.tgz
+    version: 0.2.1
+  kavita:
   - apiVersion: v2
-    appVersion: 0.2.0
-    created: "2023-07-26T18:14:24.419966+02:00"
+    appVersion: 0.2.1
+    created: "2023-11-16T12:10:43.310116+01:00"
     dependencies:
     - name: base-chart
-      repository: https://noygal.github.io/helm/
-      version: 0.2.0
+      repository: https://ekavallieri.github.io/public-helm-charts/
+      version: 0.4.1
+    description: 'This chart deploys the ''kavita'' service, please refer to the documentation
+      at: https://ekavallieri.github.io/public-helm-charts//kavita'
+    digest: 3cd30447bf7c8c587c98bd5824345a4eea529eb642846a3f7c17b26dad8f7170
+    name: kavita
+    type: application
+    urls:
+    - https://ekavallieri.github.io/public-helm-charts/kavita-0.2.1.tgz
+    version: 0.2.1
+  kdenlive:
+  - apiVersion: v2
+    appVersion: 0.2.1
+    created: "2023-11-16T12:10:43.312962+01:00"
+    dependencies:
+    - name: base-chart
+      repository: https://ekavallieri.github.io/public-helm-charts/
+      version: 0.4.1
     description: 'This chart deploys the ''kdenlive'' service, please refer to the
-      documentation at: https://noygal.github.io/helm//kdenlive'
-    digest: 6dff946c7ecf7b85f5e39d6ab7c7c023941b328d4a85d6257262a78a11cea31d
+      documentation at: https://ekavallieri.github.io/public-helm-charts//kdenlive'
+    digest: 5b692aec35bb020f0e1a8556ce18c06cc0f8361c35329a2a521c5a12aeb6ac21
     name: kdenlive
     type: application
     urls:
-    - https://noygal.github.io/helm/kdenlive-0.2.0.tgz
-    version: 0.2.0
-  lazylibrarian:
+    - https://ekavallieri.github.io/public-helm-charts/kdenlive-0.2.1.tgz
+    version: 0.2.1
+  kimai:
   - apiVersion: v2
-    appVersion: 0.2.0
-    created: "2023-07-26T18:14:24.427948+02:00"
+    appVersion: 0.2.1
+    created: "2023-11-16T12:10:43.314943+01:00"
     dependencies:
     - name: base-chart
-      repository: https://noygal.github.io/helm/
-      version: 0.2.0
+      repository: https://ekavallieri.github.io/public-helm-charts/
+      version: 0.4.1
+    description: 'This chart deploys the ''kimai'' service, please refer to the documentation
+      at: https://ekavallieri.github.io/public-helm-charts//kimai'
+    digest: aee9f0d3a29bcc2341dd077751615d849e32cb5fe11acca4ea7d1a0ec329ece9
+    name: kimai
+    type: application
+    urls:
+    - https://ekavallieri.github.io/public-helm-charts/kimai-0.2.1.tgz
+    version: 0.2.1
+  lazylibrarian:
+  - apiVersion: v2
+    appVersion: 0.2.1
+    created: "2023-11-16T12:10:43.316557+01:00"
+    dependencies:
+    - name: base-chart
+      repository: https://ekavallieri.github.io/public-helm-charts/
+      version: 0.4.1
     description: 'This chart deploys the ''lazylibrarian'' service, please refer to
-      the documentation at: https://noygal.github.io/helm//lazylibrarian'
-    digest: 57c9b5af779f199dbd79d751fefe530a60bf420b8cd9d613882eefb05336dafa
+      the documentation at: https://ekavallieri.github.io/public-helm-charts//lazylibrarian'
+    digest: ac4958b95085b7f7aef0f3610690fe6a5f25bf82d100879242dc3f57c55073d9
     name: lazylibrarian
     type: application
     urls:
-    - https://noygal.github.io/helm/lazylibrarian-0.2.0.tgz
-    version: 0.2.0
+    - https://ekavallieri.github.io/public-helm-charts/lazylibrarian-0.2.1.tgz
+    version: 0.2.1
   ldap-auth:
   - apiVersion: v2
-    appVersion: 0.2.0
-    created: "2023-07-26T18:14:24.435807+02:00"
+    appVersion: 0.2.1
+    created: "2023-11-16T12:10:43.318733+01:00"
     dependencies:
     - name: base-chart
-      repository: https://noygal.github.io/helm/
-      version: 0.2.0
+      repository: https://ekavallieri.github.io/public-helm-charts/
+      version: 0.4.1
     description: 'This chart deploys the ''ldap-auth'' service, please refer to the
-      documentation at: https://noygal.github.io/helm//ldap-auth'
-    digest: 7fb9a65c7666c61ac167fb92c7ea52109ae14bb68596d2ee2da7499c7582301e
+      documentation at: https://ekavallieri.github.io/public-helm-charts//ldap-auth'
+    digest: cb245005f15df7d87ec088a914324602545cd9d60754969e007cd209cd73b6dd
     name: ldap-auth
     type: application
     urls:
-    - https://noygal.github.io/helm/ldap-auth-0.2.0.tgz
-    version: 0.2.0
+    - https://ekavallieri.github.io/public-helm-charts/ldap-auth-0.2.1.tgz
+    version: 0.2.1
   libreoffice:
   - apiVersion: v2
-    appVersion: 0.2.0
-    created: "2023-07-26T18:14:24.44146+02:00"
+    appVersion: 0.2.1
+    created: "2023-11-16T12:10:43.320505+01:00"
     dependencies:
     - name: base-chart
-      repository: https://noygal.github.io/helm/
-      version: 0.2.0
+      repository: https://ekavallieri.github.io/public-helm-charts/
+      version: 0.4.1
     description: 'This chart deploys the ''libreoffice'' service, please refer to
-      the documentation at: https://noygal.github.io/helm//libreoffice'
-    digest: a899a1f921998ef183deecbc678c26f77627a693b0b7d7c4ab3a44b2e498e21e
+      the documentation at: https://ekavallieri.github.io/public-helm-charts//libreoffice'
+    digest: ef52609aa85721706e92d6a9839e9f85f51a5c922cd9cc2f0f041db7a7f0acf3
     name: libreoffice
     type: application
     urls:
-    - https://noygal.github.io/helm/libreoffice-0.2.0.tgz
-    version: 0.2.0
+    - https://ekavallieri.github.io/public-helm-charts/libreoffice-0.2.1.tgz
+    version: 0.2.1
   librespeed:
   - apiVersion: v2
-    appVersion: 0.2.0
-    created: "2023-07-26T18:14:24.447278+02:00"
+    appVersion: 0.2.1
+    created: "2023-11-16T12:10:43.322426+01:00"
     dependencies:
     - name: base-chart
-      repository: https://noygal.github.io/helm/
-      version: 0.2.0
+      repository: https://ekavallieri.github.io/public-helm-charts/
+      version: 0.4.1
     description: 'This chart deploys the ''librespeed'' service, please refer to the
-      documentation at: https://noygal.github.io/helm//librespeed'
-    digest: a2780ed721d9c9897550f01da23bad36c490683a2e83306555159f623231faca
+      documentation at: https://ekavallieri.github.io/public-helm-charts//librespeed'
+    digest: bb1207faacae9c52f63e4c987a7249e5424e2dd0b9a31ed0d6a38e0e1e7d8300
     name: librespeed
     type: application
     urls:
-    - https://noygal.github.io/helm/librespeed-0.2.0.tgz
-    version: 0.2.0
+    - https://ekavallieri.github.io/public-helm-charts/librespeed-0.2.1.tgz
+    version: 0.2.1
   lidarr:
   - apiVersion: v2
-    appVersion: 0.2.0
-    created: "2023-07-26T18:14:24.45078+02:00"
+    appVersion: 0.2.1
+    created: "2023-11-16T12:10:43.324284+01:00"
     dependencies:
     - name: base-chart
-      repository: https://noygal.github.io/helm/
-      version: 0.2.0
+      repository: https://ekavallieri.github.io/public-helm-charts/
+      version: 0.4.1
     description: 'This chart deploys the ''lidarr'' service, please refer to the documentation
-      at: https://noygal.github.io/helm//lidarr'
-    digest: 1bbbe2d18ea76762074c62e414b6dbd685a8affa59658eb5598c66a2feb8e120
+      at: https://ekavallieri.github.io/public-helm-charts//lidarr'
+    digest: f6704e55e3dda99cae2fe5089e1e328a5d059c56b0165fe945a57d48d6c456ca
     name: lidarr
     type: application
     urls:
-    - https://noygal.github.io/helm/lidarr-0.2.0.tgz
-    version: 0.2.0
+    - https://ekavallieri.github.io/public-helm-charts/lidarr-0.2.1.tgz
+    version: 0.2.1
   limnoria:
   - apiVersion: v2
-    appVersion: 0.2.0
-    created: "2023-07-26T18:14:24.456481+02:00"
+    appVersion: 0.2.1
+    created: "2023-11-16T12:10:43.325923+01:00"
     dependencies:
     - name: base-chart
-      repository: https://noygal.github.io/helm/
-      version: 0.2.0
+      repository: https://ekavallieri.github.io/public-helm-charts/
+      version: 0.4.1
     description: 'This chart deploys the ''limnoria'' service, please refer to the
-      documentation at: https://noygal.github.io/helm//limnoria'
-    digest: 8ec658c314a2ec1e82e0bc968fba01a1041fda1dc3ec63a6cd46537b12485e92
+      documentation at: https://ekavallieri.github.io/public-helm-charts//limnoria'
+    digest: 4cb83fb009e2cb59fb7b7c65d5d8c3df8de9edeb8eb1932dd4ba62570ed6666d
     name: limnoria
     type: application
     urls:
-    - https://noygal.github.io/helm/limnoria-0.2.0.tgz
-    version: 0.2.0
+    - https://ekavallieri.github.io/public-helm-charts/limnoria-0.2.1.tgz
+    version: 0.2.1
   lollypop:
   - apiVersion: v2
-    appVersion: 0.2.0
-    created: "2023-07-26T18:14:24.462503+02:00"
+    appVersion: 0.2.1
+    created: "2023-11-16T12:10:43.327681+01:00"
     dependencies:
     - name: base-chart
-      repository: https://noygal.github.io/helm/
-      version: 0.2.0
+      repository: https://ekavallieri.github.io/public-helm-charts/
+      version: 0.4.1
     description: 'This chart deploys the ''lollypop'' service, please refer to the
-      documentation at: https://noygal.github.io/helm//lollypop'
-    digest: 718982106bd4ad1fa851e867d7308c8b5d50c6847acfd26faaf559fca922e8b8
+      documentation at: https://ekavallieri.github.io/public-helm-charts//lollypop'
+    digest: e8dd7d8101112571a32fa806b448b47b10226d9ae2b54798c296bf30af2525a8
     name: lollypop
     type: application
     urls:
-    - https://noygal.github.io/helm/lollypop-0.2.0.tgz
-    version: 0.2.0
+    - https://ekavallieri.github.io/public-helm-charts/lollypop-0.2.1.tgz
+    version: 0.2.1
   lychee:
   - apiVersion: v2
-    appVersion: 0.2.0
-    created: "2023-07-26T18:14:24.471087+02:00"
+    appVersion: 0.2.1
+    created: "2023-11-16T12:10:43.329475+01:00"
     dependencies:
     - name: base-chart
-      repository: https://noygal.github.io/helm/
-      version: 0.2.0
+      repository: https://ekavallieri.github.io/public-helm-charts/
+      version: 0.4.1
     description: 'This chart deploys the ''lychee'' service, please refer to the documentation
-      at: https://noygal.github.io/helm//lychee'
-    digest: 81f18b3c0a38c770a128fdf69a62a700ebe73dd263f3b447415fcf6e4058d78d
+      at: https://ekavallieri.github.io/public-helm-charts//lychee'
+    digest: 73a5b7421cf049ceca8a395f4ea7df570ddd1229febe296c3936d419f1849901
     name: lychee
     type: application
     urls:
-    - https://noygal.github.io/helm/lychee-0.2.0.tgz
-    version: 0.2.0
+    - https://ekavallieri.github.io/public-helm-charts/lychee-0.2.1.tgz
+    version: 0.2.1
   mariadb:
   - apiVersion: v2
-    appVersion: 0.2.0
-    created: "2023-07-26T18:14:24.475775+02:00"
+    appVersion: 0.2.1
+    created: "2023-11-16T12:10:43.331766+01:00"
     dependencies:
     - name: base-chart
-      repository: https://noygal.github.io/helm/
-      version: 0.2.0
+      repository: https://ekavallieri.github.io/public-helm-charts/
+      version: 0.4.1
     description: 'This chart deploys the ''mariadb'' service, please refer to the
-      documentation at: https://noygal.github.io/helm//mariadb'
-    digest: e65d636dbb1a8adebc9be60a8eeba318eec1f9054ae19e1442e11daf717e82da
+      documentation at: https://ekavallieri.github.io/public-helm-charts//mariadb'
+    digest: 179be212c90f1489cacf997ca7837205deafe3a803537b127972f7c52410c2c7
     name: mariadb
     type: application
     urls:
-    - https://noygal.github.io/helm/mariadb-0.2.0.tgz
-    version: 0.2.0
+    - https://ekavallieri.github.io/public-helm-charts/mariadb-0.2.1.tgz
+    version: 0.2.1
   mastodon:
   - apiVersion: v2
-    appVersion: 0.2.0
-    created: "2023-07-26T18:14:24.480831+02:00"
+    appVersion: 0.2.1
+    created: "2023-11-16T12:10:43.333773+01:00"
     dependencies:
     - name: base-chart
-      repository: https://noygal.github.io/helm/
-      version: 0.2.0
+      repository: https://ekavallieri.github.io/public-helm-charts/
+      version: 0.4.1
     description: 'This chart deploys the ''mastodon'' service, please refer to the
-      documentation at: https://noygal.github.io/helm//mastodon'
-    digest: 5b1eebf2188fdbb23de4f59027e9b03075698bc009e2f0f8b9285ece9c6f8f08
+      documentation at: https://ekavallieri.github.io/public-helm-charts//mastodon'
+    digest: 05ee5c907531247831a3b741b63c26795e8e56b793fec8bd8c2948277cb31949
     name: mastodon
     type: application
     urls:
-    - https://noygal.github.io/helm/mastodon-0.2.0.tgz
-    version: 0.2.0
+    - https://ekavallieri.github.io/public-helm-charts/mastodon-0.2.1.tgz
+    version: 0.2.1
   medusa:
   - apiVersion: v2
-    appVersion: 0.2.0
-    created: "2023-07-26T18:14:24.484802+02:00"
+    appVersion: 0.2.1
+    created: "2023-11-16T12:10:43.335879+01:00"
     dependencies:
     - name: base-chart
-      repository: https://noygal.github.io/helm/
-      version: 0.2.0
+      repository: https://ekavallieri.github.io/public-helm-charts/
+      version: 0.4.1
     description: 'This chart deploys the ''medusa'' service, please refer to the documentation
-      at: https://noygal.github.io/helm//medusa'
-    digest: ff4ad77ac6e9cbbdd3ce46081b33c10a6896619aeb2676b88647561c8bd8bfd1
+      at: https://ekavallieri.github.io/public-helm-charts//medusa'
+    digest: 8fdbc6beb61a2aa4d5b231902f074a7e9e93753723a45887e90573681229504b
     name: medusa
     type: application
     urls:
-    - https://noygal.github.io/helm/medusa-0.2.0.tgz
-    version: 0.2.0
+    - https://ekavallieri.github.io/public-helm-charts/medusa-0.2.1.tgz
+    version: 0.2.1
   minetest:
   - apiVersion: v2
-    appVersion: 0.2.0
-    created: "2023-07-26T18:14:24.490252+02:00"
+    appVersion: 0.2.1
+    created: "2023-11-16T12:10:43.337618+01:00"
     dependencies:
     - name: base-chart
-      repository: https://noygal.github.io/helm/
-      version: 0.2.0
+      repository: https://ekavallieri.github.io/public-helm-charts/
+      version: 0.4.1
     description: 'This chart deploys the ''minetest'' service, please refer to the
-      documentation at: https://noygal.github.io/helm//minetest'
-    digest: 4fbf923872913d0b0f13e26047c792ee81c8d42d5d716622db589c4cafe0cfa8
+      documentation at: https://ekavallieri.github.io/public-helm-charts//minetest'
+    digest: fad6e4dd64c6c6275b4df6e35415709f739cf5b64d0ab66dd120479f8dc0a579
     name: minetest
     type: application
     urls:
-    - https://noygal.github.io/helm/minetest-0.2.0.tgz
-    version: 0.2.0
+    - https://ekavallieri.github.io/public-helm-charts/minetest-0.2.1.tgz
+    version: 0.2.1
   minisatip:
   - apiVersion: v2
-    appVersion: 0.2.0
-    created: "2023-07-26T18:14:24.494444+02:00"
+    appVersion: 0.2.1
+    created: "2023-11-16T12:10:43.340839+01:00"
     dependencies:
     - name: base-chart
-      repository: https://noygal.github.io/helm/
-      version: 0.2.0
+      repository: https://ekavallieri.github.io/public-helm-charts/
+      version: 0.4.1
     description: 'This chart deploys the ''minisatip'' service, please refer to the
-      documentation at: https://noygal.github.io/helm//minisatip'
-    digest: 77494adae3962d1bfdb1112b03933321f041b8fea8c451091694c48f6a936881
+      documentation at: https://ekavallieri.github.io/public-helm-charts//minisatip'
+    digest: d5aa47ad1a308544016257ac4dcf8992736ba6e6042e8423ea96fcbf63c34f6f
     name: minisatip
     type: application
     urls:
-    - https://noygal.github.io/helm/minisatip-0.2.0.tgz
-    version: 0.2.0
+    - https://ekavallieri.github.io/public-helm-charts/minisatip-0.2.1.tgz
+    version: 0.2.1
   mstream:
   - apiVersion: v2
-    appVersion: 0.2.0
-    created: "2023-07-26T18:14:24.49964+02:00"
+    appVersion: 0.2.1
+    created: "2023-11-16T12:10:43.342763+01:00"
     dependencies:
     - name: base-chart
-      repository: https://noygal.github.io/helm/
-      version: 0.2.0
+      repository: https://ekavallieri.github.io/public-helm-charts/
+      version: 0.4.1
     description: 'This chart deploys the ''mstream'' service, please refer to the
-      documentation at: https://noygal.github.io/helm//mstream'
-    digest: 597285ea7ca0cf6b4736ce1f1754f797e76f6193af90984f392122addbd44651
+      documentation at: https://ekavallieri.github.io/public-helm-charts//mstream'
+    digest: d7e4235b359e57fec6f3241d83ccce367431fcd4c1d70377b30cedc90884838f
     name: mstream
     type: application
     urls:
-    - https://noygal.github.io/helm/mstream-0.2.0.tgz
-    version: 0.2.0
-  mylar3:
+    - https://ekavallieri.github.io/public-helm-charts/mstream-0.2.1.tgz
+    version: 0.2.1
+  mullvad-browser:
   - apiVersion: v2
-    appVersion: 0.2.0
-    created: "2023-07-26T18:14:24.515391+02:00"
+    appVersion: 0.2.1
+    created: "2023-11-16T12:10:43.344751+01:00"
     dependencies:
     - name: base-chart
-      repository: https://noygal.github.io/helm/
-      version: 0.2.0
+      repository: https://ekavallieri.github.io/public-helm-charts/
+      version: 0.4.1
+    description: 'This chart deploys the ''mullvad-browser'' service, please refer
+      to the documentation at: https://ekavallieri.github.io/public-helm-charts//mullvad-browser'
+    digest: 11656b2165f8a0a9cc8b943625fbf547e749b95e5aaef3c8cd35a5e1538b1649
+    name: mullvad-browser
+    type: application
+    urls:
+    - https://ekavallieri.github.io/public-helm-charts/mullvad-browser-0.2.1.tgz
+    version: 0.2.1
+  mylar3:
+  - apiVersion: v2
+    appVersion: 0.2.1
+    created: "2023-11-16T12:10:43.347808+01:00"
+    dependencies:
+    - name: base-chart
+      repository: https://ekavallieri.github.io/public-helm-charts/
+      version: 0.4.1
     description: 'This chart deploys the ''mylar3'' service, please refer to the documentation
-      at: https://noygal.github.io/helm//mylar3'
-    digest: 6c9960a7554952b2eab0ad03c1d5139b83cd5f9fd07f54b2ed9663d7e3007581
+      at: https://ekavallieri.github.io/public-helm-charts//mylar3'
+    digest: 511a8ff754e5971915e1a74066501e22427b0d7ebc2b1a7bedf5e902c0593157
     name: mylar3
     type: application
     urls:
-    - https://noygal.github.io/helm/mylar3-0.2.0.tgz
-    version: 0.2.0
+    - https://ekavallieri.github.io/public-helm-charts/mylar3-0.2.1.tgz
+    version: 0.2.1
   mysql-workbench:
   - apiVersion: v2
-    appVersion: 0.2.0
-    created: "2023-07-26T18:14:24.520986+02:00"
+    appVersion: 0.2.1
+    created: "2023-11-16T12:10:43.349445+01:00"
     dependencies:
     - name: base-chart
-      repository: https://noygal.github.io/helm/
-      version: 0.2.0
+      repository: https://ekavallieri.github.io/public-helm-charts/
+      version: 0.4.1
     description: 'This chart deploys the ''mysql-workbench'' service, please refer
-      to the documentation at: https://noygal.github.io/helm//mysql-workbench'
-    digest: a917060d9b5e165cf615bb3c37b2c14c50e0e1ee8b5c78288a03ac2027f5b95c
+      to the documentation at: https://ekavallieri.github.io/public-helm-charts//mysql-workbench'
+    digest: b8cb0f25c94c1e70b50e255553a538de44615b037ac2bcc4e5d128e9cd7d121d
     name: mysql-workbench
     type: application
     urls:
-    - https://noygal.github.io/helm/mysql-workbench-0.2.0.tgz
-    version: 0.2.0
+    - https://ekavallieri.github.io/public-helm-charts/mysql-workbench-0.2.1.tgz
+    version: 0.2.1
   nano:
   - apiVersion: v2
-    appVersion: 0.2.0
-    created: "2023-07-26T18:14:24.525613+02:00"
+    appVersion: 0.2.1
+    created: "2023-11-16T12:10:43.351054+01:00"
     dependencies:
     - name: base-chart
-      repository: https://noygal.github.io/helm/
-      version: 0.2.0
+      repository: https://ekavallieri.github.io/public-helm-charts/
+      version: 0.4.1
     description: 'This chart deploys the ''nano'' service, please refer to the documentation
-      at: https://noygal.github.io/helm//nano'
-    digest: 187d9d9a5c383eddb83ff250fcce76cf73b7cfa73aa9ff9e3a14cdfa4ba30b8f
+      at: https://ekavallieri.github.io/public-helm-charts//nano'
+    digest: 2cf17fa6ae0044ebec761fab029ec5f502d5fb59f9802d3825c4acfed6419532
     name: nano
     type: application
     urls:
-    - https://noygal.github.io/helm/nano-0.2.0.tgz
-    version: 0.2.0
+    - https://ekavallieri.github.io/public-helm-charts/nano-0.2.1.tgz
+    version: 0.2.1
   nano-wallet:
   - apiVersion: v2
-    appVersion: 0.2.0
-    created: "2023-07-26T18:14:24.532019+02:00"
+    appVersion: 0.2.1
+    created: "2023-11-16T12:10:43.352611+01:00"
     dependencies:
     - name: base-chart
-      repository: https://noygal.github.io/helm/
-      version: 0.2.0
+      repository: https://ekavallieri.github.io/public-helm-charts/
+      version: 0.4.1
     description: 'This chart deploys the ''nano-wallet'' service, please refer to
-      the documentation at: https://noygal.github.io/helm//nano-wallet'
-    digest: 275a9b7bb1d9a94240cdb4a44855767db75bb299a3cb9eea39a98978ff2b3aa8
+      the documentation at: https://ekavallieri.github.io/public-helm-charts//nano-wallet'
+    digest: 33bd45e578b7e8315e17d3c30b56b3bea6d8e6ad1c15a817b2c925cc9681a55e
     name: nano-wallet
     type: application
     urls:
-    - https://noygal.github.io/helm/nano-wallet-0.2.0.tgz
-    version: 0.2.0
+    - https://ekavallieri.github.io/public-helm-charts/nano-wallet-0.2.1.tgz
+    version: 0.2.1
   netbootxyz:
   - apiVersion: v2
-    appVersion: 0.2.0
-    created: "2023-07-26T18:14:24.539235+02:00"
+    appVersion: 0.2.1
+    created: "2023-11-16T12:10:43.354378+01:00"
     dependencies:
     - name: base-chart
-      repository: https://noygal.github.io/helm/
-      version: 0.2.0
+      repository: https://ekavallieri.github.io/public-helm-charts/
+      version: 0.4.1
     description: 'This chart deploys the ''netbootxyz'' service, please refer to the
-      documentation at: https://noygal.github.io/helm//netbootxyz'
-    digest: 20c6f31169c589506cc426ced8384e4df5fd90c02ce0622cd966cc456fb0b3ff
+      documentation at: https://ekavallieri.github.io/public-helm-charts//netbootxyz'
+    digest: 881afbfa0f3e4ca94873c300dd2c5ba652670a5878b9ce6fabaca062d665b62f
     name: netbootxyz
     type: application
     urls:
-    - https://noygal.github.io/helm/netbootxyz-0.2.0.tgz
-    version: 0.2.0
+    - https://ekavallieri.github.io/public-helm-charts/netbootxyz-0.2.1.tgz
+    version: 0.2.1
   netbox:
   - apiVersion: v2
-    appVersion: 0.2.0
-    created: "2023-07-26T18:14:24.554056+02:00"
+    appVersion: 0.2.1
+    created: "2023-11-16T12:10:43.356096+01:00"
     dependencies:
     - name: base-chart
-      repository: https://noygal.github.io/helm/
-      version: 0.2.0
+      repository: https://ekavallieri.github.io/public-helm-charts/
+      version: 0.4.1
     description: 'This chart deploys the ''netbox'' service, please refer to the documentation
-      at: https://noygal.github.io/helm//netbox'
-    digest: 22054e91611e1e0cac721352aac69aa6955f5368e6192dd40b6171c5ba8e3407
+      at: https://ekavallieri.github.io/public-helm-charts//netbox'
+    digest: 47d560c9bb57b3d41fe338ce81d15b8755980c5327d8744fa17873ab2abd6a90
     name: netbox
     type: application
     urls:
-    - https://noygal.github.io/helm/netbox-0.2.0.tgz
-    version: 0.2.0
+    - https://ekavallieri.github.io/public-helm-charts/netbox-0.2.1.tgz
+    version: 0.2.1
   nextcloud:
   - apiVersion: v2
-    appVersion: 0.2.0
-    created: "2023-07-26T18:14:24.56075+02:00"
+    appVersion: 0.2.1
+    created: "2023-11-16T12:10:43.357699+01:00"
     dependencies:
     - name: base-chart
-      repository: https://noygal.github.io/helm/
-      version: 0.2.0
+      repository: https://ekavallieri.github.io/public-helm-charts/
+      version: 0.4.1
     description: 'This chart deploys the ''nextcloud'' service, please refer to the
-      documentation at: https://noygal.github.io/helm//nextcloud'
-    digest: b61f328f2c9b8f37e6a4a7e8927e021625f5c5847fbcbeb5f128a4d79edbf7c6
+      documentation at: https://ekavallieri.github.io/public-helm-charts//nextcloud'
+    digest: ae4c81ec5f5b7682600ca323a9b6d0af4149cea51d820693a91b71525cb5c0f8
     name: nextcloud
     type: application
     urls:
-    - https://noygal.github.io/helm/nextcloud-0.2.0.tgz
-    version: 0.2.0
+    - https://ekavallieri.github.io/public-helm-charts/nextcloud-0.2.1.tgz
+    version: 0.2.1
   nginx:
   - apiVersion: v2
-    appVersion: 0.2.0
-    created: "2023-07-26T18:14:24.570763+02:00"
+    appVersion: 0.2.1
+    created: "2023-11-16T12:10:43.359357+01:00"
     dependencies:
     - name: base-chart
-      repository: https://noygal.github.io/helm/
-      version: 0.2.0
+      repository: https://ekavallieri.github.io/public-helm-charts/
+      version: 0.4.1
     description: 'This chart deploys the ''nginx'' service, please refer to the documentation
-      at: https://noygal.github.io/helm//nginx'
-    digest: 839c857ccb8bd77b0b304640b22e29c61bc539ecc82449475fd0c71960c0ae03
+      at: https://ekavallieri.github.io/public-helm-charts//nginx'
+    digest: 6bf309aadb0d90622e2cc724b43f38527232c99a7eeddb77551c5caaa53ac5cb
     name: nginx
     type: application
     urls:
-    - https://noygal.github.io/helm/nginx-0.2.0.tgz
-    version: 0.2.0
+    - https://ekavallieri.github.io/public-helm-charts/nginx-0.2.1.tgz
+    version: 0.2.1
   ngircd:
   - apiVersion: v2
-    appVersion: 0.2.0
-    created: "2023-07-26T18:14:24.577665+02:00"
+    appVersion: 0.2.1
+    created: "2023-11-16T12:10:43.361567+01:00"
     dependencies:
     - name: base-chart
-      repository: https://noygal.github.io/helm/
-      version: 0.2.0
+      repository: https://ekavallieri.github.io/public-helm-charts/
+      version: 0.4.1
     description: 'This chart deploys the ''ngircd'' service, please refer to the documentation
-      at: https://noygal.github.io/helm//ngircd'
-    digest: 4f1aab778d74681a5f7fea8861f33a58002c316e56f032698c33b474f2a0755c
+      at: https://ekavallieri.github.io/public-helm-charts//ngircd'
+    digest: 5442c58d19d5aca884f80f39412aabcddc486a17b589862f3d82501ff74280d1
     name: ngircd
     type: application
     urls:
-    - https://noygal.github.io/helm/ngircd-0.2.0.tgz
-    version: 0.2.0
+    - https://ekavallieri.github.io/public-helm-charts/ngircd-0.2.1.tgz
+    version: 0.2.1
   nzbhydra2:
   - apiVersion: v2
-    appVersion: 0.2.0
-    created: "2023-07-26T18:14:24.589247+02:00"
+    appVersion: 0.2.1
+    created: "2023-11-16T12:10:43.363538+01:00"
     dependencies:
     - name: base-chart
-      repository: https://noygal.github.io/helm/
-      version: 0.2.0
+      repository: https://ekavallieri.github.io/public-helm-charts/
+      version: 0.4.1
     description: 'This chart deploys the ''nzbhydra2'' service, please refer to the
-      documentation at: https://noygal.github.io/helm//nzbhydra2'
-    digest: 726804865577d4cff0cd3d2cbb92ec1714595710141405af38d39fe8548fe1fa
+      documentation at: https://ekavallieri.github.io/public-helm-charts//nzbhydra2'
+    digest: 6004a52cd1373122f6d99970a5ffed38160e39faf5d058ad53466925f72d8b38
     name: nzbhydra2
     type: application
     urls:
-    - https://noygal.github.io/helm/nzbhydra2-0.2.0.tgz
-    version: 0.2.0
+    - https://ekavallieri.github.io/public-helm-charts/nzbhydra2-0.2.1.tgz
+    version: 0.2.1
   ombi:
   - apiVersion: v2
-    appVersion: 0.2.0
-    created: "2023-07-26T18:14:24.598095+02:00"
+    appVersion: 0.2.1
+    created: "2023-11-16T12:10:43.365634+01:00"
     dependencies:
     - name: base-chart
-      repository: https://noygal.github.io/helm/
-      version: 0.2.0
+      repository: https://ekavallieri.github.io/public-helm-charts/
+      version: 0.4.1
     description: 'This chart deploys the ''ombi'' service, please refer to the documentation
-      at: https://noygal.github.io/helm//ombi'
-    digest: 1134b6ab09c0e4659b81d441793d6e75142ba60ea6c465ad7d154ef2c828abc0
+      at: https://ekavallieri.github.io/public-helm-charts//ombi'
+    digest: d9dd7b20c657c8af56788e2056971bcd7cab7fb05826038975d8ff1eef0c142d
     name: ombi
     type: application
     urls:
-    - https://noygal.github.io/helm/ombi-0.2.0.tgz
-    version: 0.2.0
+    - https://ekavallieri.github.io/public-helm-charts/ombi-0.2.1.tgz
+    version: 0.2.1
   openssh-server:
   - apiVersion: v2
-    appVersion: 0.2.0
-    created: "2023-07-26T18:14:24.602332+02:00"
+    appVersion: 0.2.1
+    created: "2023-11-16T12:10:43.367062+01:00"
     dependencies:
     - name: base-chart
-      repository: https://noygal.github.io/helm/
-      version: 0.2.0
+      repository: https://ekavallieri.github.io/public-helm-charts/
+      version: 0.4.1
     description: 'This chart deploys the ''openssh-server'' service, please refer
-      to the documentation at: https://noygal.github.io/helm//openssh-server'
-    digest: 28a466d37d7a5d521711cbc0555e80a97981e7310bf3743e66645805d55a0ddf
+      to the documentation at: https://ekavallieri.github.io/public-helm-charts//openssh-server'
+    digest: 717fced6178b0b2f14ed0360332c9a6184badd5135bc7a9c574e795d1061c85d
     name: openssh-server
     type: application
     urls:
-    - https://noygal.github.io/helm/openssh-server-0.2.0.tgz
-    version: 0.2.0
+    - https://ekavallieri.github.io/public-helm-charts/openssh-server-0.2.1.tgz
+    version: 0.2.1
   openvscode-server:
   - apiVersion: v2
-    appVersion: 0.2.0
-    created: "2023-07-26T18:14:24.607224+02:00"
+    appVersion: 0.2.1
+    created: "2023-11-16T12:10:43.368587+01:00"
     dependencies:
     - name: base-chart
-      repository: https://noygal.github.io/helm/
-      version: 0.2.0
+      repository: https://ekavallieri.github.io/public-helm-charts/
+      version: 0.4.1
     description: 'This chart deploys the ''openvscode-server'' service, please refer
-      to the documentation at: https://noygal.github.io/helm//openvscode-server'
-    digest: dece15d0ad95c83d08664a7cb724cba6f5c1c3cb42703ec4846f0cbeaf27a1e1
+      to the documentation at: https://ekavallieri.github.io/public-helm-charts//openvscode-server'
+    digest: b77e5737cafc560fa5d1188b7adf655f062c73ad5c863645a83029fdd9b9d772
     name: openvscode-server
     type: application
     urls:
-    - https://noygal.github.io/helm/openvscode-server-0.2.0.tgz
-    version: 0.2.0
+    - https://ekavallieri.github.io/public-helm-charts/openvscode-server-0.2.1.tgz
+    version: 0.2.1
   opera:
   - apiVersion: v2
-    appVersion: 0.2.0
-    created: "2023-07-26T18:14:24.613658+02:00"
+    appVersion: 0.2.1
+    created: "2023-11-16T12:10:43.370136+01:00"
     dependencies:
     - name: base-chart
-      repository: https://noygal.github.io/helm/
-      version: 0.2.0
+      repository: https://ekavallieri.github.io/public-helm-charts/
+      version: 0.4.1
     description: 'This chart deploys the ''opera'' service, please refer to the documentation
-      at: https://noygal.github.io/helm//opera'
-    digest: f8576482e682a7821e2c7e1887904a87d5824cd3cb386225a4425ae056264d8a
+      at: https://ekavallieri.github.io/public-helm-charts//opera'
+    digest: 18651747cdb83c126648e07fe67bd32b8b6ef93f9d96ab7c680fb2cf1edbe61c
     name: opera
     type: application
     urls:
-    - https://noygal.github.io/helm/opera-0.2.0.tgz
-    version: 0.2.0
+    - https://ekavallieri.github.io/public-helm-charts/opera-0.2.1.tgz
+    version: 0.2.1
   oscam:
   - apiVersion: v2
-    appVersion: 0.2.0
-    created: "2023-07-26T18:14:24.617936+02:00"
+    appVersion: 0.2.1
+    created: "2023-11-16T12:10:43.372658+01:00"
     dependencies:
     - name: base-chart
-      repository: https://noygal.github.io/helm/
-      version: 0.2.0
+      repository: https://ekavallieri.github.io/public-helm-charts/
+      version: 0.4.1
     description: 'This chart deploys the ''oscam'' service, please refer to the documentation
-      at: https://noygal.github.io/helm//oscam'
-    digest: 09e8b5786ccd07bfb3d26ce00809f91857e0af92ba8e5b98df759a0d5614dd54
+      at: https://ekavallieri.github.io/public-helm-charts//oscam'
+    digest: edf3a84825eed3ec27ee115c489151ab36e184d08b5e1d78675e425c6b34039e
     name: oscam
     type: application
     urls:
-    - https://noygal.github.io/helm/oscam-0.2.0.tgz
-    version: 0.2.0
+    - https://ekavallieri.github.io/public-helm-charts/oscam-0.2.1.tgz
+    version: 0.2.1
   overseerr:
   - apiVersion: v2
-    appVersion: 0.2.0
-    created: "2023-07-26T18:14:24.636226+02:00"
+    appVersion: 0.2.1
+    created: "2023-11-16T12:10:43.374377+01:00"
     dependencies:
     - name: base-chart
-      repository: https://noygal.github.io/helm/
-      version: 0.2.0
+      repository: https://ekavallieri.github.io/public-helm-charts/
+      version: 0.4.1
     description: 'This chart deploys the ''overseerr'' service, please refer to the
-      documentation at: https://noygal.github.io/helm//overseerr'
-    digest: 6a9072eb1fff109eeec953d8eb0616230bd98b34dc7b3036382c32ea0d342b45
+      documentation at: https://ekavallieri.github.io/public-helm-charts//overseerr'
+    digest: 65bd73a15137c1099b3b379422865149a818cd338c12ee262a23ff7e0cfc3163
     name: overseerr
     type: application
     urls:
-    - https://noygal.github.io/helm/overseerr-0.2.0.tgz
-    version: 0.2.0
+    - https://ekavallieri.github.io/public-helm-charts/overseerr-0.2.1.tgz
+    version: 0.2.1
   pairdrop:
   - apiVersion: v2
-    appVersion: 0.2.0
-    created: "2023-07-26T18:14:24.643778+02:00"
+    appVersion: 0.2.1
+    created: "2023-11-16T12:10:43.376516+01:00"
     dependencies:
     - name: base-chart
-      repository: https://noygal.github.io/helm/
-      version: 0.2.0
+      repository: https://ekavallieri.github.io/public-helm-charts/
+      version: 0.4.1
     description: 'This chart deploys the ''pairdrop'' service, please refer to the
-      documentation at: https://noygal.github.io/helm//pairdrop'
-    digest: b9e09fc863d91ab30dfbb4570f2ab413765998a78487606f3850a8615bf2231d
+      documentation at: https://ekavallieri.github.io/public-helm-charts//pairdrop'
+    digest: 1d2333d19d813f3d1410b96416f2f87dd099d4ee3b9ef670879f35af6879d561
     name: pairdrop
     type: application
     urls:
-    - https://noygal.github.io/helm/pairdrop-0.2.0.tgz
-    version: 0.2.0
+    - https://ekavallieri.github.io/public-helm-charts/pairdrop-0.2.1.tgz
+    version: 0.2.1
   phpmyadmin:
   - apiVersion: v2
-    appVersion: 0.2.0
-    created: "2023-07-26T18:14:24.648857+02:00"
+    appVersion: 0.2.1
+    created: "2023-11-16T12:10:43.378787+01:00"
     dependencies:
     - name: base-chart
-      repository: https://noygal.github.io/helm/
-      version: 0.2.0
+      repository: https://ekavallieri.github.io/public-helm-charts/
+      version: 0.4.1
     description: 'This chart deploys the ''phpmyadmin'' service, please refer to the
-      documentation at: https://noygal.github.io/helm//phpmyadmin'
-    digest: fe1d761302421460a8be4b639f89ab67288dea055b725cc830f03ce40ca7415d
+      documentation at: https://ekavallieri.github.io/public-helm-charts//phpmyadmin'
+    digest: 1ee73d87f1c07f1c246b16f46f7cb1c7e8046fa3f5a9bc1a2e9016cfa3b278f7
     name: phpmyadmin
     type: application
     urls:
-    - https://noygal.github.io/helm/phpmyadmin-0.2.0.tgz
-    version: 0.2.0
+    - https://ekavallieri.github.io/public-helm-charts/phpmyadmin-0.2.1.tgz
+    version: 0.2.1
   pidgin:
   - apiVersion: v2
-    appVersion: 0.2.0
-    created: "2023-07-26T18:14:24.652896+02:00"
+    appVersion: 0.2.1
+    created: "2023-11-16T12:10:43.381869+01:00"
     dependencies:
     - name: base-chart
-      repository: https://noygal.github.io/helm/
-      version: 0.2.0
+      repository: https://ekavallieri.github.io/public-helm-charts/
+      version: 0.4.1
     description: 'This chart deploys the ''pidgin'' service, please refer to the documentation
-      at: https://noygal.github.io/helm//pidgin'
-    digest: e49a2dd93053a6caecac592e90efe154ed96eab82140eac0f03a9b46e03171c9
+      at: https://ekavallieri.github.io/public-helm-charts//pidgin'
+    digest: c2581f699c2933a16812a1746dd67b68ab7abf2bfd46c3fbb8fb147efd0b4da8
     name: pidgin
     type: application
     urls:
-    - https://noygal.github.io/helm/pidgin-0.2.0.tgz
-    version: 0.2.0
+    - https://ekavallieri.github.io/public-helm-charts/pidgin-0.2.1.tgz
+    version: 0.2.1
   piwigo:
   - apiVersion: v2
-    appVersion: 0.2.0
-    created: "2023-07-26T18:14:24.659162+02:00"
+    appVersion: 0.2.1
+    created: "2023-11-16T12:10:43.383715+01:00"
     dependencies:
     - name: base-chart
-      repository: https://noygal.github.io/helm/
-      version: 0.2.0
+      repository: https://ekavallieri.github.io/public-helm-charts/
+      version: 0.4.1
     description: 'This chart deploys the ''piwigo'' service, please refer to the documentation
-      at: https://noygal.github.io/helm//piwigo'
-    digest: 7d26e7d424a7713f94de25d4592e168db2bb8f5c85654b4c783875817a2f1b3a
+      at: https://ekavallieri.github.io/public-helm-charts//piwigo'
+    digest: 6bfca6f70a9c914aa28284e88befa0e7be530efb1127c6588e72fd7876c42cc6
     name: piwigo
     type: application
     urls:
-    - https://noygal.github.io/helm/piwigo-0.2.0.tgz
-    version: 0.2.0
+    - https://ekavallieri.github.io/public-helm-charts/piwigo-0.2.1.tgz
+    version: 0.2.1
   plex:
   - apiVersion: v2
-    appVersion: 0.2.0
-    created: "2023-07-26T18:14:24.671246+02:00"
+    appVersion: 0.2.1
+    created: "2023-11-16T12:10:43.385351+01:00"
     dependencies:
     - name: base-chart
-      repository: https://noygal.github.io/helm/
-      version: 0.2.0
+      repository: https://ekavallieri.github.io/public-helm-charts/
+      version: 0.4.1
     description: 'This chart deploys the ''plex'' service, please refer to the documentation
-      at: https://noygal.github.io/helm//plex'
-    digest: 27f4ec59b0d84c53a7832bcb70eb7df8559872c188dcf8cf187e98a304b49523
+      at: https://ekavallieri.github.io/public-helm-charts//plex'
+    digest: eed73eb7552e5fad7f2c7f8a1ca3e81d0c74a04174a5f8eeb082eaf01e634262
     name: plex
     type: application
     urls:
-    - https://noygal.github.io/helm/plex-0.2.0.tgz
-    version: 0.2.0
+    - https://ekavallieri.github.io/public-helm-charts/plex-0.2.1.tgz
+    version: 0.2.1
   plex-meta-manager:
   - apiVersion: v2
-    appVersion: 0.2.0
-    created: "2023-07-26T18:14:24.675533+02:00"
+    appVersion: 0.2.1
+    created: "2023-11-16T12:10:43.387029+01:00"
     dependencies:
     - name: base-chart
-      repository: https://noygal.github.io/helm/
-      version: 0.2.0
+      repository: https://ekavallieri.github.io/public-helm-charts/
+      version: 0.4.1
     description: 'This chart deploys the ''plex-meta-manager'' service, please refer
-      to the documentation at: https://noygal.github.io/helm//plex-meta-manager'
-    digest: b54ad2941769eb15665642fc3893e4d8876ea8f879d4a715baf7ccabe4423b0e
+      to the documentation at: https://ekavallieri.github.io/public-helm-charts//plex-meta-manager'
+    digest: 354601358b03d73e5988d332cbf0a8124972c5d0a316b6d97bb2ab5c64ebc133
     name: plex-meta-manager
     type: application
     urls:
-    - https://noygal.github.io/helm/plex-meta-manager-0.2.0.tgz
-    version: 0.2.0
+    - https://ekavallieri.github.io/public-helm-charts/plex-meta-manager-0.2.1.tgz
+    version: 0.2.1
   projectsend:
   - apiVersion: v2
-    appVersion: 0.2.0
-    created: "2023-07-26T18:14:24.680042+02:00"
+    appVersion: 0.2.1
+    created: "2023-11-16T12:10:43.388829+01:00"
     dependencies:
     - name: base-chart
-      repository: https://noygal.github.io/helm/
-      version: 0.2.0
+      repository: https://ekavallieri.github.io/public-helm-charts/
+      version: 0.4.1
     description: 'This chart deploys the ''projectsend'' service, please refer to
-      the documentation at: https://noygal.github.io/helm//projectsend'
-    digest: a54e370c698f7d0839fcc4b7ccb2bb1881effc3f35e708bcba3b8ea9ebea3d86
+      the documentation at: https://ekavallieri.github.io/public-helm-charts//projectsend'
+    digest: 09def81fe60c7ec7621d44de2610091ddde411af269a755032b34f0142dc06f1
     name: projectsend
     type: application
     urls:
-    - https://noygal.github.io/helm/projectsend-0.2.0.tgz
-    version: 0.2.0
+    - https://ekavallieri.github.io/public-helm-charts/projectsend-0.2.1.tgz
+    version: 0.2.1
   prowlarr:
   - apiVersion: v2
-    appVersion: 0.2.0
-    created: "2023-07-26T18:14:24.684181+02:00"
+    appVersion: 0.2.1
+    created: "2023-11-16T12:10:43.390367+01:00"
     dependencies:
     - name: base-chart
-      repository: https://noygal.github.io/helm/
-      version: 0.2.0
+      repository: https://ekavallieri.github.io/public-helm-charts/
+      version: 0.4.1
     description: 'This chart deploys the ''prowlarr'' service, please refer to the
-      documentation at: https://noygal.github.io/helm//prowlarr'
-    digest: 57353fb34103fd673febd8728b58b0a48647b4dc1cde00542613a9d33c15fa95
+      documentation at: https://ekavallieri.github.io/public-helm-charts//prowlarr'
+    digest: 1edb4aeeec09625e6a4b740e645593f2565c8a1ad147ef5c3a653a8074a4dd70
     name: prowlarr
     type: application
     urls:
-    - https://noygal.github.io/helm/prowlarr-0.2.0.tgz
-    version: 0.2.0
+    - https://ekavallieri.github.io/public-helm-charts/prowlarr-0.2.1.tgz
+    version: 0.2.1
   pwndrop:
   - apiVersion: v2
-    appVersion: 0.2.0
-    created: "2023-07-26T18:14:24.689119+02:00"
+    appVersion: 0.2.1
+    created: "2023-11-16T12:10:43.392451+01:00"
     dependencies:
     - name: base-chart
-      repository: https://noygal.github.io/helm/
-      version: 0.2.0
+      repository: https://ekavallieri.github.io/public-helm-charts/
+      version: 0.4.1
     description: 'This chart deploys the ''pwndrop'' service, please refer to the
-      documentation at: https://noygal.github.io/helm//pwndrop'
-    digest: 508214282a0b2841ed6eeb83e5f9820ca5977e6580fdbfccec3345795bd0cf0d
+      documentation at: https://ekavallieri.github.io/public-helm-charts//pwndrop'
+    digest: 371072b40b936a3aedd2d2b80d1a2e10898914251398c2161eb2f41e57e826c3
     name: pwndrop
     type: application
     urls:
-    - https://noygal.github.io/helm/pwndrop-0.2.0.tgz
-    version: 0.2.0
+    - https://ekavallieri.github.io/public-helm-charts/pwndrop-0.2.1.tgz
+    version: 0.2.1
   pydio-cells:
   - apiVersion: v2
-    appVersion: 0.2.0
-    created: "2023-07-26T18:14:24.692972+02:00"
+    appVersion: 0.2.1
+    created: "2023-11-16T12:10:43.394075+01:00"
     dependencies:
     - name: base-chart
-      repository: https://noygal.github.io/helm/
-      version: 0.2.0
+      repository: https://ekavallieri.github.io/public-helm-charts/
+      version: 0.4.1
     description: 'This chart deploys the ''pydio-cells'' service, please refer to
-      the documentation at: https://noygal.github.io/helm//pydio-cells'
-    digest: 6763315027d8196f4a79b188101748f6fbb7f9fa0f1b5ddf1911a30d28f4b6fd
+      the documentation at: https://ekavallieri.github.io/public-helm-charts//pydio-cells'
+    digest: daa513d75a61872933c4c483b52e02ada29e4572cedfb4cd3fa479f85a65ac50
     name: pydio-cells
     type: application
     urls:
-    - https://noygal.github.io/helm/pydio-cells-0.2.0.tgz
-    version: 0.2.0
-  pylon:
+    - https://ekavallieri.github.io/public-helm-charts/pydio-cells-0.2.1.tgz
+    version: 0.2.1
+  pyload-ng:
   - apiVersion: v2
-    appVersion: 0.2.0
-    created: "2023-07-26T18:14:24.696944+02:00"
+    appVersion: 0.2.1
+    created: "2023-11-16T12:10:43.397127+01:00"
     dependencies:
     - name: base-chart
-      repository: https://noygal.github.io/helm/
-      version: 0.2.0
+      repository: https://ekavallieri.github.io/public-helm-charts/
+      version: 0.4.1
+    description: 'This chart deploys the ''pyload-ng'' service, please refer to the
+      documentation at: https://ekavallieri.github.io/public-helm-charts//pyload-ng'
+    digest: 85d3bd9ee2988bfca0fcf50ac9daf0b29ff7d52c3dddb2cff0b20da89673cb02
+    name: pyload-ng
+    type: application
+    urls:
+    - https://ekavallieri.github.io/public-helm-charts/pyload-ng-0.2.1.tgz
+    version: 0.2.1
+  pylon:
+  - apiVersion: v2
+    appVersion: 0.2.1
+    created: "2023-11-16T12:10:43.399483+01:00"
+    dependencies:
+    - name: base-chart
+      repository: https://ekavallieri.github.io/public-helm-charts/
+      version: 0.4.1
     description: 'This chart deploys the ''pylon'' service, please refer to the documentation
-      at: https://noygal.github.io/helm//pylon'
-    digest: e77a0cd78833c645fbedf87eae3ddf707a8a790df7a9c098c85970f334c135d0
+      at: https://ekavallieri.github.io/public-helm-charts//pylon'
+    digest: cf099822f088f3c825f13d62446f01e370976e9e470569a6cc8f9935b7c90ee4
     name: pylon
     type: application
     urls:
-    - https://noygal.github.io/helm/pylon-0.2.0.tgz
-    version: 0.2.0
+    - https://ekavallieri.github.io/public-helm-charts/pylon-0.2.1.tgz
+    version: 0.2.1
   qbittorrent:
   - apiVersion: v2
-    appVersion: 0.2.0
-    created: "2023-07-26T18:14:24.700781+02:00"
+    appVersion: 0.2.1
+    created: "2023-11-16T12:10:43.401158+01:00"
     dependencies:
     - name: base-chart
-      repository: https://noygal.github.io/helm/
-      version: 0.2.0
+      repository: https://ekavallieri.github.io/public-helm-charts/
+      version: 0.4.1
     description: 'This chart deploys the ''qbittorrent'' service, please refer to
-      the documentation at: https://noygal.github.io/helm//qbittorrent'
-    digest: daf8dcf037fbb55b60be9d77eecfbefc1335fe5e1a0b7db6e11d57ef26a5e208
+      the documentation at: https://ekavallieri.github.io/public-helm-charts//qbittorrent'
+    digest: fe745920266d8b0127b74a0d99039a8e484227c144630c2e89056cbd4bf9da8d
     name: qbittorrent
     type: application
     urls:
-    - https://noygal.github.io/helm/qbittorrent-0.2.0.tgz
-    version: 0.2.0
+    - https://ekavallieri.github.io/public-helm-charts/qbittorrent-0.2.1.tgz
+    version: 0.2.1
   qdirstat:
   - apiVersion: v2
-    appVersion: 0.2.0
-    created: "2023-07-26T18:14:24.705961+02:00"
+    appVersion: 0.2.1
+    created: "2023-11-16T12:10:43.402647+01:00"
     dependencies:
     - name: base-chart
-      repository: https://noygal.github.io/helm/
-      version: 0.2.0
+      repository: https://ekavallieri.github.io/public-helm-charts/
+      version: 0.4.1
     description: 'This chart deploys the ''qdirstat'' service, please refer to the
-      documentation at: https://noygal.github.io/helm//qdirstat'
-    digest: b1179814933026234fe08cc66e2f564b2a83a23206670ae0b3a9ec806c631304
+      documentation at: https://ekavallieri.github.io/public-helm-charts//qdirstat'
+    digest: bffc09eaa60e294f50b971a54ee64b9b9ade6aaaf47032b0f2ea10c358b8a49a
     name: qdirstat
     type: application
     urls:
-    - https://noygal.github.io/helm/qdirstat-0.2.0.tgz
-    version: 0.2.0
+    - https://ekavallieri.github.io/public-helm-charts/qdirstat-0.2.1.tgz
+    version: 0.2.1
   quassel-core:
   - apiVersion: v2
-    appVersion: 0.2.0
-    created: "2023-07-26T18:14:24.716938+02:00"
+    appVersion: 0.2.1
+    created: "2023-11-16T12:10:43.405178+01:00"
     dependencies:
     - name: base-chart
-      repository: https://noygal.github.io/helm/
-      version: 0.2.0
+      repository: https://ekavallieri.github.io/public-helm-charts/
+      version: 0.4.1
     description: 'This chart deploys the ''quassel-core'' service, please refer to
-      the documentation at: https://noygal.github.io/helm//quassel-core'
-    digest: f50a9cfb326fd1dd107d8da42a41012869c3e3c853d81f113fc461ecf9232b0f
+      the documentation at: https://ekavallieri.github.io/public-helm-charts//quassel-core'
+    digest: 0348054517adf82f1ea918214b3baad3cbb434b475c6703658c35b5bc545178e
     name: quassel-core
     type: application
     urls:
-    - https://noygal.github.io/helm/quassel-core-0.2.0.tgz
-    version: 0.2.0
+    - https://ekavallieri.github.io/public-helm-charts/quassel-core-0.2.1.tgz
+    version: 0.2.1
   quassel-web:
   - apiVersion: v2
-    appVersion: 0.2.0
-    created: "2023-07-26T18:14:24.722337+02:00"
+    appVersion: 0.2.1
+    created: "2023-11-16T12:10:43.406791+01:00"
     dependencies:
     - name: base-chart
-      repository: https://noygal.github.io/helm/
-      version: 0.2.0
+      repository: https://ekavallieri.github.io/public-helm-charts/
+      version: 0.4.1
     description: 'This chart deploys the ''quassel-web'' service, please refer to
-      the documentation at: https://noygal.github.io/helm//quassel-web'
-    digest: ecfc83533ba29a78b5f9a3291182e334b9985a251698d0caa7485a35f3c97776
+      the documentation at: https://ekavallieri.github.io/public-helm-charts//quassel-web'
+    digest: 21ce08d00fee7c95c28c736e10acea78c20b0ab8667e46e4113a79c998ef0b56
     name: quassel-web
     type: application
     urls:
-    - https://noygal.github.io/helm/quassel-web-0.2.0.tgz
-    version: 0.2.0
+    - https://ekavallieri.github.io/public-helm-charts/quassel-web-0.2.1.tgz
+    version: 0.2.1
   radarr:
   - apiVersion: v2
-    appVersion: 0.2.0
-    created: "2023-07-26T18:14:24.726314+02:00"
+    appVersion: 0.2.1
+    created: "2023-11-16T12:10:43.40842+01:00"
     dependencies:
     - name: base-chart
-      repository: https://noygal.github.io/helm/
-      version: 0.2.0
+      repository: https://ekavallieri.github.io/public-helm-charts/
+      version: 0.4.1
     description: 'This chart deploys the ''radarr'' service, please refer to the documentation
-      at: https://noygal.github.io/helm//radarr'
-    digest: a785cfc18c565ee9f231526cb474463db5d44498847b5746f0eb23259c24cf5a
+      at: https://ekavallieri.github.io/public-helm-charts//radarr'
+    digest: 9785c85d868da033ea91c1e28ad44466a747f7e3f308866e29d1e988710dfdc2
     name: radarr
     type: application
     urls:
-    - https://noygal.github.io/helm/radarr-0.2.0.tgz
-    version: 0.2.0
+    - https://ekavallieri.github.io/public-helm-charts/radarr-0.2.1.tgz
+    version: 0.2.1
   raneto:
   - apiVersion: v2
-    appVersion: 0.2.0
-    created: "2023-07-26T18:14:24.731779+02:00"
+    appVersion: 0.2.1
+    created: "2023-11-16T12:10:43.41039+01:00"
     dependencies:
     - name: base-chart
-      repository: https://noygal.github.io/helm/
-      version: 0.2.0
+      repository: https://ekavallieri.github.io/public-helm-charts/
+      version: 0.4.1
     description: 'This chart deploys the ''raneto'' service, please refer to the documentation
-      at: https://noygal.github.io/helm//raneto'
-    digest: 3cb936e85ed93b2854d91c898afc835d29a5578fe57870b0202d649b12268e1a
+      at: https://ekavallieri.github.io/public-helm-charts//raneto'
+    digest: 892fc3e68fe3c6c31f73fe88a6639f61788393a766ab18bfbb9f1af9a7b80f5d
     name: raneto
     type: application
     urls:
-    - https://noygal.github.io/helm/raneto-0.2.0.tgz
-    version: 0.2.0
+    - https://ekavallieri.github.io/public-helm-charts/raneto-0.2.1.tgz
+    version: 0.2.1
   rdesktop:
   - apiVersion: v2
-    appVersion: 0.2.0
-    created: "2023-07-26T18:14:24.736797+02:00"
+    appVersion: 0.2.1
+    created: "2023-11-16T12:10:43.41239+01:00"
     dependencies:
     - name: base-chart
-      repository: https://noygal.github.io/helm/
-      version: 0.2.0
+      repository: https://ekavallieri.github.io/public-helm-charts/
+      version: 0.4.1
     description: 'This chart deploys the ''rdesktop'' service, please refer to the
-      documentation at: https://noygal.github.io/helm//rdesktop'
-    digest: cfc3dc284db1044c7730f0dd5e5f8599971931106455458f28131f42f74881b3
+      documentation at: https://ekavallieri.github.io/public-helm-charts//rdesktop'
+    digest: 44fad8d32a8067361482a01a9f106b330289c799db7578f4d1c19513631eff8b
     name: rdesktop
     type: application
     urls:
-    - https://noygal.github.io/helm/rdesktop-0.2.0.tgz
-    version: 0.2.0
+    - https://ekavallieri.github.io/public-helm-charts/rdesktop-0.2.1.tgz
+    version: 0.2.1
   readarr:
   - apiVersion: v2
-    appVersion: 0.2.0
-    created: "2023-07-26T18:14:24.741475+02:00"
+    appVersion: 0.2.1
+    created: "2023-11-16T12:10:43.415152+01:00"
     dependencies:
     - name: base-chart
-      repository: https://noygal.github.io/helm/
-      version: 0.2.0
+      repository: https://ekavallieri.github.io/public-helm-charts/
+      version: 0.4.1
     description: 'This chart deploys the ''readarr'' service, please refer to the
-      documentation at: https://noygal.github.io/helm//readarr'
-    digest: d8561db1ae31aa203b2cdc3c29a47bd24aa7ba6780b4ad805a3034a8b5b254b0
+      documentation at: https://ekavallieri.github.io/public-helm-charts//readarr'
+    digest: 841ff80b3dfca79ca4d17242d797e8709ab513da5203fbb18d95388d41dc5946
     name: readarr
     type: application
     urls:
-    - https://noygal.github.io/helm/readarr-0.2.0.tgz
-    version: 0.2.0
+    - https://ekavallieri.github.io/public-helm-charts/readarr-0.2.1.tgz
+    version: 0.2.1
   remmina:
   - apiVersion: v2
-    appVersion: 0.2.0
-    created: "2023-07-26T18:14:24.756132+02:00"
+    appVersion: 0.2.1
+    created: "2023-11-16T12:10:43.416853+01:00"
     dependencies:
     - name: base-chart
-      repository: https://noygal.github.io/helm/
-      version: 0.2.0
+      repository: https://ekavallieri.github.io/public-helm-charts/
+      version: 0.4.1
     description: 'This chart deploys the ''remmina'' service, please refer to the
-      documentation at: https://noygal.github.io/helm//remmina'
-    digest: 42ed0fc1eb252618f41ff24f721104fd8126dd0de55224c441ac2d8cf1073064
+      documentation at: https://ekavallieri.github.io/public-helm-charts//remmina'
+    digest: abe04198308f47e73a613c22c86eafc8835ae8eb63869fdf8a54b41213f6fac9
     name: remmina
     type: application
     urls:
-    - https://noygal.github.io/helm/remmina-0.2.0.tgz
-    version: 0.2.0
+    - https://ekavallieri.github.io/public-helm-charts/remmina-0.2.1.tgz
+    version: 0.2.1
   resilio-sync:
   - apiVersion: v2
-    appVersion: 0.2.0
-    created: "2023-07-26T18:14:24.763109+02:00"
+    appVersion: 0.2.1
+    created: "2023-11-16T12:10:43.418695+01:00"
     dependencies:
     - name: base-chart
-      repository: https://noygal.github.io/helm/
-      version: 0.2.0
+      repository: https://ekavallieri.github.io/public-helm-charts/
+      version: 0.4.1
     description: 'This chart deploys the ''resilio-sync'' service, please refer to
-      the documentation at: https://noygal.github.io/helm//resilio-sync'
-    digest: 3e64d8a36433ea79ca0843624feb9378f10e81789b760d001f384460e1f57255
+      the documentation at: https://ekavallieri.github.io/public-helm-charts//resilio-sync'
+    digest: c21343df98bf8355f9c7ef9d34a6dbe64845bb5db41d1070331df9a7f6e4d690
     name: resilio-sync
     type: application
     urls:
-    - https://noygal.github.io/helm/resilio-sync-0.2.0.tgz
-    version: 0.2.0
+    - https://ekavallieri.github.io/public-helm-charts/resilio-sync-0.2.1.tgz
+    version: 0.2.1
   rsnapshot:
   - apiVersion: v2
-    appVersion: 0.2.0
-    created: "2023-07-26T18:14:24.769423+02:00"
+    appVersion: 0.2.1
+    created: "2023-11-16T12:10:43.420396+01:00"
     dependencies:
     - name: base-chart
-      repository: https://noygal.github.io/helm/
-      version: 0.2.0
+      repository: https://ekavallieri.github.io/public-helm-charts/
+      version: 0.4.1
     description: 'This chart deploys the ''rsnapshot'' service, please refer to the
-      documentation at: https://noygal.github.io/helm//rsnapshot'
-    digest: a90914b8069ce30c4eb83b14d17e879a7c7cf53049c64c2c6a29ff34390990c9
+      documentation at: https://ekavallieri.github.io/public-helm-charts//rsnapshot'
+    digest: 0fdf8665e5226f45cace0969de165e68232c29ae3f53525149f8cf06234da84a
     name: rsnapshot
     type: application
     urls:
-    - https://noygal.github.io/helm/rsnapshot-0.2.0.tgz
-    version: 0.2.0
+    - https://ekavallieri.github.io/public-helm-charts/rsnapshot-0.2.1.tgz
+    version: 0.2.1
   sabnzbd:
   - apiVersion: v2
-    appVersion: 0.2.0
-    created: "2023-07-26T18:14:24.773736+02:00"
+    appVersion: 0.2.1
+    created: "2023-11-16T12:10:43.422253+01:00"
     dependencies:
     - name: base-chart
-      repository: https://noygal.github.io/helm/
-      version: 0.2.0
+      repository: https://ekavallieri.github.io/public-helm-charts/
+      version: 0.4.1
     description: 'This chart deploys the ''sabnzbd'' service, please refer to the
-      documentation at: https://noygal.github.io/helm//sabnzbd'
-    digest: 739ef08eb09c88ac4243c3a3f1da21d6d550b1fe918f44d836183e98c0f7108c
+      documentation at: https://ekavallieri.github.io/public-helm-charts//sabnzbd'
+    digest: 3a7fa8b17793c4540490d31a999aeaf9865767e44e3fb54e943aa923f149f35b
     name: sabnzbd
     type: application
     urls:
-    - https://noygal.github.io/helm/sabnzbd-0.2.0.tgz
-    version: 0.2.0
-  sickchill:
+    - https://ekavallieri.github.io/public-helm-charts/sabnzbd-0.2.1.tgz
+    version: 0.2.1
+  series-troxide:
   - apiVersion: v2
-    appVersion: 0.2.0
-    created: "2023-07-26T18:14:24.77733+02:00"
+    appVersion: 0.2.1
+    created: "2023-11-16T12:10:43.423823+01:00"
     dependencies:
     - name: base-chart
-      repository: https://noygal.github.io/helm/
-      version: 0.2.0
+      repository: https://ekavallieri.github.io/public-helm-charts/
+      version: 0.4.1
+    description: 'This chart deploys the ''series-troxide'' service, please refer
+      to the documentation at: https://ekavallieri.github.io/public-helm-charts//series-troxide'
+    digest: 7a79cf9eeb2c8f1a63f8b133b4ede611502f6cdf57c9a0ceef28212a26c4d3ff
+    name: series-troxide
+    type: application
+    urls:
+    - https://ekavallieri.github.io/public-helm-charts/series-troxide-0.2.1.tgz
+    version: 0.2.1
+  sickchill:
+  - apiVersion: v2
+    appVersion: 0.2.1
+    created: "2023-11-16T12:10:43.425695+01:00"
+    dependencies:
+    - name: base-chart
+      repository: https://ekavallieri.github.io/public-helm-charts/
+      version: 0.4.1
     description: 'This chart deploys the ''sickchill'' service, please refer to the
-      documentation at: https://noygal.github.io/helm//sickchill'
-    digest: 7ad8c0786065079149002db4f42260c77b1a44f0f2b1567f4163adbfa21d34cc
+      documentation at: https://ekavallieri.github.io/public-helm-charts//sickchill'
+    digest: b37cb1a63e9451360c996f32a8fc7f8d6fe71c163ba4a1a29812ff0a3d144d17
     name: sickchill
     type: application
     urls:
-    - https://noygal.github.io/helm/sickchill-0.2.0.tgz
-    version: 0.2.0
+    - https://ekavallieri.github.io/public-helm-charts/sickchill-0.2.1.tgz
+    version: 0.2.1
   sickgear:
   - apiVersion: v2
-    appVersion: 0.2.0
-    created: "2023-07-26T18:14:24.781573+02:00"
+    appVersion: 0.2.1
+    created: "2023-11-16T12:10:43.427712+01:00"
     dependencies:
     - name: base-chart
-      repository: https://noygal.github.io/helm/
-      version: 0.2.0
+      repository: https://ekavallieri.github.io/public-helm-charts/
+      version: 0.4.1
     description: 'This chart deploys the ''sickgear'' service, please refer to the
-      documentation at: https://noygal.github.io/helm//sickgear'
-    digest: 886606fc68bb0cd421af192a78bc0624c1bd25e31da7be4509c2aa19f0d80e71
+      documentation at: https://ekavallieri.github.io/public-helm-charts//sickgear'
+    digest: f33f71e41f68ca0e515661b5abbdbaee64c8cfe819e8810dd2388228fca5d7fe
     name: sickgear
     type: application
     urls:
-    - https://noygal.github.io/helm/sickgear-0.2.0.tgz
-    version: 0.2.0
+    - https://ekavallieri.github.io/public-helm-charts/sickgear-0.2.1.tgz
+    version: 0.2.1
   smokeping:
   - apiVersion: v2
-    appVersion: 0.2.0
-    created: "2023-07-26T18:14:24.789563+02:00"
+    appVersion: 0.2.1
+    created: "2023-11-16T12:10:43.429924+01:00"
     dependencies:
     - name: base-chart
-      repository: https://noygal.github.io/helm/
-      version: 0.2.0
+      repository: https://ekavallieri.github.io/public-helm-charts/
+      version: 0.4.1
     description: 'This chart deploys the ''smokeping'' service, please refer to the
-      documentation at: https://noygal.github.io/helm//smokeping'
-    digest: 5e8d3352906710b17cc39ba013067221cde6e8dc87d1122ff638bb0ad9b67b94
+      documentation at: https://ekavallieri.github.io/public-helm-charts//smokeping'
+    digest: 40506201d69ef42a2b1e63ea2d0bae3df1afebc21ea7aab55196f74ab031cec4
     name: smokeping
     type: application
     urls:
-    - https://noygal.github.io/helm/smokeping-0.2.0.tgz
-    version: 0.2.0
+    - https://ekavallieri.github.io/public-helm-charts/smokeping-0.2.1.tgz
+    version: 0.2.1
   snapdrop:
   - apiVersion: v2
-    appVersion: 0.2.0
-    created: "2023-07-26T18:14:24.79483+02:00"
+    appVersion: 0.2.1
+    created: "2023-11-16T12:10:43.431547+01:00"
     dependencies:
     - name: base-chart
-      repository: https://noygal.github.io/helm/
-      version: 0.2.0
+      repository: https://ekavallieri.github.io/public-helm-charts/
+      version: 0.4.1
     description: 'This chart deploys the ''snapdrop'' service, please refer to the
-      documentation at: https://noygal.github.io/helm//snapdrop'
-    digest: 7e81b205bd0ea5ac34dcc547a079f68650019be07e5db93d738680ef69032c47
+      documentation at: https://ekavallieri.github.io/public-helm-charts//snapdrop'
+    digest: c01defd3fcb35f53600863623103caf9f3c5fd0f4f46afe97040fbc979c8e8e9
     name: snapdrop
     type: application
     urls:
-    - https://noygal.github.io/helm/snapdrop-0.2.0.tgz
-    version: 0.2.0
+    - https://ekavallieri.github.io/public-helm-charts/snapdrop-0.2.1.tgz
+    version: 0.2.1
   snipe-it:
   - apiVersion: v2
-    appVersion: 0.2.0
-    created: "2023-07-26T18:14:24.80088+02:00"
+    appVersion: 0.2.1
+    created: "2023-11-16T12:10:43.433204+01:00"
     dependencies:
     - name: base-chart
-      repository: https://noygal.github.io/helm/
-      version: 0.2.0
+      repository: https://ekavallieri.github.io/public-helm-charts/
+      version: 0.4.1
     description: 'This chart deploys the ''snipe-it'' service, please refer to the
-      documentation at: https://noygal.github.io/helm//snipe-it'
-    digest: a9f20423b3066cdd3cef93b8e64d7c91b1128cb23214c8670f1c1184b615adce
+      documentation at: https://ekavallieri.github.io/public-helm-charts//snipe-it'
+    digest: 847ad047dc28cc10fe92b1e2c6857254a407a83162369dad9fdc204f62342671
     name: snipe-it
     type: application
     urls:
-    - https://noygal.github.io/helm/snipe-it-0.2.0.tgz
-    version: 0.2.0
+    - https://ekavallieri.github.io/public-helm-charts/snipe-it-0.2.1.tgz
+    version: 0.2.1
   sonarr:
   - apiVersion: v2
-    appVersion: 0.2.0
-    created: "2023-07-26T18:14:24.8057+02:00"
+    appVersion: 0.2.1
+    created: "2023-11-16T12:10:43.434725+01:00"
     dependencies:
     - name: base-chart
-      repository: https://noygal.github.io/helm/
-      version: 0.2.0
+      repository: https://ekavallieri.github.io/public-helm-charts/
+      version: 0.4.1
     description: 'This chart deploys the ''sonarr'' service, please refer to the documentation
-      at: https://noygal.github.io/helm//sonarr'
-    digest: 87b8dfbc8d6344cccd916f753a101d606cb063704ea77802b68ad7f6d91b8bc5
+      at: https://ekavallieri.github.io/public-helm-charts//sonarr'
+    digest: c1ebc9385db796025facaffb3d824c37be35f38ba14dc608fc5bd5cc2fe3c3cd
     name: sonarr
     type: application
     urls:
-    - https://noygal.github.io/helm/sonarr-0.2.0.tgz
-    version: 0.2.0
-  synclounge:
+    - https://ekavallieri.github.io/public-helm-charts/sonarr-0.2.1.tgz
+    version: 0.2.1
+  sqlitebrowser:
   - apiVersion: v2
-    appVersion: 0.2.0
-    created: "2023-07-26T18:14:24.810336+02:00"
+    appVersion: 0.2.1
+    created: "2023-11-16T12:10:43.436357+01:00"
     dependencies:
     - name: base-chart
-      repository: https://noygal.github.io/helm/
-      version: 0.2.0
+      repository: https://ekavallieri.github.io/public-helm-charts/
+      version: 0.4.1
+    description: 'This chart deploys the ''sqlitebrowser'' service, please refer to
+      the documentation at: https://ekavallieri.github.io/public-helm-charts//sqlitebrowser'
+    digest: 441aa3e4cb146b15e62a75d26144a564ed027bdc8ea3ea70050db7af1b46ea11
+    name: sqlitebrowser
+    type: application
+    urls:
+    - https://ekavallieri.github.io/public-helm-charts/sqlitebrowser-0.2.1.tgz
+    version: 0.2.1
+  steamos:
+  - apiVersion: v2
+    appVersion: 0.2.1
+    created: "2023-11-16T12:10:43.43809+01:00"
+    dependencies:
+    - name: base-chart
+      repository: https://ekavallieri.github.io/public-helm-charts/
+      version: 0.4.1
+    description: 'This chart deploys the ''steamos'' service, please refer to the
+      documentation at: https://ekavallieri.github.io/public-helm-charts//steamos'
+    digest: dcf31ef596ea87e33472cd31bc6b73a2540b03cd33502018d096165e212b01f0
+    name: steamos
+    type: application
+    urls:
+    - https://ekavallieri.github.io/public-helm-charts/steamos-0.2.1.tgz
+    version: 0.2.1
+  swag:
+  - apiVersion: v2
+    appVersion: 0.2.1
+    created: "2023-11-16T12:10:43.439842+01:00"
+    dependencies:
+    - name: base-chart
+      repository: https://ekavallieri.github.io/public-helm-charts/
+      version: 0.4.1
+    description: 'This chart deploys the ''swag'' service, please refer to the documentation
+      at: https://ekavallieri.github.io/public-helm-charts//swag'
+    digest: eb1cf5bf3562c3a3e55c1b6bc13214b15fac2aa14c22ae80efef4e8529a2ae87
+    name: swag
+    type: application
+    urls:
+    - https://ekavallieri.github.io/public-helm-charts/swag-0.2.1.tgz
+    version: 0.2.1
+  synclounge:
+  - apiVersion: v2
+    appVersion: 0.2.1
+    created: "2023-11-16T12:10:43.441396+01:00"
+    dependencies:
+    - name: base-chart
+      repository: https://ekavallieri.github.io/public-helm-charts/
+      version: 0.4.1
     description: 'This chart deploys the ''synclounge'' service, please refer to the
-      documentation at: https://noygal.github.io/helm//synclounge'
-    digest: 052cdca654cfc6b871efcae6780419ecca00f0bd4d570ec3e5357c1fcf752ebd
+      documentation at: https://ekavallieri.github.io/public-helm-charts//synclounge'
+    digest: 1a88a942373a16c830a72086d9e3baea991c1b119fee51b9d587e27065623fbf
     name: synclounge
     type: application
     urls:
-    - https://noygal.github.io/helm/synclounge-0.2.0.tgz
-    version: 0.2.0
+    - https://ekavallieri.github.io/public-helm-charts/synclounge-0.2.1.tgz
+    version: 0.2.1
   syncthing:
   - apiVersion: v2
-    appVersion: 0.2.0
-    created: "2023-07-26T18:14:24.815569+02:00"
+    appVersion: 0.2.1
+    created: "2023-11-16T12:10:43.443039+01:00"
     dependencies:
     - name: base-chart
-      repository: https://noygal.github.io/helm/
-      version: 0.2.0
+      repository: https://ekavallieri.github.io/public-helm-charts/
+      version: 0.4.1
     description: 'This chart deploys the ''syncthing'' service, please refer to the
-      documentation at: https://noygal.github.io/helm//syncthing'
-    digest: 4746271629f18c882b2ac7835e0bde6f2c8a00158c5d31f4bffff94bfac3098a
+      documentation at: https://ekavallieri.github.io/public-helm-charts//syncthing'
+    digest: ea8b2325547ebc12a96e133257043235fbf4d0b2317d1f73a04acda20345dbe3
     name: syncthing
     type: application
     urls:
-    - https://noygal.github.io/helm/syncthing-0.2.0.tgz
-    version: 0.2.0
+    - https://ekavallieri.github.io/public-helm-charts/syncthing-0.2.1.tgz
+    version: 0.2.1
   syslog-ng:
   - apiVersion: v2
-    appVersion: 0.2.0
-    created: "2023-07-26T18:14:24.820076+02:00"
+    appVersion: 0.2.1
+    created: "2023-11-16T12:10:43.444913+01:00"
     dependencies:
     - name: base-chart
-      repository: https://noygal.github.io/helm/
-      version: 0.2.0
+      repository: https://ekavallieri.github.io/public-helm-charts/
+      version: 0.4.1
     description: 'This chart deploys the ''syslog-ng'' service, please refer to the
-      documentation at: https://noygal.github.io/helm//syslog-ng'
-    digest: 703f409c767664446367cec4ea88ab4cbe7168b3ed727eb68c62c9f555688f8e
+      documentation at: https://ekavallieri.github.io/public-helm-charts//syslog-ng'
+    digest: 977d5e453fd444d96568bf6e2c05e76f462af231ae1d572ddb231a9f224caedb
     name: syslog-ng
     type: application
     urls:
-    - https://noygal.github.io/helm/syslog-ng-0.2.0.tgz
-    version: 0.2.0
+    - https://ekavallieri.github.io/public-helm-charts/syslog-ng-0.2.1.tgz
+    version: 0.2.1
   tautulli:
   - apiVersion: v2
-    appVersion: 0.2.0
-    created: "2023-07-26T18:14:24.82516+02:00"
+    appVersion: 0.2.1
+    created: "2023-11-16T12:10:43.447269+01:00"
     dependencies:
     - name: base-chart
-      repository: https://noygal.github.io/helm/
-      version: 0.2.0
+      repository: https://ekavallieri.github.io/public-helm-charts/
+      version: 0.4.1
     description: 'This chart deploys the ''tautulli'' service, please refer to the
-      documentation at: https://noygal.github.io/helm//tautulli'
-    digest: 8bc4aaaa44665bd785910c815e3e5f5c9d742ef19c3387d155a42c57d2ad0980
+      documentation at: https://ekavallieri.github.io/public-helm-charts//tautulli'
+    digest: 8797852fcfab4f70c7e26734678e146b5709aa19a2d807aaa05a8a2a74a54637
     name: tautulli
     type: application
     urls:
-    - https://noygal.github.io/helm/tautulli-0.2.0.tgz
-    version: 0.2.0
+    - https://ekavallieri.github.io/public-helm-charts/tautulli-0.2.1.tgz
+    version: 0.2.1
   thelounge:
   - apiVersion: v2
-    appVersion: 0.2.0
-    created: "2023-07-26T18:14:24.835427+02:00"
+    appVersion: 0.2.1
+    created: "2023-11-16T12:10:43.448917+01:00"
     dependencies:
     - name: base-chart
-      repository: https://noygal.github.io/helm/
-      version: 0.2.0
+      repository: https://ekavallieri.github.io/public-helm-charts/
+      version: 0.4.1
     description: 'This chart deploys the ''thelounge'' service, please refer to the
-      documentation at: https://noygal.github.io/helm//thelounge'
-    digest: bf2c93c430d4da903f1165f7f362a0ce5d538045509e705dfa514e7c3c2babbc
+      documentation at: https://ekavallieri.github.io/public-helm-charts//thelounge'
+    digest: 0d323f05a7925e7f3aa711a9eec9866709dfac9ea0a8620d0bffa3802e2855d7
     name: thelounge
     type: application
     urls:
-    - https://noygal.github.io/helm/thelounge-0.2.0.tgz
-    version: 0.2.0
+    - https://ekavallieri.github.io/public-helm-charts/thelounge-0.2.1.tgz
+    version: 0.2.1
   transmission:
   - apiVersion: v2
-    appVersion: 0.2.0
-    created: "2023-07-26T18:14:24.840815+02:00"
+    appVersion: 0.2.1
+    created: "2023-11-16T12:10:43.450498+01:00"
     dependencies:
     - name: base-chart
-      repository: https://noygal.github.io/helm/
-      version: 0.2.0
+      repository: https://ekavallieri.github.io/public-helm-charts/
+      version: 0.4.1
     description: 'This chart deploys the ''transmission'' service, please refer to
-      the documentation at: https://noygal.github.io/helm//transmission'
-    digest: a7abde512380d83e87cb11fc626ef42e177b363887d2c6da20046122d0fb8cb7
+      the documentation at: https://ekavallieri.github.io/public-helm-charts//transmission'
+    digest: ecd2be01e0ef1fb59cb3144cc0bb4b443a41c76a6c35e0f34300b4142ca7b676
     name: transmission
     type: application
     urls:
-    - https://noygal.github.io/helm/transmission-0.2.0.tgz
-    version: 0.2.0
+    - https://ekavallieri.github.io/public-helm-charts/transmission-0.2.1.tgz
+    version: 0.2.1
   tvheadend:
   - apiVersion: v2
-    appVersion: 0.2.0
-    created: "2023-07-26T18:14:24.845143+02:00"
+    appVersion: 0.2.1
+    created: "2023-11-16T12:10:43.451982+01:00"
     dependencies:
     - name: base-chart
-      repository: https://noygal.github.io/helm/
-      version: 0.2.0
+      repository: https://ekavallieri.github.io/public-helm-charts/
+      version: 0.4.1
     description: 'This chart deploys the ''tvheadend'' service, please refer to the
-      documentation at: https://noygal.github.io/helm//tvheadend'
-    digest: 260803144e8259c00a66a85781f1ad16a5ba95a7327b2b475537747935c99ec7
+      documentation at: https://ekavallieri.github.io/public-helm-charts//tvheadend'
+    digest: 37668601d5bc671b0a6423162c0fe8539a7c60d2a082e88e670179b19093b03d
     name: tvheadend
     type: application
     urls:
-    - https://noygal.github.io/helm/tvheadend-0.2.0.tgz
-    version: 0.2.0
+    - https://ekavallieri.github.io/public-helm-charts/tvheadend-0.2.1.tgz
+    version: 0.2.1
   ubooquity:
   - apiVersion: v2
-    appVersion: 0.2.0
-    created: "2023-07-26T18:14:24.850288+02:00"
+    appVersion: 0.2.1
+    created: "2023-11-16T12:10:43.453372+01:00"
     dependencies:
     - name: base-chart
-      repository: https://noygal.github.io/helm/
-      version: 0.2.0
+      repository: https://ekavallieri.github.io/public-helm-charts/
+      version: 0.4.1
     description: 'This chart deploys the ''ubooquity'' service, please refer to the
-      documentation at: https://noygal.github.io/helm//ubooquity'
-    digest: e32e016dcb8202311f7350a405b106ea57841e1f18d90155d3511ceeac55656c
+      documentation at: https://ekavallieri.github.io/public-helm-charts//ubooquity'
+    digest: d4ed466b6fab0b8d99395ed9e28f527559a3e8ddd0dde3180c213a40a5d20646
     name: ubooquity
     type: application
     urls:
-    - https://noygal.github.io/helm/ubooquity-0.2.0.tgz
-    version: 0.2.0
+    - https://ekavallieri.github.io/public-helm-charts/ubooquity-0.2.1.tgz
+    version: 0.2.1
   unifi-controller:
   - apiVersion: v2
-    appVersion: 0.2.0
-    created: "2023-07-26T18:14:24.854046+02:00"
+    appVersion: 0.2.1
+    created: "2023-11-16T12:10:43.455578+01:00"
     dependencies:
     - name: base-chart
-      repository: https://noygal.github.io/helm/
-      version: 0.2.0
+      repository: https://ekavallieri.github.io/public-helm-charts/
+      version: 0.4.1
     description: 'This chart deploys the ''unifi-controller'' service, please refer
-      to the documentation at: https://noygal.github.io/helm//unifi-controller'
-    digest: 79a01d8bfad466bae06fdbdc58db299535f07edb56071b9d99c6b485e49c5cf4
+      to the documentation at: https://ekavallieri.github.io/public-helm-charts//unifi-controller'
+    digest: 232c79eec808c745c27df5051b1cc491724a3b02528008c14d1b452425086b4c
     name: unifi-controller
     type: application
     urls:
-    - https://noygal.github.io/helm/unifi-controller-0.2.0.tgz
-    version: 0.2.0
-  vscodium:
+    - https://ekavallieri.github.io/public-helm-charts/unifi-controller-0.2.1.tgz
+    version: 0.2.1
+  unifi-network-application:
   - apiVersion: v2
-    appVersion: 0.2.0
-    created: "2023-07-26T18:14:24.858071+02:00"
+    appVersion: 0.2.1
+    created: "2023-11-16T12:10:43.457286+01:00"
     dependencies:
     - name: base-chart
-      repository: https://noygal.github.io/helm/
-      version: 0.2.0
+      repository: https://ekavallieri.github.io/public-helm-charts/
+      version: 0.4.1
+    description: 'This chart deploys the ''unifi-network-application'' service, please
+      refer to the documentation at: https://ekavallieri.github.io/public-helm-charts//unifi-network-application'
+    digest: b73d6a47e4b6e888264851bbee48382ad5922dc33c3861e64db44e8e329baf57
+    name: unifi-network-application
+    type: application
+    urls:
+    - https://ekavallieri.github.io/public-helm-charts/unifi-network-application-0.2.1.tgz
+    version: 0.2.1
+  vscodium:
+  - apiVersion: v2
+    appVersion: 0.2.1
+    created: "2023-11-16T12:10:43.458963+01:00"
+    dependencies:
+    - name: base-chart
+      repository: https://ekavallieri.github.io/public-helm-charts/
+      version: 0.4.1
     description: 'This chart deploys the ''vscodium'' service, please refer to the
-      documentation at: https://noygal.github.io/helm//vscodium'
-    digest: 94fed90c31c449586cf745a1eeec65fb3ca174f4b0008b1d9a484f5a62d798a7
+      documentation at: https://ekavallieri.github.io/public-helm-charts//vscodium'
+    digest: 5aec5dd46dd6b5c9b21f07c4f6a9c5200326fb9c8cfa55ce0dba1bc96430e47f
     name: vscodium
     type: application
     urls:
-    - https://noygal.github.io/helm/vscodium-0.2.0.tgz
-    version: 0.2.0
+    - https://ekavallieri.github.io/public-helm-charts/vscodium-0.2.1.tgz
+    version: 0.2.1
   webcord:
   - apiVersion: v2
-    appVersion: 0.2.0
-    created: "2023-07-26T18:14:24.862022+02:00"
+    appVersion: 0.2.1
+    created: "2023-11-16T12:10:43.460437+01:00"
     dependencies:
     - name: base-chart
-      repository: https://noygal.github.io/helm/
-      version: 0.2.0
+      repository: https://ekavallieri.github.io/public-helm-charts/
+      version: 0.4.1
     description: 'This chart deploys the ''webcord'' service, please refer to the
-      documentation at: https://noygal.github.io/helm//webcord'
-    digest: a158e7a56a1fadc9b5cbeb41fcda725aed3dfae1f8d2ce8a8149556db83630c1
+      documentation at: https://ekavallieri.github.io/public-helm-charts//webcord'
+    digest: 913b83170a4e3aef70da33bfe2d98f253ad69f65dbad9529919456f9a7cdcae0
     name: webcord
     type: application
     urls:
-    - https://noygal.github.io/helm/webcord-0.2.0.tgz
-    version: 0.2.0
+    - https://ekavallieri.github.io/public-helm-charts/webcord-0.2.1.tgz
+    version: 0.2.1
   webgrabplus:
   - apiVersion: v2
-    appVersion: 0.2.0
-    created: "2023-07-26T18:14:24.87466+02:00"
+    appVersion: 0.2.1
+    created: "2023-11-16T12:10:43.46241+01:00"
     dependencies:
     - name: base-chart
-      repository: https://noygal.github.io/helm/
-      version: 0.2.0
+      repository: https://ekavallieri.github.io/public-helm-charts/
+      version: 0.4.1
     description: 'This chart deploys the ''webgrabplus'' service, please refer to
-      the documentation at: https://noygal.github.io/helm//webgrabplus'
-    digest: 82795766198cc7124b6270152d7d835b7f08f3daa10312493b46c92977346eb3
+      the documentation at: https://ekavallieri.github.io/public-helm-charts//webgrabplus'
+    digest: b98958dcedce54a81c92443ee7a2f4ef0c4b81ab68b7ae95fda14a61f6601bfb
     name: webgrabplus
     type: application
     urls:
-    - https://noygal.github.io/helm/webgrabplus-0.2.0.tgz
-    version: 0.2.0
+    - https://ekavallieri.github.io/public-helm-charts/webgrabplus-0.2.1.tgz
+    version: 0.2.1
   webtop:
   - apiVersion: v2
-    appVersion: 0.2.0
-    created: "2023-07-26T18:14:24.880157+02:00"
+    appVersion: 0.2.1
+    created: "2023-11-16T12:10:43.465413+01:00"
     dependencies:
     - name: base-chart
-      repository: https://noygal.github.io/helm/
-      version: 0.2.0
+      repository: https://ekavallieri.github.io/public-helm-charts/
+      version: 0.4.1
     description: 'This chart deploys the ''webtop'' service, please refer to the documentation
-      at: https://noygal.github.io/helm//webtop'
-    digest: 409afad7a6a6fc771742e15d821c9dd0818fab5515252c4239e6e2b336005565
+      at: https://ekavallieri.github.io/public-helm-charts//webtop'
+    digest: 120c638146a181234f0b0da5899f9bf46f4c0ad3612a64a43c8f64fa29cfff0a
     name: webtop
     type: application
     urls:
-    - https://noygal.github.io/helm/webtop-0.2.0.tgz
-    version: 0.2.0
+    - https://ekavallieri.github.io/public-helm-charts/webtop-0.2.1.tgz
+    version: 0.2.1
   wikijs:
   - apiVersion: v2
-    appVersion: 0.2.0
-    created: "2023-07-26T18:14:24.886184+02:00"
+    appVersion: 0.2.1
+    created: "2023-11-16T12:10:43.467399+01:00"
     dependencies:
     - name: base-chart
-      repository: https://noygal.github.io/helm/
-      version: 0.2.0
+      repository: https://ekavallieri.github.io/public-helm-charts/
+      version: 0.4.1
     description: 'This chart deploys the ''wikijs'' service, please refer to the documentation
-      at: https://noygal.github.io/helm//wikijs'
-    digest: f508e53051a0f0b60a5464932cad1b905defc0a0c50d791435aa1aff368301d3
+      at: https://ekavallieri.github.io/public-helm-charts//wikijs'
+    digest: 1a5b5294f2bd5474bfe7457cee755e94ee5e6a3d8af7607d173797b845099ebc
     name: wikijs
     type: application
     urls:
-    - https://noygal.github.io/helm/wikijs-0.2.0.tgz
-    version: 0.2.0
+    - https://ekavallieri.github.io/public-helm-charts/wikijs-0.2.1.tgz
+    version: 0.2.1
   wireguard:
   - apiVersion: v2
-    appVersion: 0.2.0
-    created: "2023-07-26T18:14:24.891971+02:00"
+    appVersion: 0.2.1
+    created: "2023-11-16T12:10:43.469327+01:00"
     dependencies:
     - name: base-chart
-      repository: https://noygal.github.io/helm/
-      version: 0.2.0
+      repository: https://ekavallieri.github.io/public-helm-charts/
+      version: 0.4.1
     description: 'This chart deploys the ''wireguard'' service, please refer to the
-      documentation at: https://noygal.github.io/helm//wireguard'
-    digest: 5cac1234010286d09724cd84147cd66794a5ae000ac57a48f4eb83a90849e616
+      documentation at: https://ekavallieri.github.io/public-helm-charts//wireguard'
+    digest: 4b9b6cdde65d095ebcef95aed2a28ed4f88333ea7bd7a532bd385235ed07d2d0
     name: wireguard
     type: application
     urls:
-    - https://noygal.github.io/helm/wireguard-0.2.0.tgz
-    version: 0.2.0
+    - https://ekavallieri.github.io/public-helm-charts/wireguard-0.2.1.tgz
+    version: 0.2.1
   wireshark:
   - apiVersion: v2
-    appVersion: 0.2.0
-    created: "2023-07-26T18:14:24.896215+02:00"
+    appVersion: 0.2.1
+    created: "2023-11-16T12:10:43.471419+01:00"
     dependencies:
     - name: base-chart
-      repository: https://noygal.github.io/helm/
-      version: 0.2.0
+      repository: https://ekavallieri.github.io/public-helm-charts/
+      version: 0.4.1
     description: 'This chart deploys the ''wireshark'' service, please refer to the
-      documentation at: https://noygal.github.io/helm//wireshark'
-    digest: c0a810a82adfbf0a89601bf5b5200353f2de2b0d39571044796fce0f6e1a2e8b
+      documentation at: https://ekavallieri.github.io/public-helm-charts//wireshark'
+    digest: 7d3ea3c79a4bba1d1f23e940d70defc76c08600c6f5b3e457deb662fe054817c
     name: wireshark
     type: application
     urls:
-    - https://noygal.github.io/helm/wireshark-0.2.0.tgz
-    version: 0.2.0
-  xbackbone:
+    - https://ekavallieri.github.io/public-helm-charts/wireshark-0.2.1.tgz
+    version: 0.2.1
+  wps-office:
   - apiVersion: v2
-    appVersion: 0.2.0
-    created: "2023-07-26T18:14:24.89943+02:00"
+    appVersion: 0.2.1
+    created: "2023-11-16T12:10:43.473402+01:00"
     dependencies:
     - name: base-chart
-      repository: https://noygal.github.io/helm/
-      version: 0.2.0
+      repository: https://ekavallieri.github.io/public-helm-charts/
+      version: 0.4.1
+    description: 'This chart deploys the ''wps-office'' service, please refer to the
+      documentation at: https://ekavallieri.github.io/public-helm-charts//wps-office'
+    digest: 53434e20ec6f10e0efd641708a348fbca976916502d291e6cfe5fb34eb364959
+    name: wps-office
+    type: application
+    urls:
+    - https://ekavallieri.github.io/public-helm-charts/wps-office-0.2.1.tgz
+    version: 0.2.1
+  xbackbone:
+  - apiVersion: v2
+    appVersion: 0.2.1
+    created: "2023-11-16T12:10:43.475181+01:00"
+    dependencies:
+    - name: base-chart
+      repository: https://ekavallieri.github.io/public-helm-charts/
+      version: 0.4.1
     description: 'This chart deploys the ''xbackbone'' service, please refer to the
-      documentation at: https://noygal.github.io/helm//xbackbone'
-    digest: 6787c8563d97d6249c13f24bc6a2ee6bf7c2815d2c3180e511f192ea1c4ce31b
+      documentation at: https://ekavallieri.github.io/public-helm-charts//xbackbone'
+    digest: 5a198c0ab5365b77f6ee3295099acf965dbe72386654a549690e4e1e0b23cc71
     name: xbackbone
     type: application
     urls:
-    - https://noygal.github.io/helm/xbackbone-0.2.0.tgz
-    version: 0.2.0
+    - https://ekavallieri.github.io/public-helm-charts/xbackbone-0.2.1.tgz
+    version: 0.2.1
   your_spotify:
   - apiVersion: v2
-    appVersion: 0.2.0
-    created: "2023-07-26T18:14:24.903356+02:00"
+    appVersion: 0.2.1
+    created: "2023-11-16T12:10:43.479733+01:00"
     dependencies:
     - name: base-chart
-      repository: https://noygal.github.io/helm/
-      version: 0.2.0
+      repository: https://ekavallieri.github.io/public-helm-charts/
+      version: 0.4.1
     description: 'This chart deploys the ''your_spotify'' service, please refer to
-      the documentation at: https://noygal.github.io/helm//your_spotify'
-    digest: f37c0cab503763efaae3a4bd2cd5a9c1b00d960cfdf8e6285d1e3764bd3eef0f
+      the documentation at: https://ekavallieri.github.io/public-helm-charts//your_spotify'
+    digest: f1e8a2346c49532c89679ed58e86bc24b5d8bc1709823c8a9caacaf590c6fb97
     name: your_spotify
     type: application
     urls:
-    - https://noygal.github.io/helm/your_spotify-0.2.0.tgz
-    version: 0.2.0
-  znc:
+    - https://ekavallieri.github.io/public-helm-charts/your_spotify-0.2.1.tgz
+    version: 0.2.1
+  yq:
   - apiVersion: v2
-    appVersion: 0.2.0
-    created: "2023-07-26T18:14:24.91232+02:00"
+    appVersion: 0.2.1
+    created: "2023-11-16T12:10:43.482563+01:00"
     dependencies:
     - name: base-chart
-      repository: https://noygal.github.io/helm/
-      version: 0.2.0
+      repository: https://ekavallieri.github.io/public-helm-charts/
+      version: 0.4.1
+    description: 'This chart deploys the ''yq'' service, please refer to the documentation
+      at: https://ekavallieri.github.io/public-helm-charts//yq'
+    digest: 469da2221dafa0c7e4bc637035aff4a2fb6ce3476a06ddb08b3d86352ea867d7
+    name: yq
+    type: application
+    urls:
+    - https://ekavallieri.github.io/public-helm-charts/yq-0.2.1.tgz
+    version: 0.2.1
+  znc:
+  - apiVersion: v2
+    appVersion: 0.2.1
+    created: "2023-11-16T12:10:43.484446+01:00"
+    dependencies:
+    - name: base-chart
+      repository: https://ekavallieri.github.io/public-helm-charts/
+      version: 0.4.1
     description: 'This chart deploys the ''znc'' service, please refer to the documentation
-      at: https://noygal.github.io/helm//znc'
-    digest: ba1d8c81cbb6816a3fadf0061673b6fc590b6db6ddc7c539facb632af4ea2a9d
+      at: https://ekavallieri.github.io/public-helm-charts//znc'
+    digest: 1416eb1e1304e5350af3680f4a9425be250c746aa8416d732e0241ed68f7aab2
     name: znc
     type: application
     urls:
-    - https://noygal.github.io/helm/znc-0.2.0.tgz
-    version: 0.2.0
-generated: "2023-07-26T18:14:24.193096+02:00"
+    - https://ekavallieri.github.io/public-helm-charts/znc-0.2.1.tgz
+    version: 0.2.1
+generated: "2023-11-16T12:10:43.174469+01:00"

@@ -7,11 +7,15 @@ module.exports = {
   // The output folder for the charts
   outputFolder: path.join(__dirname, "../../gen"),
   // The helm chart repository
-  repository: "https://noygal.github.io/helm/",
+  repository: "https://ekavallieri.github.io/public-helm-charts/",
   // Git related settings
   git: {
     repository: "https://github.com/linuxserver/docker-documentation",
-    imagesFolder: path.join(workingFolder, "docker-documentation", "images"),
+    imagesFolder: path.join(
+      workingFolder,
+      "docker-documentation",
+      "docs/images"
+    ),
   },
   files: {
     // The files are filtered by the first line of the file, the current regex filtering
@@ -28,12 +32,12 @@ module.exports = {
     },
   },
   versions: {
-    chartVersion: "0.2.0",
-    appVersion: "0.2.0",
-    baseChartVersion: "0.2.0",
+    chartVersion: "0.2.2",
+    appVersion: "0.2.2",
+    baseChartVersion: "0.4.1",
   },
   chart: {
-    host: "e-kavallieri.local",
+    host: "e-kavallieri.com",
     defaultVolumes: [
       {
         name: "appdata",
@@ -43,14 +47,35 @@ module.exports = {
         },
       },
     ],
+    volumeClaimTemplates: [
+      {
+        volumeClaimTemplate: {
+          metadata: {
+            name: "pvc-config",
+          },
+          spec: {
+            storageClassName: "ceph-block",
+            accessModes: ["ReadWriteOnce"],
+            resources: {
+              requests: {
+                storage: "20Gi",
+              },
+            },
+          },
+        },
+        volumeMount: {
+          mountPath: "/config",
+        },
+      },
+    ],
     defaultEnv: [
       {
         name: "GUID",
-        value: "1000",
+        value: '"1000"',
       },
       {
         name: "PUID",
-        value: "1000",
+        value: '"1000"',
       },
       {
         name: "TZ",

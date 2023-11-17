@@ -1,6 +1,6 @@
 dependencies:
 - name: base-chart
-  repository: https://noygal.github.io/helm/
-  version: 0.2.0
-digest: sha256:e401e41ac03c00ee40e7dea22c61f7916cbd04efb24cb1390cb5de3e5d496997
-generated: "2023-07-26T16:24:12.68925+02:00"
+  repository: https://ekavallieri.github.io/public-helm-charts/
+  version: 0.4.1
+digest: sha256:96a022b52747212eb16e2a3424b9576eab178de4263459d7726129d64c8af57a
+generated: "2023-11-15T17:35:16.246815+01:00"

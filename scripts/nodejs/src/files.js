@@ -17,7 +17,10 @@ const mapFile =
   (config) =>
   ({ fileName, fullPath, content }) => {
     const lines = content.split("\n");
-    const name = lines[6].split("/")[1].split("]")[0];
+    const name = lines
+      .find((line) => line.startsWith("#"))
+      .split("/")[1]
+      .split("]")[0];
     const description = lines.find((line) =>
       // Find a line with the project name link - 'descriptionsMap' override
       line

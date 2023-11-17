@@ -14,12 +14,12 @@ metadata:
     {{- toYaml . | nindent 4 }}
   {{- end }}
 spec:
-  {{- if .ingressClassName }}
-  ingressClassName: {{ .ingressClassName }}
+  {{- if .spec.ingressClassName }}
+  ingressClassName: {{ .spec.ingressClassName }}
   {{- end }}
-{{- if .tls }}
+{{- if .spec.tls }}
   tls:
-  {{- range .tls }}
+  {{- range .spec.tls }}
     - hosts:
       {{- range .hosts }}
         - {{ . | quote }}
@@ -27,9 +27,9 @@ spec:
       secretName: {{ .secretName }}
   {{- end }}
 {{- end }}
-{{- if .rules }}
+{{- if .spec.rules }}
   rules:
-  {{- range .rules }}
+  {{- range .spec.rules }}
     - http:
         paths:
           - path: {{ .path }}

@@ -15,7 +15,12 @@ service:
   ports:
     - port: 3000
       targetPort: 3000
-      name: test
+      name: p3000-tcp
+      protocol: TCP
+    - port: 3000
+      targetPort: 3000
+      name: p3000-udp
+      protocol: UDP
 
 ingresses:
   - name: codimd
@@ -23,21 +28,22 @@ ingresses:
     annotations:
       spec.ingressClassName: nginx
       external-dns.alpha.kubernetes.io/cloudflare-proxied: "false"
-      external-dns.alpha.kubernetes.io/target: nginx.e-kavallieri.com
-      external-dns.alpha.kubernetes.io/hostname: nginx.e-kavallieri.com
+      external-dns.alpha.kubernetes.io/target: nginx.example.com
+      external-dns.alpha.kubernetes.io/hostname: nginx.example.com
       external-dns.alpha.kubernetes.io/ttl: "3600"
       cert-manager.io/issuer: letsencrypt-production
       cert-manager.io/issuer-kind: ClusterIssuer
-    ingressClassName: nginx
-    tls:
-      - hosts:
-          - nginx.e-kavallieri.com
-        secretName: certsecret
-    rules:
-      - path: "/"
-        serviceName: codimd
-        servicePort: 3000
-        host: nginx.e-kavallieri.com
+    spec:
+      ingressClassName: nginx
+      tls:
+        - hosts:
+            - nginx.example.com
+          secretName: certsecret
+      rules:
+        - path: "/"
+          serviceName: example
+          servicePort: 3000
+          host: nginx.example.com
 
 statefulset:
   podManagementPolicy: OrderedReady
@@ -127,13 +133,15 @@ static_volumes:
         clusterID: "rook-ceph"
         fsName: "ceph-filesystem"
         staticVolume: "true"
-        rootPath: /volumes/test/share/xxxxxxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+        # Precreated in cephfs externally
+        rootPath: /volumes/test/share/c1bbb36d-ee82-4311-b4ef-7660a23bc90d
     persistentVolumeReclaimPolicy: Retain
     volumeMode: Filesystem
     createpv: true
     volumeMount:
       mountPath: /test
     secret:
+      # Precreated in ceph externally
       enabled: true
       userID: test_share
       userKey: MTIzNDU2Nzg5YWJjZGVmZ2hpamtsbW5vcHFyc3R1dnd4eXo=

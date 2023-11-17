@@ -1,8 +1,26 @@
 # helm chart repository (v3)
 
-This repository is a helm charts repository containing most of the [linuxserver.io](https://www.linuxserver.io/) community based docker images as helm chart. The `linuxserver.io` project is a very mature and well maintained, the standard documentation allow us to general all the charts automatically from a single repository - [docker-documentation](https://github.com/linuxserver/docker-documentation). This project is the result of my personal experience with converting my small home network from `docker-compose` based solution to `k8s`.
+Builds on the work by [noygal](https://github.com/noygal) at this [repo](https://github.com/noygal/helm/).
 
-You can view a list off all the chart at: https://noygal.github.io/helm/
+This repository is a helm charts repository containing most of the [linuxserver.io](https://www.linuxserver.io/) community based docker images as helm chart. The `linuxserver.io` project is a very mature and well maintained, the standard documentation allow us to general all the charts automatically from a single repository - [docker-documentation](https://github.com/linuxserver/docker-documentation). This project is the result of my adaptation of the work created by [noygal](https://github.com/noygal) to my specific requirements. Mainly:
+
+- I have modernized the scripts to run against some changes that have occured in the documentation of `linuxserver.io`
+- Adapted the base-chart to use a stateful set
+- Added the option to use static volume mappings to the pods
+
+You can view a list off all the chart at: https://github.com/ekavallieri/helm-charts
+
+- [helm chart repository (v3)](#helm-chart-repository-v3)
+  - [Usage](#usage)
+    - [1. Install](#1-install)
+    - [2. Clone](#2-clone)
+  - [Project Structure](#project-structure)
+    - [`charts` folder](#charts-folder)
+    - [`scripts` folder](#scripts-folder)
+    - [`gen` folder](#gen-folder)
+    - [`docs` folder](#docs-folder)
+  - [Caveats](#caveats)
+  - [Roadmap](#roadmap)
 
 ## Usage
 
@@ -11,19 +29,19 @@ You can view a list off all the chart at: https://noygal.github.io/helm/
 Adding registry to helm (single time):
 
 ```bash
-helm repo add noygal https://noygal.github.io/helm
+helm repo add ekavallieri https://ekavallieri.github.io/public-helm-charts
 ```
 
 Search registry:
 
 ```bash
-helm search repo noygal
+helm search repo ekavallieri
 ```
 
 Install chart:
 
 ```bash
-helm install cloud9 noygal/cloud9
+helm install base-chart ekavallieri/base-chart
 ```
 
 ### 2. Clone
@@ -34,11 +52,11 @@ All the charts code generation is located under `script/nodejs`, it should be pr
 
 ### `charts` folder
 
-Contains the [base chart](https://github.com/noygal/helm/tree/master/charts/base-chart) for all the generated charts, also an usage [example](https://github.com/noygal/helm/tree/master/charts/exmple-dev-tools).
+Contains the [base chart](https://github.com/ekavallieri/helm-charts/tree/master/charts/base-chart) for all the generated charts, also an usage [example](https://github.com/ekavallieri/helm-charts/tree/master/charts/exmple-dev-tools).
 
 ### `scripts` folder
 
-Contains various maintenance scripts and the [Node.JS script](https://github.com/noygal/helm/tree/master/scripts/nodejs) that generate the linuxserver.io charts.
+Contains various maintenance scripts and the [Node.JS script](https://github.com/ekavallieri/helm-charts/tree/master/scripts/nodejs) that generate the linuxserver.io charts.
 
 ### `gen` folder
 

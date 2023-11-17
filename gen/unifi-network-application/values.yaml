@@ -1,0 +1,160 @@
+base-chart:
+  nameOverride: unifi-network-application
+  fullnameOverride: ""
+
+  serviceAccount:
+    # Specifies whether a service account should be created
+    create: true
+    # Annotations to add to the service account
+    annotations: {}
+    # The name of the service account to use.
+    # If not set and create is true, a name is generated using the fullname template
+    name:
+
+  service:
+    type: ClusterIP
+    ports: 
+      - port: 8443
+        targetPort: 8443
+        name: p8443-tcp
+        protocol: TCP
+      - port: 3478
+        targetPort: 3478
+        name: p3478-udp
+        protocol: UDP
+      - port: 10001
+        targetPort: 10001
+        name: p10001-udp
+        protocol: UDP
+      - port: 8080
+        targetPort: 8080
+        name: p8080-tcp
+        protocol: TCP
+      - port: 1900
+        targetPort: 1900
+        name: p1900-udp
+        protocol: UDP
+      - port: 8843
+        targetPort: 8843
+        name: p8843-tcp
+        protocol: TCP
+      - port: 8880
+        targetPort: 8880
+        name: p8880-tcp
+        protocol: TCP
+      - port: 6789
+        targetPort: 6789
+        name: p6789-tcp
+        protocol: TCP
+      - port: 5514
+        targetPort: 5514
+        name: p5514-udp
+        protocol: UDP
+
+  ingresses: 
+    - name: unifi-network-application
+      # disabled: true
+      annotations:
+        spec.ingressClassName: nginx
+        cert-manager.io/issuer: letsencrypt-staging
+        cert-manager.io/issuer-kind: ClusterIssuer
+      spec:
+        ingressClassName: nginx
+        tls:
+          - hosts:
+              - unifi-network-application.e-kavallieri.com
+            secretName: unifi-network-application-certsecret
+        rules:
+          - path: '/'
+            serviceName: p10001/udp-tcp
+            servicePort: 10001&#x2F;udp
+            host: unifi-network-application.e-kavallieri.com
+            pathType: Prefix
+
+  statefulset:
+    podManagementPolicy: OrderedReady
+    replicas: 1
+    revisionHistoryLimit: 10
+    updateStrategy:
+      rollingUpdate:
+        partition: 0
+      type: RollingUpdate
+    volumes:
+      - name: appdata
+        nfs: 
+          server: 192.168.1.10
+          path: /appdata
+    sharedEnv: 
+      - name: GUID
+        value: "1000"
+      - name: PUID
+        value: "1000"
+      - name: TZ
+        value: Etc/UTC
+    sharedValues:
+      imagePullPolicy: IfNotPresent
+      securityContext: {}
+      resources: {}
+    spec:
+      imagePullSecrets: []
+      nodeSelector: {}
+      tolerations: []
+      affinity: {}
+    containers: 
+      - name: unifi
+        image: lscr.io/linuxserver/unifi-network-application:latest
+        env: 
+          - name: MONGO_USER
+            value: unifi
+          - name: MONGO_PASS
+            value: 
+          - name: MONGO_HOST
+            value: unifi-db
+          - name: MONGO_PORT
+            value: 27017
+          - name: MONGO_DBNAME
+            value: unifi
+        ports: 
+          - containerPort: 8443
+            name: p8443-tcp
+            protocol: TCP
+          - containerPort: 3478
+            name: p3478-udp
+            protocol: UDP
+          - containerPort: 10001
+            name: p10001-udp
+            protocol: UDP
+          - containerPort: 8080
+            name: p8080-tcp
+            protocol: TCP
+          - containerPort: 1900
+            name: p1900-udp
+            protocol: UDP
+          - containerPort: 8843 #optional
+            name: p8843 #optional-tcp
+            protocol: TCP
+          - containerPort: 8880 #optional
+            name: p8880 #optional-tcp
+            protocol: TCP
+          - containerPort: 6789 #optional
+            name: p6789 #optional-tcp
+            protocol: TCP
+          - containerPort: 5514
+            name: p5514-udp
+            protocol: UDP
+        volumeMounts: []
+    volumeClaimTemplates: 
+      - volumeClaimTemplate:
+          metadata:
+            name: pvc-config
+          spec:
+            storageClassName: ceph-block
+            accessModes: 
+              - ReadWriteOnce
+            resources:
+              requests:
+                storage: 20Gi
+        volumeMount:
+          mountPath: /config
+
+  static_volumes: []

@@ -20,7 +20,8 @@ const logWrap =
     return props[0];
   };
 
-const getFirstLine = (file) => file.content.split("\n")[6];
+const getFirstLine = (file) =>
+  file.content.split("\n").find((line) => line.startsWith("#"));
 
 const preprocessFiles = (config) => (files) =>
   files
@@ -58,15 +59,29 @@ const processData = (config) => (data) =>
         arch,
         dockerCompose,
       }) => {
+        console.log("name:", name);
+        console.log("fileName:", fileName);
+        console.log("fullPath:", fullPath);
+        console.log("description:", description);
+        console.log("ports:", ports);
+        console.log("env:", env);
+        console.log("volumes:", volumes);
+        console.log("devices:", devices);
+        console.log("arch:", arch);
+        console.log("dockerCompose:", dockerCompose);
         const docker = processor.processDockerCompose(dockerCompose);
+        console.log("docker:", docker);
         const values = processor.generateValues(config)({
           name,
           ports,
           docker,
           volumes,
         });
+        console.log("values:", values);
         const chart = processor.generateChart(config)({ name });
+        console.log("chart:", chart);
         const readme = processor.generateReadme(config)({ name, description });
+        console.log("readme:", readme);
         return { name, values, chart, readme };
       }
     )
@@ -74,8 +89,10 @@ const processData = (config) => (data) =>
 
 const writeFile =
   ({ outputFolder }) =>
-  ({ name, values, chart, readme }) =>
-    fs
+  ({ name, values, chart, readme }) => {
+    console.log("output folder:", outputFolder, "/", name);
+
+    return fs
       .ensureDir(path.join(outputFolder, name))
       .then(() =>
         Promise.all([
@@ -93,6 +110,7 @@ const writeFile =
           ),
         ])
       );
+  };
 
 getImageDocsFiles(config)
   .then(preprocessFiles(config))
@@ -114,6 +132,6 @@ getImageDocsFiles(config)
   // .then(console.log)
   .then((data) => Promise.all(data.map(writeFile(config))))
   // .then((results) => console.log("hallo werld"))
-  .then((data) => writeFile(config)(data[0]))
+  // .then((data) => writeFile(config)(data[0]))
   .catch(console.error)
   .then(cleanup);
